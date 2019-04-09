@@ -20,7 +20,7 @@ class ITModel: NSObject {
         super.init()
     }
     
-    init(array: Array<Dictionary<String, Any>> , language: String) {
+    init(array: Array<Dictionary<String, Any>> , word: String) {
         super.init()
         
         guard !array.isEmpty else {
@@ -30,9 +30,8 @@ class ITModel: NSObject {
         
         success = 1
         total = array.count
-        for dic in array {
-            let questionModel = ITQuestionModel.init(dictionary: dic);
-            questionModel.language = language
+        for dict in array {
+            let questionModel = ITQuestionModel.init(dictionary: dict, language: word);
             result.append(questionModel)
         }
     }

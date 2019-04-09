@@ -48,16 +48,13 @@ class ITQuestionListViewController: UIViewController {
     }()
     
     lazy var listModel: ITModel = {
-        if ILeetCoderModel.shared.defaultArray.contains(self.title!) {
-            return ILeetCoderModel.shared.defaultData()[self.title!] as! ITModel
+        if IHTCModel.shared.defaultArray.contains(self.title!) {
+            return IHTCModel.shared.defaultData()[self.title!] as! ITModel
             
-        } else if ILeetCoderModel.shared.tagsArray.contains(self.title!) {
-            return ILeetCoderModel.shared.tagsData()[self.title!] as! ITModel
+        } else if IHTCModel.shared.tagsArray.contains(self.title!) {
+            return IHTCModel.shared.tagsData()[self.title!] as! ITModel
             
-        } else if ILeetCoderModel.shared.enterpriseArray.contains(self.title!) {
-            return ILeetCoderModel.shared.enterpriseData()[self.title!] as! ITModel
-            
-        } else {
+        }  else {
             print("no featch title")
             return ITModel()
         }
@@ -127,12 +124,12 @@ extension ITQuestionListViewController : UITableViewDelegate, UITableViewDataSou
         let question = self.listModel.result[indexPath.row]
         cell.numLbl.text =  " #" + question.leetId + " "
         cell.tagLbl.text =  " " + question.difficulty + " "
-        cell.tagLbl.backgroundColor = ILeetCoderModel.shared.colorForKey(level: question.difficulty)
+        cell.tagLbl.backgroundColor = IHTCModel.shared.colorForKey(level: question.difficulty)
         cell.frequencyLbl.text = " " + (question.frequency.count < 3 ? (question.frequency + ".0%") : question.frequency) + " "
         
-        if ILeetCoderModel.shared.defaultArray.contains(self.title!) {
-            if question.tagString.count > 0 {
-                cell.langugeLbl.text =  " " + question.tagString.componentsJoined(by: " · ") + " "
+        if IHTCModel.shared.defaultArray.contains(self.title!) {
+            if question.codeStrings.count > 0 {
+                cell.langugeLbl.text =  " " + question.codeStrings + " "
                 cell.langugeLbl.backgroundColor = kColorAppGray
                 cell.langugeLbl.isHidden = false
             }
@@ -142,8 +139,8 @@ extension ITQuestionListViewController : UITableViewDelegate, UITableViewDataSou
             }
         }
         
-        if ILeetCoderModel.shared.tagsArray.contains(self.title!) {
-            cell.langugeLbl.text =  " " + self.title! + "   "
+        if IHTCModel.shared.tagsArray.contains(self.title!) {
+            cell.langugeLbl.text =  " " + question.codeStrings + "   "
             cell.langugeLbl.backgroundColor = kColorAppGray
             cell.langugeLbl.isHidden = false
         }
@@ -152,7 +149,7 @@ extension ITQuestionListViewController : UITableViewDelegate, UITableViewDataSou
         if false {
             cell.questionLbl.text = question.titleZh
         }else{
-            cell.questionLbl.text = question.title
+            cell.questionLbl.text = question.word
         }
         
 
@@ -162,7 +159,7 @@ extension ITQuestionListViewController : UITableViewDelegate, UITableViewDataSou
 //            cell.langugeLbl.isHidden = true
 //        }else{
 //
-//            cell.tagLbl.backgroundColor = ILeetCoderModel.shared.colorForKey(level: question.difficulty)
+//            cell.tagLbl.backgroundColor = IHTCModel.shared.colorForKey(level: question.difficulty)
 //            cell.langugeLbl.isHidden = false
 //        }
         

@@ -9,7 +9,10 @@
 import UIKit
 
 class ITQuestionModel: NSObject {
-    var language = "" //当前作用的标题
+    var language = "" //当前分类
+    var word = "" //当前词
+    var codeStrings = ""
+    var codeArray = Array<String>()
     var leetId = ""
     var title = ""
     var titleZh = ""
@@ -24,32 +27,15 @@ class ITQuestionModel: NSObject {
     var tagStringZh = NSMutableArray()
     
     
-    init(dictionary: Dictionary<String, Any>) {
+    init(dictionary: Dictionary<String, Any>, language: String) {
         
-        leetId = dictionary["leetId"] as! String
-        title = dictionary["title"] as! String
-        if let tZh = dictionary["titleZh"] as? String {
-            titleZh = tZh
-        }
-        is_locked = dictionary["is_locked"] as! String
-        difficulty = dictionary["difficulty"] as! String
-        frequency = dictionary["frequency"] as! String
-        link = dictionary["link"] as! String
-        if let question = dictionary["questionDescription"] as? String {
-            questionDescription = question
-        }
-        if let questionZh = dictionary["questionDescriptionZh"] as? String {
-            questionDescriptionZh = questionZh
-        }
-        
-        if let tag = dictionary["tags"] as? Array<Dictionary<String, String>> {
-            tags = tag
-            for t in tag {
-                tagString.add(t["tag"] ?? "")
-                tagStringZh.add(t["tagZh"] ?? "")
-            }
-            
-        }
+        self.language = language
+        let wordKey = dictionary.keys.first as! String
+        self.word = wordKey
+        let wordValue = dictionary[wordKey]
+        self.codeArray = wordValue as! Array
+        let codes = self.codeArray.joined(separator: "，")
+        self.codeStrings = codes.uppercased()
     }
 }
 

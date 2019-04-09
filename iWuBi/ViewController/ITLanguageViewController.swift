@@ -26,7 +26,7 @@ class ITLanguageViewController: ITBasePushTransitionVC {
     }
     
     // MARK:- 懒加载
-    fileprivate var titles = ILeetCoderModel.shared.defaultArray
+    fileprivate var titles = IHTCModel.shared.defaultArray
     
     fileprivate lazy var pageTitleView: ITPageTitleView = {
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH, width: kScreenW, height: kTitleViewH)

@@ -25,7 +25,7 @@ class ITProfessionViewController: ITBasePushTransitionVC
     }
     
     // MARK:- 懒加载
-    fileprivate var titles = ILeetCoderModel.shared.tagsArray
+    fileprivate var titles = IHTCModel.shared.tagsArray
     
     fileprivate lazy var pageTitleView: ITPageTitleView = {
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH, width: kScreenW, height: kTitleViewH)

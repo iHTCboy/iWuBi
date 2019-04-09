@@ -159,11 +159,11 @@ extension ITQuestionDetailViewController : UITableViewDelegate, UITableViewDataS
         let question = questionModle!
         cell.numLbl.text =  " #" + question.leetId + " "
         cell.tagLbl.text =  " " + question.difficulty + " "
-        cell.tagLbl.backgroundColor = ILeetCoderModel.shared.colorForKey(level: question.difficulty)
+        cell.tagLbl.backgroundColor = IHTCModel.shared.colorForKey(level: question.difficulty)
         cell.frequencyLbl.text = " " + (question.frequency.count < 3 ? (question.frequency + ".0%") : question.frequency) + " "
         cell.langugeLbl.backgroundColor = kColorAppGray
         
-        if ILeetCoderModel.shared.defaultArray.contains(self.title!) {
+        if IHTCModel.shared.defaultArray.contains(self.title!) {
             if question.tagString.count > 0 {
                 //cell.langugeLbl.text =  " " + question.tagString.componentsJoined(by: " · ") + "   "
                 cell.langugeLbl.isHidden = false
@@ -174,7 +174,7 @@ extension ITQuestionDetailViewController : UITableViewDelegate, UITableViewDataS
             
         }
         
-        if ILeetCoderModel.shared.tagsArray.contains(self.title!) {
+        if IHTCModel.shared.tagsArray.contains(self.title!) {
             //cell.langugeLbl.text =  " " + self.title! + "   "
             cell.langugeLbl.isHidden = false
         }
