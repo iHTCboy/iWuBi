@@ -105,18 +105,38 @@ extension IHTCModel
                             wordDict?.add([key98 : word98])
                         }
                     }
+
+                    print(NSDate())
                     
                     // 转成模型
                     for dfKey in dfDict.keys {
-                        let model = ITModel.init(array: dfDict[dfKey] as! Array<Dictionary<String, Any>>, word: dfKey)
+                        let model = ITModel.init(array:  Array(dfDict[dfKey]!.prefix(100)) as! Array<Dictionary<String, Any>>, word: dfKey)
                         self.defaultDict[dfKey] = model
                     }
-
-                    for tagKey in tagDict.keys {
-                        let model = ITModel.init(array: tagDict[tagKey] as! Array<Dictionary<String, Any>>, word: tagKey)
-                        self.tagsDict[tagKey] = model
+                    
+//                    let dicArray = dfDict["86"]! as! Array<Dictionary<String, Any>>
+//                    let model = ITModel.init(array: Array(dicArray.prefix(20)), word: "86")
+//                    self.defaultDict["86"] = model
+                    
+                    print(NSDate())
+                    
+                    
+                    DispatchQueue.global(qos: .default).async {
+                        print(NSDate())
+                        // 转成模型
+                        for dfKey in dfDict.keys {
+                            let model = ITModel.init(array: dfDict[dfKey] as! Array<Dictionary<String, Any>>, word: dfKey)
+                            self.defaultDict[dfKey] = model
+                        }
+                        print(NSDate())
+                        for tagKey in tagDict.keys {
+                            let model = ITModel.init(array: tagDict[tagKey] as! Array<Dictionary<String, Any>>, word: tagKey)
+                            self.tagsDict[tagKey] = model
+                        }
+                        print(NSDate())
                     }
                     
+                    print(NSDate())
                 } else {
                     print("JSON is invalid")
                 }

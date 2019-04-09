@@ -346,14 +346,14 @@
 		6DB88DE1225B8E340099AC80 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6DB88DE2225B8E340099AC80 /* ITAboutAppVC.swift */,
-				6DB88DE3225B8E340099AC80 /* ITProgrammerVC.swift */,
 				6DB88DE5225B8E340099AC80 /* BaseVC */,
 				6DB88DE8225B8E340099AC80 /* ITAboutAppVC.xib */,
-				6DB88DE9225B8E340099AC80 /* ITQuestionDetailViewController.swift */,
-				6DB88DEA225B8E340099AC80 /* ITQuestionListViewController.swift */,
-				6DB88DEB225B8E340099AC80 /* ITProfessionViewController.swift */,
 				6DB88DEC225B8E340099AC80 /* ITLanguageViewController.swift */,
+				6DB88DEA225B8E340099AC80 /* ITQuestionListViewController.swift */,
+				6DB88DE9225B8E340099AC80 /* ITQuestionDetailViewController.swift */,
+				6DB88DEB225B8E340099AC80 /* ITProfessionViewController.swift */,
+				6DB88DE2225B8E340099AC80 /* ITAboutAppVC.swift */,
+				6DB88DE3225B8E340099AC80 /* ITProgrammerVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
