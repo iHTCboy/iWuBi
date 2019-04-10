@@ -55,8 +55,8 @@ extension ITQuestionDetailViewController {
         tableView.dataSource = self;
         
         let add = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(addTapped))
-        let play = UIBarButtonItem(title: "中", style: .plain, target: self, action: #selector(playTapped))
-        navigationItem.rightBarButtonItems = [add, play]
+        let play = UIBarButtonItem(title: "繁體", style: .plain, target: self, action: #selector(playTapped))
+        navigationItem.rightBarButtonItems = [play]
     }
     
     @objc func addTapped(item: UIBarButtonItem) {
@@ -88,13 +88,13 @@ extension ITQuestionDetailViewController {
     
     @objc func playTapped(item: UIBarButtonItem) {
         
-        if item.title == "中" {
+        if item.title == "简体" {
             isShowZH = true
-            item.title = "En"
+            item.title = "繁體"
         }
         else {
             isShowZH = false
-            item.title = "中"
+            item.title = "简体"
         }
         
         self.tableView.reloadData()
@@ -139,74 +139,31 @@ extension ITQuestionDetailViewController : UITableViewDelegate, UITableViewDataS
         cell.backgroundColor = UIColor.white
         cell.accessoryType = .none
         cell.selectionStyle = .none
-        cell.numLbl.layer.cornerRadius = 3
-        cell.numLbl.layer.masksToBounds = true
-        cell.numLbl.adjustsFontSizeToFitWidth = true
-        cell.numLbl.baselineAdjustment = .alignCenters
-        cell.tagLbl.layer.cornerRadius = 3
-        cell.tagLbl.layer.masksToBounds = true
-        cell.tagLbl.adjustsFontSizeToFitWidth = true
-        cell.tagLbl.baselineAdjustment = .alignCenters
-        cell.langugeLbl.layer.cornerRadius = 3
-        cell.langugeLbl.layer.masksToBounds = true
-        cell.langugeLbl.adjustsFontSizeToFitWidth = true
-        cell.langugeLbl.baselineAdjustment = .alignCenters
-        cell.frequencyLbl.layer.cornerRadius = 3
-        cell.frequencyLbl.layer.masksToBounds = true
-        cell.frequencyLbl.adjustsFontSizeToFitWidth = true
-        cell.frequencyLbl.baselineAdjustment = .alignCenters
+        cell.num1Lbl.layer.cornerRadius = 3
+        cell.num1Lbl.layer.masksToBounds = true
+        cell.num1Lbl.adjustsFontSizeToFitWidth = true
+        cell.num1Lbl.baselineAdjustment = .alignCenters
+        cell.num2Lbl.layer.cornerRadius = 3
+        cell.num2Lbl.layer.masksToBounds = true
+        cell.num2Lbl.adjustsFontSizeToFitWidth = true
+        cell.num2Lbl.baselineAdjustment = .alignCenters
+        cell.num3Lbl.layer.cornerRadius = 3
+        cell.num3Lbl.layer.masksToBounds = true
+        cell.num3Lbl.adjustsFontSizeToFitWidth = true
+        cell.num3Lbl.baselineAdjustment = .alignCenters
+        cell.num4Lbl.layer.cornerRadius = 3
+        cell.num4Lbl.layer.masksToBounds = true
+        cell.num4Lbl.adjustsFontSizeToFitWidth = true
+        cell.num4Lbl.baselineAdjustment = .alignCenters
         
         let question = questionModle!
-        cell.numLbl.text =  " #" + question.leetId + " "
-        cell.tagLbl.text =  " " + question.difficulty + " "
-        cell.tagLbl.backgroundColor = IHTCModel.shared.colorForKey(level: question.difficulty)
-        cell.frequencyLbl.text = " " + (question.frequency.count < 3 ? (question.frequency + ".0%") : question.frequency) + " "
-        cell.langugeLbl.backgroundColor = kColorAppGray
-        
-        if IHTCModel.shared.defaultArray.contains(self.title!) {
-            if question.tagString.count > 0 {
-                //cell.langugeLbl.text =  " " + question.tagString.componentsJoined(by: " · ") + "   "
-                cell.langugeLbl.isHidden = false
-            }
-            else {
-                cell.langugeLbl.isHidden = true
-            }
-            
-        }
-        
-        if IHTCModel.shared.tagsArray.contains(self.title!) {
-            //cell.langugeLbl.text =  " " + self.title! + "   "
-            cell.langugeLbl.isHidden = false
-        }
         
         if isShowZH {
-            cell.tagLbl.text =  " " + (question.difficulty == "Easy" ? "容易" : (question.difficulty == "Medium" ? "中等" : "困难" )) + " "
-            cell.langugeLbl.text = cell.langugeLbl.isHidden ? "" : (" " + question.tagStringZh.componentsJoined(by: " · ") + " ")
-            cell.questionLbl.text = question.titleZh.count > 0 ? question.titleZh : question.title
+            cell.wordLbl.text = ZMChineseConvert.convert(toSimplified: question.word)
         }else{
-            cell.tagLbl.text = " " + question.difficulty + " "
-            cell.langugeLbl.text = cell.langugeLbl.isHidden ? "" : (" " + question.tagString.componentsJoined(by: " · ") + " ")
-            cell.questionLbl.text = question.title
+            cell.wordLbl.text = ZMChineseConvert.convert(toTraditional: question.word)
         }
         
-        
-//        if questionModle!.hasOptionQuestion {
-//            cell.questionLbl.text = questionModle!.question + "\n  A: " + questionModle!.optionA + "\n  B: " + questionModle!.optionB + "\n  C: " + questionModle!.optionC + "\n  D: " + questionModle!.optionD
-//        }else{
-//
-//            cell.questionLbl.text = questionModle!.question
-//        }
-//
-//        if self.title == questionModle?.lauguage {
-//            // 判断当前是语言tabbar 也可以用 self.tabBarController?.selectedIndex 判断，但兼容性不好
-//            cell.tagLbl.backgroundColor = kColorAppBlue
-//            cell.langugeLbl.isHidden = true
-//        }else{
-//
-//            cell.tagLbl.backgroundColor = kColorAppOrange
-//            cell.langugeLbl.isHidden = false
-//            cell.langugeLbl.text =   " " + questionModle!.lauguage + "   "
-//        }
         self.selectedCell = cell;
         return cell
     }
@@ -218,7 +175,7 @@ extension ITQuestionDetailViewController : UITableViewDelegate, UITableViewDataS
         cell.selectionStyle = .none
         cell.answerLbl.textAlignment = .left
         if isShowZH {
-            let str = questionModle!.questionDescriptionZh.count > 0 ? questionModle!.questionDescriptionZh : questionModle!.questionDescription;
+            //let str = questionModle!.questionDescriptionZh.count > 0 ? questionModle!.questionDescriptionZh : questionModle!.questionDescription;
             //cell.answerLbl.attributedText =  SwiftyMarkdown(string: str).attributedString()
         }
         else {

@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="109" id="KGk-i7-Jjw" customClass="ITQuestionListViewCell" customModule="iLeetcode" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="109" id="KGk-i7-Jjw" customClass="ITQuestionListViewCell" customModule="iWuBi" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="407" height="109"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -30,18 +30,18 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ca7-QA-H6s">
-                        <rect key="frame" x="71" y="36" width="45" height="20"/>
+                        <rect key="frame" x="71" y="36" width="33" height="20"/>
                         <color key="backgroundColor" red="0.27572933521949206" green="0.74357826637324975" blue="0.98872262239456177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="kPO-To-a1Z"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="s90-tQ-F0G"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="33" id="s90-tQ-F0G"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iT-FL-dXy">
-                        <rect key="frame" x="124" y="36" width="33" height="20"/>
+                        <rect key="frame" x="112" y="36" width="33" height="20"/>
                         <color key="backgroundColor" red="0.97480666039999997" green="0.52825597879999997" blue="0.069089337319999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="aek-mR-Hnt"/>
@@ -50,7 +50,18 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uc-TE-V7e" customClass="ITCopyLabel" customModule="iLeetcode" customModuleProvider="target">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9m-Hw-2gV">
+                        <rect key="frame" x="153" y="36" width="40" height="20"/>
+                        <color key="backgroundColor" red="0.97480666039999997" green="0.52825597879999997" blue="0.069089337319999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Si3-Px-CqY"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="jkn-ds-n3c"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uc-TE-V7e" customClass="ITCopyLabel" customModule="iWuBi" customModuleProvider="target">
                         <rect key="frame" x="30" y="66" width="331" height="22"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <nil key="textColor"/>
@@ -63,17 +74,6 @@
                             <constraint firstAttribute="height" constant="0.80000000000000004" id="etT-Ob-Wuz"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9m-Hw-2gV">
-                        <rect key="frame" x="165" y="36" width="35" height="20"/>
-                        <color key="backgroundColor" red="0.97480666039999997" green="0.52825597879999997" blue="0.069089337319999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="Si3-Px-CqY"/>
-                            <constraint firstAttribute="width" constant="35" id="jkn-ds-n3c"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="0iT-FL-dXy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="1ua-pD-Ly1"/>
@@ -96,11 +96,11 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="frequencyLbl" destination="k9m-Hw-2gV" id="7Hw-f4-J3U"/>
-                <outlet property="langugeLbl" destination="0iT-FL-dXy" id="thq-du-Eb0"/>
-                <outlet property="numLbl" destination="wr1-c5-CJj" id="uyO-FJ-UIB"/>
-                <outlet property="questionLbl" destination="7Uc-TE-V7e" id="S03-Rr-0jM"/>
-                <outlet property="tagLbl" destination="Ca7-QA-H6s" id="51j-y9-ioH"/>
+                <outlet property="num1Lbl" destination="wr1-c5-CJj" id="Mxe-lH-CaO"/>
+                <outlet property="num2Lbl" destination="Ca7-QA-H6s" id="hXG-M9-Aof"/>
+                <outlet property="num3Lbl" destination="0iT-FL-dXy" id="iy2-11-3jf"/>
+                <outlet property="num4Lbl" destination="k9m-Hw-2gV" id="aYV-PW-Qwk"/>
+                <outlet property="wordLbl" destination="7Uc-TE-V7e" id="MSV-DD-4bF"/>
             </connections>
             <point key="canvasLocation" x="-323.5" y="6.5"/>
         </tableViewCell>

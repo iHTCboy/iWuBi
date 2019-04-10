@@ -10,15 +10,15 @@ import UIKit
 
 class ITQuestionListViewCell: UITableViewCell {
 
-    @IBOutlet weak var numLbl: UILabel!
+    @IBOutlet weak var num1Lbl: UILabel!
     
-    @IBOutlet weak var tagLbl: UILabel!
+    @IBOutlet weak var num2Lbl: UILabel!
     
-    @IBOutlet weak var langugeLbl: UILabel!
+    @IBOutlet weak var num3Lbl: UILabel!
     
-    @IBOutlet weak var frequencyLbl: UILabel!
+    @IBOutlet weak var num4Lbl: UILabel!
     
-    @IBOutlet weak var questionLbl: ITCopyLabel!
+    @IBOutlet weak var wordLbl: ITCopyLabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

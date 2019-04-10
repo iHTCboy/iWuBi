@@ -82,7 +82,7 @@ extension AppDelegate {
     func setupBaseUI() {
         let ui = UINavigationBar.appearance()
         ui.tintColor = UIColor.white
-        ui.barTintColor = UIColor.orange
+        ui.barTintColor = kColorAppOrange
         ui.barStyle = .black
         //        UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
         //        UIApplication.shared.setStatusBarHidden(false, with: .none)

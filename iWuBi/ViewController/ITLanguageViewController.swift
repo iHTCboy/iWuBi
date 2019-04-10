@@ -84,17 +84,18 @@ extension ITLanguageViewController {
             window.addSubview(launchView!)
             window.makeKeyAndVisible()
             
-            UIView.animate(withDuration: 0.4, delay: 0.8, options: .beginFromCurrentState, animations: {
-                launchView?.transform = CGAffineTransform.init(scaleX: 5, y: 5).rotated(by: CGFloat.pi * 3)
-                launchView?.alpha = 0.7
+            UIView.animate(withDuration: 0.25, delay: 0.8, options: .beginFromCurrentState, animations: {
+                //launchView?.transform = CGAffineTransform.init(scaleX: 5, y: 5).rotated(by: CGFloat.pi * 3)
+                launchView?.layer.transform = CATransform3DScale(CATransform3DIdentity, 2, 2, 1)
+                launchView?.alpha = 0.0
             }, completion: { (true) in
-                UIView.animate(withDuration: 0.2, animations: {
-                    launchView?.layer.transform = CATransform3DScale(CATransform3DIdentity, 0.5, 0.5, 1)
-                    launchView?.alpha = 0.0
-                }, completion: { (true) in
-                    
-                    window.removeFromSuperview()
-                })
+                window.removeFromSuperview()
+//                UIView.animate(withDuration: 0.2, animations: {
+//                    //launchView?.layer.transform = CATransform3DScale(CATransform3DIdentity, 0.5, 0.5, 1)
+//                    launchView?.alpha = 0.0
+//                }, completion: { (true) in
+//                    window.removeFromSuperview()
+//                })
             })
         }
     }

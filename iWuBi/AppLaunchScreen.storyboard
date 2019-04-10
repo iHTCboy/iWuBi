@@ -18,25 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App-LaunchScreen-Image.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hyl-1N-RVz">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="888.5"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App-TextLogo-Alpha.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZPg-61-4Yr">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App-share-Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZPg-61-4Yr">
                                 <rect key="frame" x="103.5" y="210" width="207" height="207"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZPg-61-4Yr" secondAttribute="height" id="Jcr-og-wZg"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZPg-61-4Yr" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.5" id="GxP-vR-RKy"/>
                             <constraint firstItem="ZPg-61-4Yr" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="IGP-jE-4xp"/>
                             <constraint firstItem="ZPg-61-4Yr" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.7" id="JRo-Xi-L2N"/>
-                            <constraint firstItem="Hyl-1N-RVz" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Qcc-8t-ScV"/>
-                            <constraint firstItem="Hyl-1N-RVz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rhi-7Q-FQu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hyl-1N-RVz" secondAttribute="trailing" id="lWy-gt-9dQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hyl-1N-RVz" secondAttribute="bottom" multiplier="0.97" id="ymh-2S-6wy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -47,7 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="App-LaunchScreen-Image.png" width="1500" height="3000"/>
-        <image name="App-TextLogo-Alpha.png" width="323" height="323"/>
+        <image name="App-share-Icon.png" width="350" height="350"/>
     </resources>
 </document>

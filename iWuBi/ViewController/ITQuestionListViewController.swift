@@ -47,18 +47,41 @@ class ITQuestionListViewController: UIViewController {
         return tableView
     }()
     
-    lazy var listModel: ITModel = {
+    var modelCounts = 0
+    
+    func listModel() -> ITModel {
+        var model = ITModel()
         if IHTCModel.shared.defaultArray.contains(self.title!) {
-            return IHTCModel.shared.defaultData()[self.title!] as! ITModel
+            model = IHTCModel.shared.defaultData()[self.title!] as! ITModel
             
         } else if IHTCModel.shared.tagsArray.contains(self.title!) {
-            return IHTCModel.shared.tagsData()[self.title!] as! ITModel
-            
+            model = IHTCModel.shared.tagsData()[self.title!] as! ITModel
+
         }  else {
             print("no featch title")
-            return ITModel()
         }
-    }()
+        
+        if model.result.count != modelCounts {
+            modelCounts = model.result.count
+            self.tableView.reloadData()
+        }
+        
+        return model
+    }
+    
+    
+//    lazy var listModel: ITModel = {
+//        if IHTCModel.shared.defaultArray.contains(self.title!) {
+//            return IHTCModel.shared.defaultData()[self.title!] as! ITModel
+//
+//        } else if IHTCModel.shared.tagsArray.contains(self.title!) {
+//            return IHTCModel.shared.tagsData()[self.title!] as! ITModel
+//
+//        }  else {
+//            print("no featch title")
+//            return ITModel()
+//        }
+//    }()
     
 
 }
@@ -83,7 +106,7 @@ extension ITQuestionListViewController {
     }
     
     @objc public func randomRefresh(sender: AnyObject) {
-        self.listModel.result.shuffle()
+        self.listModel().result.shuffle()
         tableView.reloadData()
         refreshControl.endRefreshing()
     }
@@ -97,71 +120,52 @@ extension ITQuestionListViewController : UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listModel.result.count
+        return self.listModel().result.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ITQuestionListViewCell = tableView.dequeueReusableCell(withIdentifier: "ITQuestionListViewCell") as! ITQuestionListViewCell
         cell.accessoryType = .disclosureIndicator
         cell.selectionStyle = .none
-        cell.numLbl.layer.cornerRadius = 3
-        cell.numLbl.layer.masksToBounds = true
-        cell.numLbl.adjustsFontSizeToFitWidth = true
-        cell.numLbl.baselineAdjustment = .alignCenters
-        cell.tagLbl.layer.cornerRadius = 3
-        cell.tagLbl.layer.masksToBounds = true
-        cell.tagLbl.adjustsFontSizeToFitWidth = true
-        cell.tagLbl.baselineAdjustment = .alignCenters
-        cell.langugeLbl.layer.cornerRadius = 3
-        cell.langugeLbl.layer.masksToBounds = true
-        cell.langugeLbl.adjustsFontSizeToFitWidth = true
-        cell.langugeLbl.baselineAdjustment = .alignCenters
-        cell.frequencyLbl.layer.cornerRadius = 3
-        cell.frequencyLbl.layer.masksToBounds = true
-        cell.frequencyLbl.adjustsFontSizeToFitWidth = true
-        cell.frequencyLbl.baselineAdjustment = .alignCenters
+        cell.num1Lbl.layer.cornerRadius = 3
+        cell.num1Lbl.layer.masksToBounds = true
+        cell.num1Lbl.adjustsFontSizeToFitWidth = true
+        cell.num1Lbl.baselineAdjustment = .alignCenters
+        cell.num1Lbl.backgroundColor = kColorAppBlue
+        cell.num2Lbl.layer.cornerRadius = 3
+        cell.num2Lbl.layer.masksToBounds = true
+        cell.num2Lbl.adjustsFontSizeToFitWidth = true
+        cell.num2Lbl.baselineAdjustment = .alignCenters
+        cell.num2Lbl.backgroundColor = kColorAppGreen
+        cell.num3Lbl.layer.cornerRadius = 3
+        cell.num3Lbl.layer.masksToBounds = true
+        cell.num3Lbl.adjustsFontSizeToFitWidth = true
+        cell.num3Lbl.baselineAdjustment = .alignCenters
+        cell.num3Lbl.backgroundColor = KColorAppRed
+        cell.num4Lbl.layer.cornerRadius = 3
+        cell.num4Lbl.layer.masksToBounds = true
+        cell.num4Lbl.adjustsFontSizeToFitWidth = true
+        cell.num4Lbl.baselineAdjustment = .alignCenters
+        cell.num4Lbl.backgroundColor = kColorAppGray
         
-        let question = self.listModel.result[indexPath.row]
-        cell.numLbl.text =  " #" + question.leetId + " "
-        cell.tagLbl.text =  " " + question.difficulty + " "
-        cell.tagLbl.backgroundColor = IHTCModel.shared.colorForKey(level: question.difficulty)
-        cell.frequencyLbl.text = " " + (question.frequency.count < 3 ? (question.frequency + ".0%") : question.frequency) + " "
         
-        if IHTCModel.shared.defaultArray.contains(self.title!) {
-            if question.codeStrings.count > 0 {
-                cell.langugeLbl.text =  " " + question.codeStrings + " "
-                cell.langugeLbl.backgroundColor = kColorAppGray
-                cell.langugeLbl.isHidden = false
+        let question = self.listModel().result[indexPath.row]
+        cell.wordLbl.text = ZMChineseConvert.convert(toSimplified: question.word)
+        
+        let lblArray = [cell.num1Lbl, cell.num2Lbl, cell.num3Lbl, cell.num4Lbl]
+        
+        for (index, lbl) in lblArray.enumerated() {
+            if index < question.codeArray.count {
+                lbl?.isHidden = false
+                lbl?.text = "" + question.codeArray[index].uppercased() + "   "
+                
+            } else {
+                lbl?.isHidden = true
             }
-            else {
-                cell.langugeLbl.text = ""
-                cell.langugeLbl.isHidden = true
-            }
-        }
-        
-        if IHTCModel.shared.tagsArray.contains(self.title!) {
-            cell.langugeLbl.text =  " " + question.codeStrings + "   "
-            cell.langugeLbl.backgroundColor = kColorAppGray
-            cell.langugeLbl.isHidden = false
         }
         
         
-        if false {
-            cell.questionLbl.text = question.titleZh
-        }else{
-            cell.questionLbl.text = question.word
-        }
         
-
-//        if question.language == "All" {
-//            // 判断当前是语言tabbar 也可以用 self.tabBarController?.selectedIndex 判断，但兼容性不好
-//            cell.tagLbl.isHidden = true
-//            cell.langugeLbl.isHidden = true
-//        }else{
-//
-//            cell.tagLbl.backgroundColor = IHTCModel.shared.colorForKey(level: question.difficulty)
-//            cell.langugeLbl.isHidden = false
-//        }
         
         return cell
     }
@@ -171,7 +175,7 @@ extension ITQuestionListViewController : UITableViewDelegate, UITableViewDataSou
         
         self.selectedCell = (tableView.cellForRow(at: indexPath) as! ITQuestionListViewCell)
     
-        let question = self.listModel.result[indexPath.row]
+        let question = self.listModel().result[indexPath.row]
         let questionVC = ITQuestionDetailViewController()
         questionVC.title = self.title
         questionVC.questionModle = question

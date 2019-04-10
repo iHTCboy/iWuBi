@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App-TextLogo-Alpha.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZPg-61-4Yr">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iWuBi-orange.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZPg-61-4Yr">
                                 <rect key="frame" x="103.5" y="210" width="207" height="207"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZPg-61-4Yr" secondAttribute="height" id="Jcr-og-wZg"/>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="App-TextLogo-Alpha.png" width="323" height="323"/>
+        <image name="iWuBi-orange.png" width="323" height="323"/>
     </resources>
 </document>
