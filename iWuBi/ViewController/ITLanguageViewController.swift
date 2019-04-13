@@ -56,6 +56,14 @@ class ITLanguageViewController: ITBasePushTransitionVC {
     }()
     
     var isFirstLaunch = false
+    
+    @IBAction func clickedSearchItem(_ sender: Any) {
+        let vc = IHTCSearchViewController()
+        self.present(vc, animated: true) {
+            vc.is86Word = true
+        }
+    }
+    
 }
 
 

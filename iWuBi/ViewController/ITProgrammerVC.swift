@@ -135,7 +135,7 @@ extension ITProgrammerVC : UITableViewDelegate, UITableViewDataSource
 
                 let image = UIImage(named: "App-share-Icon")
                 let url = NSURL(string: kAppDownloadURl)
-                let string = "Hello, \(kiTalker)! 这是一款为IT工程师们提供算法知识充电的应用，IT算法和数据结构知识，求职面试必备的好工具哦！" + "iOS下载链接：" + kAppDownloadURl
+                let string = kAppShare
                 let activityController = UIActivityViewController(activityItems: [image! ,url!,string], applicationActivities: nil)
                 self.present(activityController, animated: true, completion: nil)
             }
@@ -143,7 +143,7 @@ extension ITProgrammerVC : UITableViewDelegate, UITableViewDataSource
             break
         case 1:
             if row == 0 {
-                gotoAppstore(isAssessment: true)
+                gotoAppstore(isAssessment: false)
             }
             if row == 1 {
                 let message = "欢迎来信，写下你的问题吧" + "\n\n\n\n" + kMarginLine + "\n 当前\(kiTalker)版本：" + KAppVersion + "， 系统版本：" + String(Version.SYS_VERSION_FLOAT) + "， 设备信息：" + UIDevice.init().modelName

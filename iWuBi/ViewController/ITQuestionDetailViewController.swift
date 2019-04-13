@@ -29,7 +29,7 @@ class ITQuestionDetailViewController: ITBasePopTransitionVC {
         // Dispose of any resources that can be recreated.
     }
     
-    var selectedCell: ITQuestionListViewCell!
+    var selectedCell: ITListTitleViewCell!
     
     var questionModle : ITQuestionModel?
     var isShowZH : Bool = false
@@ -39,8 +39,8 @@ class ITQuestionDetailViewController: ITBasePopTransitionVC {
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.estimatedRowHeight = 80
         tableView.estimatedSectionHeaderHeight = 80
-        tableView.register(UINib.init(nibName: "ITQuestionListViewCell", bundle: Bundle.main), forCellReuseIdentifier: "ITQuestionListViewCell")
-        tableView.register(UINib.init(nibName: "ITQuestionDetailViewCell", bundle: Bundle.main), forCellReuseIdentifier: "ITQuestionDetailViewCell")
+        tableView.register(UINib.init(nibName: "ITListTitleViewCell", bundle: Bundle.main), forCellReuseIdentifier: "ITListTitleViewCell")
+        tableView.register(UINib.init(nibName: "IHTCWuBiWordViewCell", bundle: Bundle.main), forCellReuseIdentifier: "IHTCWuBiWordViewCell")
         // 调试
         //        tableView.fd_debugLogEnabled = true
         return tableView
@@ -131,11 +131,11 @@ extension ITQuestionDetailViewController : UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return questionModle?.codeArray.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = UINib(nibName: "ITQuestionListViewCell", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ITQuestionListViewCell
+        let cell = UINib(nibName: "ITListTitleViewCell", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ITListTitleViewCell
         cell.backgroundColor = UIColor.white
         cell.accessoryType = .none
         cell.selectionStyle = .none
@@ -143,25 +143,37 @@ extension ITQuestionDetailViewController : UITableViewDelegate, UITableViewDataS
         cell.num1Lbl.layer.masksToBounds = true
         cell.num1Lbl.adjustsFontSizeToFitWidth = true
         cell.num1Lbl.baselineAdjustment = .alignCenters
+        cell.num1Lbl.backgroundColor = kColorAppBlue
         cell.num2Lbl.layer.cornerRadius = 3
         cell.num2Lbl.layer.masksToBounds = true
         cell.num2Lbl.adjustsFontSizeToFitWidth = true
         cell.num2Lbl.baselineAdjustment = .alignCenters
+        cell.num2Lbl.backgroundColor = kColorAppGreen
         cell.num3Lbl.layer.cornerRadius = 3
         cell.num3Lbl.layer.masksToBounds = true
         cell.num3Lbl.adjustsFontSizeToFitWidth = true
         cell.num3Lbl.baselineAdjustment = .alignCenters
+        cell.num3Lbl.backgroundColor = KColorAppRed
         cell.num4Lbl.layer.cornerRadius = 3
         cell.num4Lbl.layer.masksToBounds = true
         cell.num4Lbl.adjustsFontSizeToFitWidth = true
         cell.num4Lbl.baselineAdjustment = .alignCenters
+        cell.num4Lbl.backgroundColor = kColorAppGray
         
         let question = questionModle!
         
-        if isShowZH {
-            cell.wordLbl.text = ZMChineseConvert.convert(toSimplified: question.word)
-        }else{
-            cell.wordLbl.text = ZMChineseConvert.convert(toTraditional: question.word)
+        cell.wordLbl.text = question.word
+        
+        let lblArray = [cell.num1Lbl, cell.num2Lbl, cell.num3Lbl, cell.num4Lbl]
+        
+        for (index, lbl) in lblArray.enumerated() {
+            if index < question.codeArray.count {
+                lbl?.isHidden = false
+                lbl?.text = question.codeArray[index].uppercased() + "   "
+                
+            } else {
+                lbl?.isHidden = true
+            }
         }
         
         self.selectedCell = cell;
@@ -170,18 +182,41 @@ extension ITQuestionDetailViewController : UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
-        let cell: ITQuestionDetailViewCell = tableView.dequeueReusableCell(withIdentifier: "ITQuestionDetailViewCell") as! ITQuestionDetailViewCell
+        let cell: IHTCWuBiWordViewCell = tableView.dequeueReusableCell(withIdentifier: "IHTCWuBiWordViewCell") as! IHTCWuBiWordViewCell
         cell.accessoryType = .none
         cell.selectionStyle = .none
-        cell.answerLbl.textAlignment = .left
+        cell.num1Lbl.layer.cornerRadius = 3
+        cell.num1Lbl.layer.masksToBounds = true
+        cell.num1Lbl.adjustsFontSizeToFitWidth = true
+        cell.num1Lbl.baselineAdjustment = .alignCenters
+        cell.num1Lbl.backgroundColor = kColorAppBlue
+        
+        let question = questionModle!
         if isShowZH {
-            //let str = questionModle!.questionDescriptionZh.count > 0 ? questionModle!.questionDescriptionZh : questionModle!.questionDescription;
-            //cell.answerLbl.attributedText =  SwiftyMarkdown(string: str).attributedString()
-        }
-        else {
-            //cell.answerLbl.attributedText =  SwiftyMarkdown(string: questionModle!.questionDescription).attributedString()
+            cell.num1Lbl.text = ZMChineseConvert.convert(toSimplified: question.word)
+        }else{
+            cell.num1Lbl.text = ZMChineseConvert.convert(toTraditional: question.word)
         }
         
+        let code = question.codeArray[indexPath.row].uppercased()
+        
+        cell.num2Lbl.text = "编码：\(code)"
+        
+        let imgArray = [cell.img1, cell.img2, cell.img3, cell.img4]
+        for (index, imgView) in imgArray.enumerated() {
+            if index < code.count {
+                imgView?.isHidden = false
+                let index = code.index(code.startIndex, offsetBy: index)
+                let key = code[index].uppercased()
+                if self.title!.contains("86") {
+                    imgView?.image = IHTCImgModel.shared.image86Dict[key]
+                } else {
+                    imgView?.image = IHTCImgModel.shared.image98Dict[key]
+                }
+            } else {
+                imgView?.isHidden = true
+            }
+        }
 
         return cell
     }

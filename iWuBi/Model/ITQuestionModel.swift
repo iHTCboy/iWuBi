@@ -27,6 +27,10 @@ class ITQuestionModel: NSObject {
     var tagStringZh = NSMutableArray()
     
     
+    init(word: String) {
+        self.word = word
+    }
+    
     init(dictionary: Dictionary<String, Any>, language: String) {
         
         self.language = language

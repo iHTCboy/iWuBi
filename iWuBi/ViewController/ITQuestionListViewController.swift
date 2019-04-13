@@ -69,20 +69,6 @@ class ITQuestionListViewController: UIViewController {
         return model
     }
     
-    
-//    lazy var listModel: ITModel = {
-//        if IHTCModel.shared.defaultArray.contains(self.title!) {
-//            return IHTCModel.shared.defaultData()[self.title!] as! ITModel
-//
-//        } else if IHTCModel.shared.tagsArray.contains(self.title!) {
-//            return IHTCModel.shared.tagsData()[self.title!] as! ITModel
-//
-//        }  else {
-//            print("no featch title")
-//            return ITModel()
-//        }
-//    }()
-    
 
 }
 
@@ -148,24 +134,37 @@ extension ITQuestionListViewController : UITableViewDelegate, UITableViewDataSou
         cell.num4Lbl.baselineAdjustment = .alignCenters
         cell.num4Lbl.backgroundColor = kColorAppGray
         
-        
         let question = self.listModel().result[indexPath.row]
-        cell.wordLbl.text = ZMChineseConvert.convert(toSimplified: question.word)
+        cell.wordLbl.text = question.word
         
         let lblArray = [cell.num1Lbl, cell.num2Lbl, cell.num3Lbl, cell.num4Lbl]
         
         for (index, lbl) in lblArray.enumerated() {
             if index < question.codeArray.count {
                 lbl?.isHidden = false
-                lbl?.text = "" + question.codeArray[index].uppercased() + "   "
+                lbl?.text = question.codeArray[index].uppercased() + "   "
                 
             } else {
                 lbl?.isHidden = true
             }
         }
         
-        
-        
+        let imgArray = [cell.img1, cell.img2, cell.img3, cell.img4]
+        let code = question.codeArray.first
+        for (index, imgView) in imgArray.enumerated() {
+            if index < code!.count {
+                imgView?.isHidden = false
+                let index = code!.index(code!.startIndex, offsetBy: index)
+                let key = code![index].uppercased()
+                if self.title!.contains("86") {
+                    imgView?.image = IHTCImgModel.shared.image86Dict[key]
+                } else {
+                    imgView?.image = IHTCImgModel.shared.image98Dict[key]
+                }
+            } else {
+                imgView?.isHidden = true
+            }
+        }
         
         return cell
     }

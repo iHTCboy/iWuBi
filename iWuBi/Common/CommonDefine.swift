@@ -11,12 +11,16 @@ import UIKit
 
 // 常量
 let kiTalker = "iWuBi"
-let kAppAppleId = "145825941"
-let kAppDownloadURl = "https://itunes.apple.com/cn/app/iLeetCoder/id1458259471?l=zh&ls=1&mt=8"
+let kAppAppleId = "1459028801"
+let kAppDownloadURl = "https://itunes.apple.com/cn/app/iWuBi/id1459028801?l=zh&ls=1&mt=8"
 let kReviewAction = "&action=write-review"
-let kGithubURL = "https://github.com/iHTCboy/iLeetcode-iOS"
+let kGithubURL = "https://github.com/iHTCboy/iWuBi"
 let kiHTCboyURL = "https://ihtcboy.com"
 let kEmail = "ihetiancong@gmail.com"
+let kAppShare = "Hello, \(kiTalker)! 这是一款为IT工程师们提供算法知识充电的应用，IT算法和数据结构知识，求职面试必备的好工具哦！" + "iOS下载链接：" + kAppDownloadURl
+let kAppAbout = "\(kiTalker) 为一款五笔学习的工具，不断努力打造更多更好方式呈现更有趣的知识，让大家在零碎时间也可以快速和简单的学习get! \n \n 1、30000+词库，满足你五笔求知欲望！\n2、支持86版和98版，简体和繁体字显示！"
+
+
 let kStatusBarH: CGFloat = 20
 let kNavBarH: CGFloat = (DeviceType.IS_IPHONE_X_S ? 68 : 40)
 let kHomeIndcator: CGFloat = (DeviceType.IS_IPHONE_X_S ? (34 + 49) : 0) //49 Tab bars

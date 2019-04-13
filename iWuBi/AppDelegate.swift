@@ -61,7 +61,7 @@ extension AppDelegate {
         let statTracker = BaiduMobStat.default()
         statTracker?.channelId = "AppStore"
         statTracker?.shortAppVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        statTracker?.start(withAppId: "16b4ffd70b")
+        statTracker?.start(withAppId: "ba31e87e48")
         
         let formatter = DateFormatter()
         formatter.locale = Locale.current

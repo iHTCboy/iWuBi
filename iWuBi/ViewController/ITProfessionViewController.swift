@@ -54,6 +54,12 @@ class ITProfessionViewController: ITBasePushTransitionVC
         return contentView
         }()
     
+    @IBAction func clickedSearchItem(_ sender: Any) {
+        let vc = IHTCSearchViewController()
+        self.present(vc, animated: true) {
+            vc.is86Word = false
+        }
+    }
 }
 
 

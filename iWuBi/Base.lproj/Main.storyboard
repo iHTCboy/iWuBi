@@ -22,7 +22,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="爱五笔" id="7Dd-N7-EHW"/>
+                    <navigationItem key="navigationItem" title="爱五笔" id="7Dd-N7-EHW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="3DB-jK-l3d">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="clickedSearchItem:" destination="hzK-He-MKE" id="Lpp-Vj-PEV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7X-KB-i9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -32,7 +39,7 @@
         <scene sceneID="RIu-IP-yhe">
             <objects>
                 <navigationController id="T0k-tT-zim" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="学习" image="company_tabbar_normal.png" selectedImage="company_tabbar_selected.png" id="tOD-5L-U1d"/>
+                    <tabBarItem key="tabBarItem" title="学习" image="Engineer_normal.png" selectedImage="Engineer_selected.png" id="tOD-5L-U1d"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IO7-GX-A2G">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -121,7 +128,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="爱五笔" id="dj7-EA-3Bs"/>
+                    <navigationItem key="navigationItem" title="爱五笔" id="dj7-EA-3Bs">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="5rM-Bc-ZpX">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="clickedSearchItem:" destination="9g4-eb-czi" id="5nq-uM-CIl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCE-1a-eJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -197,8 +211,6 @@
     <resources>
         <image name="Engineer_normal.png" width="45" height="45"/>
         <image name="Engineer_selected.png" width="45" height="45"/>
-        <image name="company_tabbar_normal.png" width="30" height="30"/>
-        <image name="company_tabbar_selected.png" width="30" height="30"/>
         <image name="iTalkerman_blue.png" width="45" height="45"/>
         <image name="italkerman_gray.png" width="45" height="45"/>
         <image name="language_tabbar_normal.png" width="30" height="30"/>

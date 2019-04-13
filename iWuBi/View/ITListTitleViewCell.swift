@@ -1,5 +1,5 @@
 //
-//  ITQuestionDetailViewCell.swift
+//  ITListTitleViewCell.swift
 //  iTalker
 //
 //  Created by HTC on 2017/4/9.
@@ -8,9 +8,19 @@
 
 import UIKit
 
-class ITQuestionDetailViewCell: UITableViewCell {
+class ITListTitleViewCell: UITableViewCell {
 
-    @IBOutlet weak var answerLbl: ITCopyLabel!
+    @IBOutlet weak var num1Lbl: UILabel!
+    
+    @IBOutlet weak var num2Lbl: UILabel!
+    
+    @IBOutlet weak var num3Lbl: UILabel!
+    
+    @IBOutlet weak var num4Lbl: UILabel!
+    
+    
+    
+    @IBOutlet weak var wordLbl: ITCopyLabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

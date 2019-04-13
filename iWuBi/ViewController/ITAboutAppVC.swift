@@ -53,7 +53,7 @@ extension ITAboutAppVC
         self.logoImgView.layer.masksToBounds = true
         self.appNameLbl.text = kiTalker
         self.versionLbl.text = "v" + KAppVersion
-        self.contentLbl.text = "\(kiTalker) 为一款IT工程师们提供算法知识充电的应用，IT算法和数据结构知识学习、面试必备的工具，不断努力打造更多更好方式呈现更有趣的知识，让大家在零碎时间也可以快速和简单的学习get! \n \n 1、1000+题库，满足你对算法求知欲望！\n2、IT企业面试题目，为你完名企的梦！\n3、最全算法知识，为你准备好的面试！"
+        self.contentLbl.text = kAppAbout
         self.copylightLbl.text = "Copyright © 2019 " + "iHTCboy"
     }
 }

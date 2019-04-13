@@ -16,6 +16,10 @@ class ITModel: NSObject {
         return Array()
     }()
     
+    lazy var dictionKeys: Dictionary<String, ITQuestionModel> = {
+        return Dictionary()
+    }()
+    
     override init() {
         super.init()
     }
@@ -33,6 +37,7 @@ class ITModel: NSObject {
         for dict in array {
             let questionModel = ITQuestionModel.init(dictionary: dict, language: word);
             result.append(questionModel)
+            dictionKeys[questionModel.word] = questionModel
         }
     }
 }
