@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setupBaseUI()
         
-        ITCommonAPI.sharedInstance.checkAppUpdate(newHandler: nil)
+        ITCommonAPI.shared.checkAppUpdate(newHandler: nil)
         
         return true
     }
@@ -81,7 +81,7 @@ extension AppDelegate {
     
     func setupBaseUI() {
         let ui = UINavigationBar.appearance()
-        ui.tintColor = UIColor.white
+        ui.tintColor = .white
         ui.barTintColor = kColorAppOrange
         ui.barStyle = .black
         //        UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)

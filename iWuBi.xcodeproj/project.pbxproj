@@ -34,6 +34,14 @@
 		6D76E2A52260D7E8005EACCA /* IHTCSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2A32260D7E8005EACCA /* IHTCSearchViewController.swift */; };
 		6D76E2A72260D97E005EACCA /* IHTCSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2A92260D97E005EACCA /* IHTCSearchViewController.xib */; };
 		6D76E2B5226215A6005EACCA /* IHTCSearchDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2B4226215A6005EACCA /* IHTCSearchDetailVC.swift */; };
+		6D76E2B72262C613005EACCA /* IAppleServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2B62262C613005EACCA /* IAppleServiceUtil.swift */; };
+		6D76E2BD2262D34E005EACCA /* UIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2B92262D34D005EACCA /* UIScrollView+Additions.swift */; };
+		6D76E2BE2262D34E005EACCA /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2BA2262D34D005EACCA /* UIImage+Additions.swift */; };
+		6D76E2BF2262D34E005EACCA /* UITableView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2BB2262D34D005EACCA /* UITableView+Additions.swift */; };
+		6D76E2C02262D34E005EACCA /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2BC2262D34E005EACCA /* UIView+Additions.swift */; };
+		6D76E2C22262DA7A005EACCA /* iWuBi-qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2C12262DA79005EACCA /* iWuBi-qrcode.png */; };
+		6D76E2C62262DC75005EACCA /* IHTCShareFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2C52262DC75005EACCA /* IHTCShareFooterView.xib */; };
+		6D76E2C82262DF37005EACCA /* IHTCShareFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2C72262DF37005EACCA /* IHTCShareFooterView.swift */; };
 		6DAD76FA225A277F00961BEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAD76F9225A277F00961BEC /* AppDelegate.swift */; };
 		6DAD7701225A278000961BEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DAD7700225A278000961BEC /* Assets.xcassets */; };
 		6DAD770F225A278000961BEC /* iWuBiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAD770E225A278000961BEC /* iWuBiTests.swift */; };
@@ -141,6 +149,15 @@
 		6D76E2AD2260D99E005EACCA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/IHTCSearchViewController.strings"; sourceTree = "<group>"; };
 		6D76E2AF2260D9AC005EACCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/IHTCSearchViewController.strings; sourceTree = "<group>"; };
 		6D76E2B4226215A6005EACCA /* IHTCSearchDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHTCSearchDetailVC.swift; sourceTree = "<group>"; };
+		6D76E2B62262C613005EACCA /* IAppleServiceUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAppleServiceUtil.swift; sourceTree = "<group>"; };
+		6D76E2B92262D34D005EACCA /* UIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Additions.swift"; sourceTree = "<group>"; };
+		6D76E2BA2262D34D005EACCA /* UIImage+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
+		6D76E2BB2262D34D005EACCA /* UITableView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Additions.swift"; sourceTree = "<group>"; };
+		6D76E2BC2262D34E005EACCA /* UIView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
+		6D76E2C12262DA79005EACCA /* iWuBi-qrcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWuBi-qrcode.png"; sourceTree = "<group>"; };
+		6D76E2C42262DB2A005EACCA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		6D76E2C52262DC75005EACCA /* IHTCShareFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IHTCShareFooterView.xib; sourceTree = "<group>"; };
+		6D76E2C72262DF37005EACCA /* IHTCShareFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHTCShareFooterView.swift; sourceTree = "<group>"; };
 		6DAD76F6225A277F00961BEC /* iWuBi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iWuBi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DAD76F9225A277F00961BEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DAD7700225A278000961BEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -240,6 +257,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D76E2B82262D342005EACCA /* DHSmartScreenshot */ = {
+			isa = PBXGroup;
+			children = (
+				6D76E2BA2262D34D005EACCA /* UIImage+Additions.swift */,
+				6D76E2B92262D34D005EACCA /* UIScrollView+Additions.swift */,
+				6D76E2BB2262D34D005EACCA /* UITableView+Additions.swift */,
+				6D76E2BC2262D34E005EACCA /* UIView+Additions.swift */,
+			);
+			path = DHSmartScreenshot;
+			sourceTree = "<group>";
+		};
 		6DAD76ED225A277F00961BEC = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +344,7 @@
 		6DB88DB9225B8E340099AC80 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6D76E2C12262DA79005EACCA /* iWuBi-qrcode.png */,
 				6D76E276225F883C005EACCA /* iWuBi-98-keyboard.png */,
 				6D76E274225F8829005EACCA /* iWuBi-86-keyboard.png */,
 				6D3B8402225E43D700037787 /* iWuBi-word-bg.png */,
@@ -385,6 +414,8 @@
 				6D76E27D225F95F7005EACCA /* IHTCWuBiWordViewCell.swift */,
 				6D76E27E225F95F7005EACCA /* IHTCWuBiWordViewCell.xib */,
 				6DB88DD8225B8E340099AC80 /* ITCopyLabel.swift */,
+				6D76E2C72262DF37005EACCA /* IHTCShareFooterView.swift */,
+				6D76E2C52262DC75005EACCA /* IHTCShareFooterView.xib */,
 				6DB88DD9225B8E340099AC80 /* ITPageView */,
 			);
 			path = View;
@@ -438,6 +469,7 @@
 		6DB88DED225B8E340099AC80 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				6D76E2B82262D342005EACCA /* DHSmartScreenshot */,
 				6DB88DEE225B8E340099AC80 /* ITScalePushTransition.swift */,
 				6DB88DEF225B8E340099AC80 /* TCDataTool.swift */,
 				6DB88DF0225B8E340099AC80 /* ITScalePopTransition.swift */,
@@ -450,6 +482,7 @@
 			children = (
 				6DB88E1E225B8E720099AC80 /* CommonDefine.swift */,
 				6DB88E1F225B8E720099AC80 /* ITCommonAPI.swift */,
+				6D76E2B62262C613005EACCA /* IAppleServiceUtil.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -600,7 +633,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DB88DF4225B8E340099AC80 /* company_tabbar_selected@3x.png in Resources */,
+				6D76E2C62262DC75005EACCA /* IHTCShareFooterView.xib in Resources */,
 				6DB88DFD225B8E340099AC80 /* language_tabbar_normal@2x.png in Resources */,
+				6D76E2C22262DA7A005EACCA /* iWuBi-qrcode.png in Resources */,
 				6DAD7701225A278000961BEC /* Assets.xcassets in Resources */,
 				6DB88E2A225B8F430099AC80 /* (null) in Resources */,
 				6DB88DFA225B8E340099AC80 /* Engineer_normal@2x.png in Resources */,
@@ -729,17 +764,23 @@
 				6DB88E18225B8E340099AC80 /* IHTC98WordViewController.swift in Sources */,
 				6DB88E10225B8E340099AC80 /* IHTCAboutAppViewController.swift in Sources */,
 				6DB88E11225B8E340099AC80 /* IHTCMeViewController.swift in Sources */,
+				6D76E2C82262DF37005EACCA /* IHTCShareFooterView.swift in Sources */,
 				6DB88E0B225B8E340099AC80 /* ITPageContentView.swift in Sources */,
 				6D76E2B5226215A6005EACCA /* IHTCSearchDetailVC.swift in Sources */,
 				6DB88E21225B8E720099AC80 /* ITCommonAPI.swift in Sources */,
 				6DB88E1B225B8E340099AC80 /* TCDataTool.swift in Sources */,
 				6DB88E0D225B8E340099AC80 /* IHTCModel.swift in Sources */,
+				6D76E2BE2262D34E005EACCA /* UIImage+Additions.swift in Sources */,
+				6D76E2BF2262D34E005EACCA /* UITableView+Additions.swift in Sources */,
 				6DB88E1A225B8E340099AC80 /* ITScalePushTransition.swift in Sources */,
 				6DAD76FA225A277F00961BEC /* AppDelegate.swift in Sources */,
 				6DB88E16225B8E340099AC80 /* IHTCWordDetailViewController.swift in Sources */,
+				6D76E2BD2262D34E005EACCA /* UIScrollView+Additions.swift in Sources */,
+				6D76E2C02262D34E005EACCA /* UIView+Additions.swift in Sources */,
 				6D3B8400225E42CC00037787 /* ITListTitleViewCell.swift in Sources */,
 				6DB88E08225B8E340099AC80 /* ITQuestionListViewCell.swift in Sources */,
 				6DB88E09225B8E340099AC80 /* ITCopyLabel.swift in Sources */,
+				6D76E2B72262C613005EACCA /* IAppleServiceUtil.swift in Sources */,
 				6DB88E19225B8E340099AC80 /* IHTC86WordViewController.swift in Sources */,
 				6DB88E14225B8E340099AC80 /* ITBasePushTransitionVC.swift in Sources */,
 				6D76E27F225F95F7005EACCA /* IHTCWuBiWordViewCell.swift in Sources */,
@@ -790,6 +831,7 @@
 			children = (
 				6D3B83E1225E27B500037787 /* Base */,
 				6D3B83E4225E27BC00037787 /* zh-Hans */,
+				6D76E2C42262DB2A005EACCA /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

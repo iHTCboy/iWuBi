@@ -167,6 +167,7 @@ extension IHTCWordListViewController : UITableViewDelegate, UITableViewDataSourc
         let question = self.listModel()[indexPath.row] as! Dictionary<String, Any>
         let questionVC = IHTCWordDetailViewController()
         questionVC.title = question["word"] as? String
+        questionVC.is86Word = self.title!.contains("86")
         questionVC.questionModle = question
         questionVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(questionVC, animated: true)

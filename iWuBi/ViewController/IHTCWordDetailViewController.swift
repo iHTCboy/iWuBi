@@ -30,7 +30,7 @@ class IHTCWordDetailViewController: ITBasePopTransitionVC {
     }
     
     var selectedCell: ITListTitleViewCell!
-    
+    var is86Word: Bool = true
     var questionModle : Dictionary<String, Any>?
     var isShowZH : Bool = false
     
@@ -42,9 +42,14 @@ class IHTCWordDetailViewController: ITBasePopTransitionVC {
         tableView.estimatedSectionHeaderHeight = 80
         tableView.register(UINib.init(nibName: "ITListTitleViewCell", bundle: Bundle.main), forCellReuseIdentifier: "ITListTitleViewCell")
         tableView.register(UINib.init(nibName: "IHTCWuBiWordViewCell", bundle: Bundle.main), forCellReuseIdentifier: "IHTCWuBiWordViewCell")
-        // 调试
-        //        tableView.fd_debugLogEnabled = true
         return tableView
+    }()
+    
+    lazy var infoItem :UIBarButtonItem = {
+        let infoBtn = UIButton.init(type: UIButton.ButtonType.detailDisclosure)
+        infoBtn.addTarget(self, action: #selector(showWordInfo), for: .touchUpInside)
+        let item = UIBarButtonItem.init(customView: infoBtn)
+        return item
     }()
 }
 
@@ -65,12 +70,11 @@ extension IHTCWordDetailViewController {
         view.addConstraints(hConstraints)
         view.layoutIfNeeded()
         
-        let add = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(addTapped))
-//        let play = UIBarButtonItem(title: "繁體", style: .plain, target: self, action: #selector(playTapped))
-        navigationItem.rightBarButtonItems = [add]
+        let shareItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(sharedPageView))
+        navigationItem.rightBarButtonItems = [shareItem, infoItem]
     }
     
-    @objc func addTapped(item: UIBarButtonItem) {
+    @objc func showWordInfo(item: UIBarButtonItem) {
         
         var url = "https://m.youdao.com/dict?q=" + self.title!
         if UIDevice.current.userInterfaceIdiom == .pad {
@@ -92,31 +96,11 @@ extension IHTCWordDetailViewController {
         self.present(sfvc, animated: true, completion: nil)
     }
     
-    @objc func playTapped(item: UIBarButtonItem) {
-        
-        if item.title == "简体" {
-            isShowZH = true
-            item.title = "繁體"
-        }
-        else {
-            isShowZH = false
-            item.title = "简体"
-        }
-        
-        self.tableView.reloadData()
-    }
-    
-    func showWebView(url: String) {
-        let vc = SFSafariViewController(url: URL(string: url
-            )!, entersReaderIfAvailable: true)
-        if #available(iOS 10.0, *) {
-            vc.preferredBarTintColor = kColorAppOrange
-            vc.preferredControlTintColor = UIColor.white
-        }
-        if #available(iOS 11.0, *) {
-            vc.dismissButtonStyle = .close
-        }
-        present(vc, animated: true)
+    @objc func sharedPageView(item: UIBarButtonItem) {
+        let masterImage = tableView.screenshot ?? UIImage.init(named: "App-share-Icon")
+        let footerImage = IHTCShareFooterView.footerView(image: UIImage.init(named: "iWuBi-qrcode")!, title: kShareTitle, subTitle: kShareSubTitle).screenshot
+        let image = ImageHandle.slaveImageWithMaster(masterImage: masterImage!, headerImage: UIImage(), footerImage: footerImage!)
+        IAppleServiceUtil.shareImage(image: image!, vc: self)
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -165,8 +149,13 @@ extension IHTCWordDetailViewController : UITableViewDelegate, UITableViewDataSou
         cell.num4Lbl.adjustsFontSizeToFitWidth = true
         cell.num4Lbl.baselineAdjustment = .alignCenters
         cell.num4Lbl.backgroundColor = kColorAppGray
+        cell.versionLbl.layer.cornerRadius = 3
+        cell.versionLbl.layer.masksToBounds = true
+        cell.versionLbl.adjustsFontSizeToFitWidth = true
+        cell.versionLbl.baselineAdjustment = .alignCenters
+        cell.versionLbl.backgroundColor = .lightGray
         
-        let question = questionModle! as! Dictionary<String, Any>
+        let question = questionModle!
         
         cell.wordLbl.text = question["word"] as? String
         
@@ -182,6 +171,12 @@ extension IHTCWordDetailViewController : UITableViewDelegate, UITableViewDataSou
             } else {
                 lbl?.isHidden = true
             }
+        }
+        
+        if is86Word {
+            cell.versionLbl.text = " 86版 "
+        } else {
+            cell.versionLbl.text = " 98版 "
         }
         
         self.selectedCell = cell;
@@ -218,7 +213,7 @@ extension IHTCWordDetailViewController : UITableViewDelegate, UITableViewDataSou
                 imgView?.isHidden = false
                 let index = code.index(code.startIndex, offsetBy: index)
                 let key = code[index].uppercased()
-                if self.title!.contains("86") {
+                if is86Word {
                     imgView?.image = IHTCImgModel.shared.image86Dict[key]
                 } else {
                     imgView?.image = IHTCImgModel.shared.image98Dict[key]

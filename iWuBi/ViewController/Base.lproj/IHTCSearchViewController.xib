@@ -16,6 +16,7 @@
                 <outlet property="optionItem" destination="1OT-bu-bAD" id="MHO-oO-01k"/>
                 <outlet property="searchBar" destination="rM4-0j-H8r" id="xA7-8J-JgZ"/>
                 <outlet property="tableView" destination="dWQ-I2-ado" id="Woi-gm-1Cz"/>
+                <outlet property="versionItem" destination="bac-AK-lmr" id="mMM-No-hVO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,18 +29,34 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <items>
                         <navigationItem title="Search" id="sn4-2G-rIV">
-                            <barButtonItem key="leftBarButtonItem" title="单字" style="plain" id="1OT-bu-bAD">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="clickedOptionItem:" destination="-1" id="MYq-4g-dIu"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" systemItem="stop" id="Ah8-zJ-ZAW">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="clickedCancelItem:" destination="-1" id="7v9-PG-vic"/>
-                                </connections>
-                            </barButtonItem>
+                            <leftBarButtonItems>
+                                <barButtonItem title="单字" style="plain" id="1OT-bu-bAD">
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="clickedOptionItem:" destination="-1" id="MYq-4g-dIu"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem title="86版" id="bac-AK-lmr" userLabel="type">
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="clickedVersionItem:" destination="-1" id="LmC-i8-w0H"/>
+                                    </connections>
+                                </barButtonItem>
+                            </leftBarButtonItems>
+                            <rightBarButtonItems>
+                                <barButtonItem systemItem="stop" id="Ah8-zJ-ZAW">
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="clickedCancelItem:" destination="-1" id="7v9-PG-vic"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem systemItem="action" id="zIC-jm-Fip" userLabel="Share">
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="clickedShareItem:" destination="-1" id="UQW-kC-ezk"/>
+                                    </connections>
+                                </barButtonItem>
+                            </rightBarButtonItems>
                         </navigationItem>
                     </items>
                 </navigationBar>

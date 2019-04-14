@@ -12,7 +12,7 @@ import MessageUI
 
 class ITCommonAPI: NSObject {
     
-    static let sharedInstance = ITCommonAPI()
+    static let shared = ITCommonAPI()
     private override init() {} //This prevents others from using the default '()' initializer for this class.
     
 }

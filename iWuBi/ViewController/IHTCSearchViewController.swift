@@ -13,6 +13,7 @@ class IHTCSearchViewController: UIViewController {
     
     @IBOutlet weak var naviBar: UINavigationBar!
     @IBOutlet weak var optionItem: UIBarButtonItem!
+    @IBOutlet weak var versionItem: UIBarButtonItem!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -33,6 +34,28 @@ class IHTCSearchViewController: UIViewController {
         
         searchWordList(words: searchBar.text ?? "")
     }
+    
+    @IBAction func clickedShareItem(_ sender: Any) {
+        searchBar.resignFirstResponder()
+        let headerImgae = searchBar.screenshot
+        let masterImage = tableView.screenshot ?? UIImage.init(named: "App-share-Icon")
+        let footerImage = IHTCShareFooterView.footerView(image: UIImage.init(named: "iWuBi-qrcode")!, title: kShareTitle, subTitle: kShareSubTitle).screenshot
+        let image = ImageHandle.slaveImageWithMaster(masterImage: masterImage!, headerImage: headerImgae!, footerImage: footerImage!)
+        IAppleServiceUtil.shareImage(image: image!, vc: self)
+    }
+    
+    @IBAction func clickedVersionItem(_ sender: UIBarButtonItem) {
+        if sender.title == "86版" {
+            is86Word = false
+            sender.title = "98版"
+        } else {
+            is86Word = true
+            sender.title = "86版"
+        }
+        
+        searchWordList(words: searchBar.text ?? "")
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,9 +89,9 @@ extension IHTCSearchViewController {
         tableView.register(UINib.init(nibName: "IHTCWuBiWordViewCell", bundle: Bundle.main), forCellReuseIdentifier: "IHTCWuBiWordViewCell")
         
         if is86Word {
-            naviBar.topItem?.title = "86-Search"
+            versionItem.title = "86版"
         } else {
-            naviBar.topItem?.title = "96-Search"
+            versionItem.title = "98版"
         }
         
     }
@@ -369,6 +392,7 @@ extension IHTCSearchViewController : UITableViewDelegate, UITableViewDataSource 
         let question = self.searchArray[indexPath.row]
         let questionVC = IHTCSearchDetailVC()
         questionVC.title = question["word"] as? String
+        questionVC.is86Word = self.is86Word
         questionVC.questionModle = question
         questionVC.hidesBottomBarWhenPushed = true
         self.navigationController?.navigationBar.isHidden = false

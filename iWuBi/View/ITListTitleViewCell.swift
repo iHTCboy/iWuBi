@@ -18,6 +18,7 @@ class ITListTitleViewCell: UITableViewCell {
     
     @IBOutlet weak var num4Lbl: UILabel!
     
+    @IBOutlet weak var versionLbl: UILabel!
     
     
     @IBOutlet weak var wordLbl: ITCopyLabel!
