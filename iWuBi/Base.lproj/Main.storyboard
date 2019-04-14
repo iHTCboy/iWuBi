@@ -39,7 +39,7 @@
         <scene sceneID="RIu-IP-yhe">
             <objects>
                 <navigationController id="T0k-tT-zim" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="学习" image="Engineer_normal.png" selectedImage="Engineer_selected.png" id="tOD-5L-U1d"/>
+                    <tabBarItem key="tabBarItem" title="学习" image="tabbar_selected_leaning.png" selectedImage="tabbar_selected_leaning.png" id="tOD-5L-U1d"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IO7-GX-A2G">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -79,7 +79,7 @@
         <scene sceneID="mUv-b9-y8D">
             <objects>
                 <navigationController id="I4V-gm-neW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="五笔" image="italkerman_gray.png" selectedImage="iTalkerman_blue.png" id="U2l-c7-sle"/>
+                    <tabBarItem key="tabBarItem" title="五笔" image="tabbar_selected_setting.png" selectedImage="tabbar_selected_setting.png" id="U2l-c7-sle"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zSy-sY-Xca">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -165,7 +165,7 @@
         <scene sceneID="EjM-gk-Jnz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2km-lX-hSg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="86版" image="language_tabbar_normal.png" selectedImage="language_tabbar_selected.png" id="fhS-3c-oCy"/>
+                    <tabBarItem key="tabBarItem" title="86版" image="tabbar_selected_86.png" selectedImage="tabbar_selected_86.png" id="fhS-3c-oCy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="O3v-qv-Ey5">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -188,7 +188,7 @@
         <scene sceneID="UkM-GO-KDx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bLq-5e-DWk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="98版" image="Engineer_normal.png" selectedImage="Engineer_selected.png" id="Auc-75-r2L"/>
+                    <tabBarItem key="tabBarItem" title="98版" image="tabbar_selected_98.png" selectedImage="tabbar_selected_98.png" id="Auc-75-r2L"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IZs-vs-zoc">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -209,11 +209,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Engineer_normal.png" width="45" height="45"/>
-        <image name="Engineer_selected.png" width="45" height="45"/>
-        <image name="iTalkerman_blue.png" width="45" height="45"/>
-        <image name="italkerman_gray.png" width="45" height="45"/>
-        <image name="language_tabbar_normal.png" width="30" height="30"/>
-        <image name="language_tabbar_selected.png" width="30" height="30"/>
+        <image name="tabbar_selected_86.png" width="30" height="30"/>
+        <image name="tabbar_selected_98.png" width="30" height="30"/>
+        <image name="tabbar_selected_leaning.png" width="30" height="30"/>
+        <image name="tabbar_selected_setting.png" width="30" height="30"/>
     </resources>
 </document>
