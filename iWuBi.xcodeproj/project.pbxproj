@@ -30,6 +30,8 @@
 		6D531B632263643900C921B8 /* 新世纪五笔字根键位图2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B612263643800C921B8 /* 新世纪五笔字根键位图2.png */; };
 		6D531B642263643900C921B8 /* 新世纪五笔字根键位图1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B622263643800C921B8 /* 新世纪五笔字根键位图1.png */; };
 		6D531B662263648E00C921B8 /* 新世纪版与86版变动对比图表.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B652263648E00C921B8 /* 新世纪版与86版变动对比图表.png */; };
+		6D531B6922636BF400C921B8 /* 五笔86版字根键盘表.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B6822636BF400C921B8 /* 五笔86版字根键盘表.png */; };
+		6D531B6B22636C3100C921B8 /* 五笔98版字根键盘表.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B6A22636C3100C921B8 /* 五笔98版字根键盘表.png */; };
 		6D76E275225F8829005EACCA /* iWuBi-86-keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E274225F8829005EACCA /* iWuBi-86-keyboard.png */; };
 		6D76E277225F883C005EACCA /* iWuBi-98-keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E276225F883C005EACCA /* iWuBi-98-keyboard.png */; };
 		6D76E27C225F9064005EACCA /* IHTCImgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E27B225F9064005EACCA /* IHTCImgModel.swift */; };
@@ -160,6 +162,9 @@
 		6D531B612263643800C921B8 /* 新世纪五笔字根键位图2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "新世纪五笔字根键位图2.png"; sourceTree = "<group>"; };
 		6D531B622263643800C921B8 /* 新世纪五笔字根键位图1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "新世纪五笔字根键位图1.png"; sourceTree = "<group>"; };
 		6D531B652263648E00C921B8 /* 新世纪版与86版变动对比图表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "新世纪版与86版变动对比图表.png"; sourceTree = "<group>"; };
+		6D531B672263691400C921B8 /* 五笔知识点.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "五笔知识点.txt"; sourceTree = "<group>"; };
+		6D531B6822636BF400C921B8 /* 五笔86版字根键盘表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "五笔86版字根键盘表.png"; sourceTree = "<group>"; };
+		6D531B6A22636C3100C921B8 /* 五笔98版字根键盘表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "五笔98版字根键盘表.png"; sourceTree = "<group>"; };
 		6D76E274225F8829005EACCA /* iWuBi-86-keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWuBi-86-keyboard.png"; sourceTree = "<group>"; };
 		6D76E276225F883C005EACCA /* iWuBi-98-keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWuBi-98-keyboard.png"; sourceTree = "<group>"; };
 		6D76E27B225F9064005EACCA /* IHTCImgModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHTCImgModel.swift; sourceTree = "<group>"; };
@@ -299,6 +304,8 @@
 		6D531B54226360CB00C921B8 /* wubi-img */ = {
 			isa = PBXGroup;
 			children = (
+				6D531B6822636BF400C921B8 /* 五笔86版字根键盘表.png */,
+				6D531B6A22636C3100C921B8 /* 五笔98版字根键盘表.png */,
 				6D76E276225F883C005EACCA /* iWuBi-98-keyboard.png */,
 				6D76E274225F8829005EACCA /* iWuBi-86-keyboard.png */,
 				6D531B4B226360C400C921B8 /* 98五笔码元-全图-浅黄.jpg */,
@@ -443,6 +450,7 @@
 		6DB88DCD225B8E340099AC80 /* Documents */ = {
 			isa = PBXGroup;
 			children = (
+				6D531B672263691400C921B8 /* 五笔知识点.txt */,
 				6D76E2DB2263150B005EACCA /* iWuBi_learning.plist */,
 				6D76E2DD22632972005EACCA /* HTML */,
 				6DB88DCE225B8E340099AC80 /* jsonFiles */,
@@ -607,6 +615,7 @@
 				6DAD76F2225A277F00961BEC /* Sources */,
 				6DAD76F3225A277F00961BEC /* Frameworks */,
 				6DAD76F4225A277F00961BEC /* Resources */,
+				4F321F1162CEB42FBB9A3D47 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -710,6 +719,7 @@
 				6D76E2D42263118D005EACCA /* tabbar_selected_86@3x.png in Resources */,
 				6D531B53226360C700C921B8 /* 98透明码元图001.png in Resources */,
 				6D76E2C62262DC75005EACCA /* IHTCShareFooterView.xib in Resources */,
+				6D531B6922636BF400C921B8 /* 五笔86版字根键盘表.png in Resources */,
 				6D76E2E722632984005EACCA /* 86版速成诀窍.html in Resources */,
 				6D76E2C22262DA7A005EACCA /* iWuBi-qrcode.png in Resources */,
 				6DAD7701225A278000961BEC /* Assets.xcassets in Resources */,
@@ -731,6 +741,7 @@
 				6D531B52226360C700C921B8 /* 98透明码元图002.png in Resources */,
 				6D531B642263643900C921B8 /* 新世纪五笔字根键位图1.png in Resources */,
 				6D76E2EE22632992005EACCA /* 98版速成诀窍.html in Resources */,
+				6D531B6B22636C3100C921B8 /* 五笔98版字根键盘表.png in Resources */,
 				6D76E2D62263118D005EACCA /* tabbar_selected_86@2x.png in Resources */,
 				6DB88E15225B8E340099AC80 /* IHTCAboutAppViewController.xib in Resources */,
 				6D76E2EC22632992005EACCA /* 98版五笔字根表.html in Resources */,
@@ -798,6 +809,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F321F1162CEB42FBB9A3D47 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iWuBi/Pods-iWuBi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JXPhotoBrowser/JXPhotoBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXPhotoBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iWuBi/Pods-iWuBi-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BFF21BD209DC66F9B1210992 /* [CP] Check Pods Manifest.lock */ = {

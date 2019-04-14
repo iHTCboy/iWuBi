@@ -1,3 +1,24 @@
-PODFILE CHECKSUM: 73cb473475e932864e741a4bb54297b97f3c6c26
+PODS:
+  - JXPhotoBrowser (2.1.3):
+    - JXPhotoBrowser/Kingfisher (= 2.1.3)
+  - JXPhotoBrowser/Core (2.1.3)
+  - JXPhotoBrowser/Kingfisher (2.1.3):
+    - JXPhotoBrowser/Core
+    - Kingfisher
+  - Kingfisher (4.10.1)
+
+DEPENDENCIES:
+  - JXPhotoBrowser
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JXPhotoBrowser
+    - Kingfisher
+
+SPEC CHECKSUMS:
+  JXPhotoBrowser: 83b3ca36fe8915e6c157a177f7878f6a15a71c19
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+
+PODFILE CHECKSUM: 9fadb11ec392027fdf9a19833c39f57c0971fca0
 
 COCOAPODS: 1.5.3

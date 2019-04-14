@@ -1,233 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<array>
-	<dict>
-		<key>五笔学习教程</key>
-		<array>
-			<dict>
-				<key>type</key>
-				<string>html</string>
-				<key>title</key>
-				<string>86版五笔字根表</string>
-				<key>content</key>
-				<string>86版五笔字根表.html</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>html</string>
-				<key>title</key>
-				<string>86版简明教程</string>
-				<key>content</key>
-				<string>86版简明教程.html</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>html</string>
-				<key>title</key>
-				<string>86版五笔简码</string>
-				<key>content</key>
-				<string>86版五笔简码.html</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>html</string>
-				<key>title</key>
-				<string>86版速成诀窍</string>
-				<key>content</key>
-				<string>86版速成诀窍.html</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>html</string>
-				<key>title</key>
-				<string>98版五笔字根表</string>
-				<key>content</key>
-				<string>98版五笔字根表.html</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>html</string>
-				<key>title</key>
-				<string>98版简明教程</string>
-				<key>content</key>
-				<string>98版简明教程.html</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>html</string>
-				<key>title</key>
-				<string>98版五笔简码</string>
-				<key>content</key>
-				<string>98版五笔简码.html</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>html</string>
-				<key>title</key>
-				<string>98版速成诀窍</string>
-				<key>content</key>
-				<string>98版速成诀窍.html</string>
-			</dict>
-		</array>
-	</dict>
-	<dict>
-		<key>字根表</key>
-		<array>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>五笔86版字根键盘表</string>
-				<key>content</key>
-				<string>五笔86版字根键盘表.png</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>五笔98版字根键盘表</string>
-				<key>content</key>
-				<string>五笔98版字根键盘表.png</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>98五笔码元-全图-浅黄</string>
-				<key>content</key>
-				<string>98五笔码元-全图-浅黄.jpg</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>98五笔码元-全图-青葱</string>
-				<key>content</key>
-				<string>98五笔码元-全图-青葱.jpg</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>98五笔码元-应用图</string>
-				<key>content</key>
-				<string>98五笔码元-应用图.jpg</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>98透明码元图001</string>
-				<key>content</key>
-				<string>98透明码元图001.png</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>98透明码元图002</string>
-				<key>content</key>
-				<string>98透明码元图002.png</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>98五笔码元图-白底</string>
-				<key>content</key>
-				<string>98五笔码元图-白底.png</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>98五笔码元图-浅色</string>
-				<key>content</key>
-				<string>98五笔码元图-浅色.png</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>98五笔字根全图白底</string>
-				<key>content</key>
-				<string>98五笔字根全图白底.png</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>新世纪五笔字根键位图1</string>
-				<key>content</key>
-				<string>新世纪五笔字根键位图1.png</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>新世纪五笔字根键位图2</string>
-				<key>content</key>
-				<string>新世纪五笔字根键位图2.png</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>新世纪五笔字根图1</string>
-				<key>content</key>
-				<string>新世纪五笔字根图1.jpg</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>新世纪五笔字根图2</string>
-				<key>content</key>
-				<string>新世纪五笔字根图2.jpg</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>新世纪五笔字根图3</string>
-				<key>content</key>
-				<string>新世纪五笔字根图3.jpg</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>image</string>
-				<key>title</key>
-				<string>新世纪版与86版变动对比图表</string>
-				<key>content</key>
-				<string>新世纪版与86版变动对比图表.png</string>
-			</dict>
-		</array>
-	</dict>
-	<dict>
-		<key>五笔基础知识</key>
-		<array>
-			<dict>
-				<key>type</key>
-				<string>text</string>
-				<key>title</key>
-				<string>五笔概述</string>
-				<key>content</key>
-				<string>五笔输入法，简称五笔，是一种汉字形码输入法，区别于拼音输入法，其核心基础是“王永民”先生于1983年发明的王码五笔，至今（2013年）已有三个核心定型版本：86版、98版、新世纪版（2008年发布），其它五笔，诸如万能五笔、极点五笔、搜狗五笔、海峰五笔、智能五笔、小鸭五笔均是在王码五笔基础上发展的，以86最为普及，可能因版权原因，98版及新世纪版极少有其它五笔输入法支持。
+
+## 五笔字型的基本知识
+### 五笔概述
+
+五笔输入法，简称五笔，是一种汉字形码输入法，区别于拼音输入法，其核心基础是“王永民”先生于1983年发明的王码五笔，至今（2013年）已有三个核心定型版本：86版、98版、新世纪版（2008年发布），其它五笔，诸如万能五笔、极点五笔、搜狗五笔、海峰五笔、智能五笔、小鸭五笔均是在王码五笔基础上发展的，以86最为普及，可能因版权原因，98版及新世纪版极少有其它五笔输入法支持。
 
 汉字是一种意形结合的象形文字，形体复杂，笔画繁多，它最基本的成分是笔画，由基本笔画构成汉字的偏旁部首（字根），再由字根组成有形有意的汉字。
 
 五笔字型是一种纯字型的编码方案，它由130个字根组字，重码少，便于盲打，输入速度快。
 
-“五笔”原意是也指五种基本笔画：横、竖、撇、捺（点）、折，任何一个汉字，也都是由这五种基本笔画及其衍生字根组成，通过使用一定的映射规则，至多只需要4个字母，即可完成一个汉字或词组的输入。</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>text</string>
-				<key>title</key>
-				<string>笔画学习</string>
-				<key>content</key>
-				<string>书写汉字时，一次写成的一个连续不断的线段叫笔画
+“五笔”原意是也指五种基本笔画：横、竖、撇、捺（点）、折，任何一个汉字，也都是由这五种基本笔画及其衍生字根组成，通过使用一定的映射规则，至多只需要4个字母，即可完成一个汉字或词组的输入。
+
+
+### 笔画学习
+
+书写汉字时，一次写成的一个连续不断的线段叫笔画
 
 在只考虑笔画的运笔方向，而不计其长短轻重时，汉字的笔画分为五类：
 
@@ -249,15 +35,13 @@
 
        点也属于捺　学、家、心
 
-折：所有带转折的笔画（除左竖钩外)</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>text</string>
-				<key>title</key>
-				<string>字根学习</string>
-				<key>content</key>
-				<string>在五笔字型输入编码方案中，把由基本笔画组成的相对不变的结构（偏旁、部首）称字根。五笔字型精选了130多个常用字根为基本字根，它们是组成汉字的基本单位，它们在键盘上分5个区，每个区按“横，竖，撇，捺，折”顺序以1、2、3、4、5作为区号，五区共占25个位，区号为首笔，位号为次笔 。
+折：所有带转折的笔画（除左竖钩外)
+
+
+
+### 字根学习
+
+在五笔字型输入编码方案中，把由基本笔画组成的相对不变的结构（偏旁、部首）称字根。五笔字型精选了130多个常用字根为基本字根，它们是组成汉字的基本单位，它们在键盘上分5个区，每个区按“横，竖，撇，捺，折”顺序以1、2、3、4、5作为区号，五区共占25个位，区号为首笔，位号为次笔 。
 
 
 背诵口决
@@ -313,15 +97,13 @@
 52-B　子耳了也框向上。 (“框向上”即“凵”) 
 53-V　女刀九臼山朝西。 (“山朝西”即“彐”) 
 54-C　又巴马，丢矢矣， (“矣”去“矢”为“厶”) 
-55-X　慈母无心弓和匕， 幼无力。(“幼”去“力”为“幺”) </string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>text</string>
-				<key>title</key>
-				<string>字根间的结构关系</string>
-				<key>content</key>
-				<string>基本字根在组成汉字时，按照它们之间的位置关系可以分为单、散、连、交４种。
+55-X　慈母无心弓和匕， 幼无力。(“幼”去“力”为“幺”) 
+
+
+
+### 字根间的结构关系
+
+基本字根在组成汉字时，按照它们之间的位置关系可以分为单、散、连、交４种。
 
 单字根结构
 
@@ -351,15 +133,13 @@
 
 两个或多个字根交叉重迭构成的汉字
 
-本、里、夷、申、必、东</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>text</string>
-				<key>title</key>
-				<string>字形结构关系</string>
-				<key>content</key>
-				<string>有些汉字，它们所含的字根相同，但字根之间的关系不同，如下面两组字
+本、里、夷、申、必、东
+
+
+
+### 字形结构关系
+
+有些汉字，它们所含的字根相同，但字根之间的关系不同，如下面两组字
 
 叭、只     两个字都由字根“口、八”组成
 
@@ -390,15 +170,12 @@
 2) 交叉字根汉字    东、电、本、农、里
 
 3)内外型汉字    团、同、困、匝、这、边
-</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>text</string>
-				<key>title</key>
-				<string>汉字的拆字原则</string>
-				<key>content</key>
-				<string>1、书写顺序
+
+
+
+### 汉字的拆字原则
+
+1、书写顺序
 
 拆分“合体字”时，一定要按照正确的书写顺序进行。例：“新”只能拆成“立、木、斤”，不能拆成“立、斤、木” “中”只能拆成“口、丨”，不能拆成“丨、口”；“夷”只能拆成“一、弓、人”，不能拆成“大、弓”。
 
@@ -435,15 +212,12 @@
 键名不拆打四下，成报一二末笔画。
 
 一般一二三末根，不足才打识别码。
-</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>text</string>
-				<key>title</key>
-				<string>五笔字形的编码规则</string>
-				<key>content</key>
-				<string>五笔字形的编码是按汉字书写顺序，以基本字根为单位、再按一定的编码规则给出的，编码长度最多为四码（即四个字母）。
+
+
+
+## 五笔字形汉字输入规则
+### 编码规则
+五笔字形的编码是按汉字书写顺序，以基本字根为单位、再按一定的编码规则给出的，编码长度最多为四码（即四个字母）。
 
     五笔字形规定，单个汉字可分为三类：键名汉字（共25个）、成字字根汉字（即一个汉字本身就是一个基本字根，不包括键名字）键外字（即必须拆分为两个或两个以上字根的汉字）。下面分别介绍这三类汉字的编码规则。
 
@@ -469,7 +243,7 @@
 
    在130多个基本字根中，除25个键名字根外，还有几十个基本字根本身也是汉字，如“八、用、西、石”等，在五笔字形方案中，称它们为成字字根。成字字根汉字的编码规则为：键名码＋首笔码＋次笔码＋末笔码
 
-   其中，键名码即该汉字字根所在键的字母；首笔码、次笔码和末笔码不是按字根取码，而是按单笔画取码，横、竖、撇、捺、折五种单笔画取各区第一字母，即：横（G）、竖（H）、撇（T）、捺（Y）和折（N）。当成字字根仅为两笔时，只有三码，则补上空格键作为编码的结束。例如：汉字“古”所在键名D，首笔画为“一&quot;，次笔画为”丨“，末笔画为”一“，因此，汉字”古“的编码为DGHG。
+   其中，键名码即该汉字字根所在键的字母；首笔码、次笔码和末笔码不是按字根取码，而是按单笔画取码，横、竖、撇、捺、折五种单笔画取各区第一字母，即：横（G）、竖（H）、撇（T）、捺（Y）和折（N）。当成字字根仅为两笔时，只有三码，则补上空格键作为编码的结束。例如：汉字“古”所在键名D，首笔画为“一"，次笔画为”丨“，末笔画为”一“，因此，汉字”古“的编码为DGHG。
 
  3、键外字的编码
 
@@ -515,39 +289,29 @@
 
 ⑷“我、线、成”等汉字的末笔一律取撇去点。
 
-</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>text</string>
-				<key>title</key>
-				<string>识别码</string>
-				<key>content</key>
-				<string>1、“识别码”的组成：它是由“末笔”代号加“字型”代号而构成的一个附加码。由于教不得法，以前许多人对“识别码”望而生畏。其实，按如下做法，你只要5分钟定能学会。
+
+
+### 识别码
+
+1、“识别码”的组成：它是由“末笔”代号加“字型”代号而构成的一个附加码。由于教不得法，以前许多人对“识别码”望而生畏。其实，按如下做法，你只要5分钟定能学会。
 
 “1”型（左右型）字：码元打完之后，补打1个末笔画即等同于加了“识别码”。例： 沐：氵木丶(“丶”为末笔，补１个“丶”)汀：氵丁丨(“丨”为末笔，补１个“丨”)洒：氵西一(“一”为末笔，补１个“一”)
 
 “2”型（上下型）字：码元打完之后，补打由2个末笔画复合构成的“码元”即等同于加了“识别码”。例：华：亻匕十(末笔为“丨”，2型，补打“”作为“识别码”)字：宀子二(末笔为“一”，2型，补打“二”作为“识别码”)参：厶大彡（末笔为“丿”，2型，补打“”作为“识别码”)
  “3”型（杂合型）字：码元打完之后，补打由3个末笔画复合而成的“码元”即等同于加了“识别码”。例：同：冂一口三(末笔为“一”，3型，补打“三”作为“识别码”)串：口口丨(末笔为“丨”，3型，补打“”作为“识别码”)国：囗王丶氵(末笔为“丶”，3型，补打“氵”作为“识别码”)至于为什么这些“笔画”可以起到“识别码”的作用，你只要仔细研究一下区位号的设计与“识别码”的定义便会恍然大悟。
-</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>text</string>
-				<key>title</key>
-				<string>容错码</string>
-				<key>content</key>
-				<string>有很多字并不好拆，除了标准编码外，还有其它编码，那些就叫容错码。比如字型容错，顺序容错。
 
-除了喜欢打容错码的个别字以外，建议不用容错码。知道有容错码这个概念就可以了，拆字训练，只要拆不错字，自然不需容错。还有很重要的一点，如果一个二级简码打容错码，如果前两码和标准不一样，那么这个字就不是简码了。比如长，TA+ 空格即可打出长，而如果打TG+ 空格，那么得到的就不是长，而是“生”，长本来是简码，却认为不是简码了；一个二字词，因为是取两个字的前两码，和标准不一样的话，也会不好搞。</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>text</string>
-				<key>title</key>
-				<string>简码</string>
-				<key>content</key>
-				<string>1、一级简码
+
+
+### 容错码
+
+有很多字并不好拆，除了标准编码外，还有其它编码，那些就叫容错码。比如字型容错，顺序容错。
+
+除了喜欢打容错码的个别字以外，建议不用容错码。知道有容错码这个概念就可以了，拆字训练，只要拆不错字，自然不需容错。还有很重要的一点，如果一个二级简码打容错码，如果前两码和标准不一样，那么这个字就不是简码了。比如长，TA+ 空格即可打出长，而如果打TG+ 空格，那么得到的就不是长，而是“生”，长本来是简码，却认为不是简码了；一个二字词，因为是取两个字的前两码，和标准不一样的话，也会不好搞。
+
+
+### 简码
+
+1、一级简码
 
 根据每一键位上的字根形态，每键安排一个最常用的高频汉字，这类字只需打一键即可。
 
@@ -570,15 +334,12 @@
 
 举例：黛：WAL 〖空格〗　　带： GKP〖空格〗
 
-</string>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>text</string>
-				<key>title</key>
-				<string>词汇编码</string>
-				<key>content</key>
-				<string>因为汉语中的许多汉字常以词汇的形式出现，所以在五笔字形方案中，还设计了词汇输入法，以提高输入速度，词汇输入的方法是：不论一个词汇由几个汉字组成，一律用四码输入，即从组词的汉字中按一定规律取四位编码输入这个词汇。词汇输入的编码规则分以下四类：
+
+
+
+### 词汇编码
+
+因为汉语中的许多汉字常以词汇的形式出现，所以在五笔字形方案中，还设计了词汇输入法，以提高输入速度，词汇输入的方法是：不论一个词汇由几个汉字组成，一律用四码输入，即从组词的汉字中按一定规律取四位编码输入这个词汇。词汇输入的编码规则分以下四类：
 
 1、二字词
 
@@ -610,9 +371,7 @@
 
 全国人民代表大会：WLWW
 
-词汇输入也是在五笔字形汉字输入方式下进行。即：词汇输入和单字输入可混合进行，不用特别指出输入的是词汇编码还是单字编码，系统能自动识别。在词汇输入中，有可能会出现重码词汇，可以通过选词输入实现重码词汇中指定词汇的输入。</string>
-			</dict>
-		</array>
-	</dict>
-</array>
-</plist>
+词汇输入也是在五笔字形汉字输入方式下进行。即：词汇输入和单字输入可混合进行，不用特别指出输入的是词汇编码还是单字编码，系统能自动识别。在词汇输入中，有可能会出现重码词汇，可以通过选词输入实现重码词汇中指定词汇的输入。
+
+
+

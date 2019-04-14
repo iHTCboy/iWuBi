@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import JXPhotoBrowser
 
 class IHTCLearnViewController: UIViewController {
     
@@ -116,8 +116,20 @@ extension IHTCLearnViewController : UITableViewDelegate, UITableViewDataSource
         let data = array![indexPath.row] as! Dictionary<String, String>
         let type = data["type"]
         if type == "image" {
-            
-            
+            // 数据源
+            let dataSource = JXLocalDataSource(numberOfItems: {
+                // 共有多少项
+                return array!.count
+            }, localImage: { index -> UIImage? in
+                // 每一项的图片对象
+                let data = array![index] as! Dictionary<String, String>
+                let imageName = data["content"]
+                return UIImage(named: imageName!)
+            })
+            // 视图代理，实现了数字型页码指示器
+            let delegate = JXNumberPageControlDelegate()
+            // 打开浏览器
+            JXPhotoBrowser(dataSource: dataSource, delegate: delegate).show(pageIndex: indexPath.row)
         } else {
             let vc = IHTCLearnDetailViewController()
             vc.title = data["title"]

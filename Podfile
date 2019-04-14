@@ -6,6 +6,7 @@ target 'iWuBi' do
   use_frameworks!
 
   # Pods for iWuBi
+  pod 'JXPhotoBrowser'
 
   target 'iWuBiTests' do
     inherit! :search_paths
