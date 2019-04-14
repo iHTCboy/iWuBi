@@ -2,45 +2,49 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIcons</key>
 	<dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
-			<key>iWiBi-orange-icon</key>
-			<dict>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>iWiBi-orange-icon</string>
-				</array>
-			</dict>
-			<key>iWiBi-orange-icon-light</key>
-			<dict>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>iWiBi-orange-icon-light</string>
-				</array>
-			</dict>
-			<key>iWiBi-orange-two</key>
-			<dict>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>iWiBi-orange-two</string>
-				</array>
-			</dict>
 			<key>iWiBi-orange-blank</key>
 			<dict>
-				<key>UIPrerenderedIcon</key>
-				<false/>
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>iWiBi-orange-blank</string>
 				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>iWiBi-orange-icon</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>iWiBi-orange-icon</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>iWiBi-orange-icon-light</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>iWiBi-orange-icon-light</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>iWiBi-orange-two</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>iWiBi-orange-two</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
 			</dict>
 		</dict>
 		<key>CFBundlePrimaryIcon</key>
@@ -58,43 +62,12 @@
 			<array>
 				<string></string>
 			</array>
-			<key>UINewsstandBindingType</key>
-			<string>UINewsstandBindingTypeMagazine</string>
 			<key>UINewsstandBindingEdge</key>
 			<string>UINewsstandBindingEdgeLeft</string>
+			<key>UINewsstandBindingType</key>
+			<string>UINewsstandBindingTypeMagazine</string>
 		</dict>
 	</dict>
-	<key>UIApplicationShortcutItems</key>
-	<array>
-		<dict>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeMessage</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>iWuBi://feedback</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>问题建议反馈</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeFavorite</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>iWuBi://love</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>应用星级评价</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeSearch</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>iWuBi://search</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>快速查询字词</string>
-		</dict>
-	</array>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -106,9 +79,36 @@
 	<key>CFBundleShortVersionString</key>
 	<string>2.0.0</string>
 	<key>CFBundleVersion</key>
-	<string>2019.04.13</string>
+	<string>2019.04.14</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeMessage</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>问题建议反馈</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>iWuBi://feedback</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeFavorite</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>应用星级评价</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>iWuBi://love</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeSearch</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>快速查询字词</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>iWuBi://search</string>
+		</dict>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

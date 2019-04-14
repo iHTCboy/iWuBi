@@ -177,7 +177,15 @@ extension IHTCMeViewController : UITableViewDelegate, UITableViewDataSource
                 let url = NSURL(string: kAppDownloadURl)
                 let string = kAppShare
                 let activityController = UIActivityViewController(activityItems: [image! ,url!,string], applicationActivities: nil)
-                self.present(activityController, animated: true, completion: nil)
+                //if iPhone
+                if (UIDevice.current.userInterfaceIdiom == .phone) {
+                    self.present(activityController, animated: true, completion: nil)
+                } else {
+                    //if iPad
+                    // Change Rect to position Popover
+                    let popup = UIPopoverController.init(contentViewController: activityController);
+                    popup.present(from: CGRect.init(x: self.view.frame.width-44, y: 64, width: 0, height: 0), in: self.view, permittedArrowDirections: .any, animated: true)
+                }
             }
             
             break
