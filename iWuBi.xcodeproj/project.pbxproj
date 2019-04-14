@@ -32,6 +32,16 @@
 		6D531B662263648E00C921B8 /* 新世纪版与86版变动对比图表.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B652263648E00C921B8 /* 新世纪版与86版变动对比图表.png */; };
 		6D531B6922636BF400C921B8 /* 五笔86版字根键盘表.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B6822636BF400C921B8 /* 五笔86版字根键盘表.png */; };
 		6D531B6B22636C3100C921B8 /* 五笔98版字根键盘表.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B6A22636C3100C921B8 /* 五笔98版字根键盘表.png */; };
+		6D531B71226379CB00C921B8 /* iWiBi-orange-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B6F226379CA00C921B8 /* iWiBi-orange-icon@2x.png */; };
+		6D531B72226379CB00C921B8 /* iWiBi-orange-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B70226379CB00C921B8 /* iWiBi-orange-icon@3x.png */; };
+		6D531B7522637A5000C921B8 /* iWiBi-orange-icon-light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7322637A5000C921B8 /* iWiBi-orange-icon-light@2x.png */; };
+		6D531B7622637A5000C921B8 /* iWiBi-orange-icon-light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7422637A5000C921B8 /* iWiBi-orange-icon-light@3x.png */; };
+		6D531B7922637B2A00C921B8 /* AppIcon-default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7722637B2A00C921B8 /* AppIcon-default@2x.png */; };
+		6D531B7A22637B2A00C921B8 /* AppIcon-default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7822637B2A00C921B8 /* AppIcon-default@3x.png */; };
+		6D531B7D22637E4B00C921B8 /* iWiBi-orange-two@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7B22637E4A00C921B8 /* iWiBi-orange-two@3x.png */; };
+		6D531B7E22637E4B00C921B8 /* iWiBi-orange-two@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7C22637E4A00C921B8 /* iWiBi-orange-two@2x.png */; };
+		6D531B8122637E8500C921B8 /* iWiBi-orange-blank@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7F22637E8400C921B8 /* iWiBi-orange-blank@3x.png */; };
+		6D531B8222637E8500C921B8 /* iWiBi-orange-blank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B8022637E8400C921B8 /* iWiBi-orange-blank@2x.png */; };
 		6D76E275225F8829005EACCA /* iWuBi-86-keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E274225F8829005EACCA /* iWuBi-86-keyboard.png */; };
 		6D76E277225F883C005EACCA /* iWuBi-98-keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E276225F883C005EACCA /* iWuBi-98-keyboard.png */; };
 		6D76E27C225F9064005EACCA /* IHTCImgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E27B225F9064005EACCA /* IHTCImgModel.swift */; };
@@ -165,6 +175,16 @@
 		6D531B672263691400C921B8 /* 五笔知识点.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "五笔知识点.txt"; sourceTree = "<group>"; };
 		6D531B6822636BF400C921B8 /* 五笔86版字根键盘表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "五笔86版字根键盘表.png"; sourceTree = "<group>"; };
 		6D531B6A22636C3100C921B8 /* 五笔98版字根键盘表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "五笔98版字根键盘表.png"; sourceTree = "<group>"; };
+		6D531B6F226379CA00C921B8 /* iWiBi-orange-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-orange-icon@2x.png"; sourceTree = "<group>"; };
+		6D531B70226379CB00C921B8 /* iWiBi-orange-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-orange-icon@3x.png"; sourceTree = "<group>"; };
+		6D531B7322637A5000C921B8 /* iWiBi-orange-icon-light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-orange-icon-light@2x.png"; sourceTree = "<group>"; };
+		6D531B7422637A5000C921B8 /* iWiBi-orange-icon-light@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-orange-icon-light@3x.png"; sourceTree = "<group>"; };
+		6D531B7722637B2A00C921B8 /* AppIcon-default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-default@2x.png"; sourceTree = "<group>"; };
+		6D531B7822637B2A00C921B8 /* AppIcon-default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-default@3x.png"; sourceTree = "<group>"; };
+		6D531B7B22637E4A00C921B8 /* iWiBi-orange-two@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-orange-two@3x.png"; sourceTree = "<group>"; };
+		6D531B7C22637E4A00C921B8 /* iWiBi-orange-two@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-orange-two@2x.png"; sourceTree = "<group>"; };
+		6D531B7F22637E8400C921B8 /* iWiBi-orange-blank@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-orange-blank@3x.png"; sourceTree = "<group>"; };
+		6D531B8022637E8400C921B8 /* iWiBi-orange-blank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-orange-blank@2x.png"; sourceTree = "<group>"; };
 		6D76E274225F8829005EACCA /* iWuBi-86-keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWuBi-86-keyboard.png"; sourceTree = "<group>"; };
 		6D76E276225F883C005EACCA /* iWuBi-98-keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWuBi-98-keyboard.png"; sourceTree = "<group>"; };
 		6D76E27B225F9064005EACCA /* IHTCImgModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHTCImgModel.swift; sourceTree = "<group>"; };
@@ -326,6 +346,23 @@
 			path = "wubi-img";
 			sourceTree = "<group>";
 		};
+		6D531B6C22636D9E00C921B8 /* app-icon */ = {
+			isa = PBXGroup;
+			children = (
+				6D531B8022637E8400C921B8 /* iWiBi-orange-blank@2x.png */,
+				6D531B7F22637E8400C921B8 /* iWiBi-orange-blank@3x.png */,
+				6D531B7C22637E4A00C921B8 /* iWiBi-orange-two@2x.png */,
+				6D531B7B22637E4A00C921B8 /* iWiBi-orange-two@3x.png */,
+				6D531B7722637B2A00C921B8 /* AppIcon-default@2x.png */,
+				6D531B7822637B2A00C921B8 /* AppIcon-default@3x.png */,
+				6D531B6F226379CA00C921B8 /* iWiBi-orange-icon@2x.png */,
+				6D531B70226379CB00C921B8 /* iWiBi-orange-icon@3x.png */,
+				6D531B7322637A5000C921B8 /* iWiBi-orange-icon-light@2x.png */,
+				6D531B7422637A5000C921B8 /* iWiBi-orange-icon-light@3x.png */,
+			);
+			path = "app-icon";
+			sourceTree = "<group>";
+		};
 		6D76E2B82262D342005EACCA /* DHSmartScreenshot */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +456,7 @@
 		6DB88DB8225B8E340099AC80 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				6D531B6C22636D9E00C921B8 /* app-icon */,
 				6D531B54226360CB00C921B8 /* wubi-img */,
 				6DB88DB9225B8E340099AC80 /* Images */,
 				6DB88DCD225B8E340099AC80 /* Documents */,
@@ -717,6 +755,7 @@
 			files = (
 				6D531B662263648E00C921B8 /* 新世纪版与86版变动对比图表.png in Resources */,
 				6D76E2D42263118D005EACCA /* tabbar_selected_86@3x.png in Resources */,
+				6D531B7E22637E4B00C921B8 /* iWiBi-orange-two@2x.png in Resources */,
 				6D531B53226360C700C921B8 /* 98透明码元图001.png in Resources */,
 				6D76E2C62262DC75005EACCA /* IHTCShareFooterView.xib in Resources */,
 				6D531B6922636BF400C921B8 /* 五笔86版字根键盘表.png in Resources */,
@@ -729,16 +768,21 @@
 				6D3B83E0225E27B500037787 /* Main.storyboard in Resources */,
 				6D76E2D72263118D005EACCA /* tabbar_selected_98@3x.png in Resources */,
 				6DB88E0C225B8E340099AC80 /* ITQuestionListViewCell.xib in Resources */,
+				6D531B71226379CB00C921B8 /* iWiBi-orange-icon@2x.png in Resources */,
 				6D3B83D6225E238300037787 /* iWuBi-orange-word.png in Resources */,
 				6D3B83F2225E307700037787 /* InfoPlist.strings in Resources */,
 				6D531B50226360C700C921B8 /* 98五笔码元-全图-浅黄.jpg in Resources */,
 				6DEF6236225C0FDA001A6530 /* iWuBi_code.json in Resources */,
 				6D531B4F226360C700C921B8 /* 98五笔码元-全图-青葱.jpg in Resources */,
+				6D531B7A22637B2A00C921B8 /* AppIcon-default@3x.png in Resources */,
+				6D531B7922637B2A00C921B8 /* AppIcon-default@2x.png in Resources */,
 				6D76E2D82263118D005EACCA /* tabbar_selected_learning@2x.png in Resources */,
 				6D76E2E322632984005EACCA /* 86版五笔字根表.html in Resources */,
 				6D76E277225F883C005EACCA /* iWuBi-98-keyboard.png in Resources */,
 				6DB88DF8225B8E340099AC80 /* App-share-Icon.png in Resources */,
+				6D531B7622637A5000C921B8 /* iWiBi-orange-icon-light@3x.png in Resources */,
 				6D531B52226360C700C921B8 /* 98透明码元图002.png in Resources */,
+				6D531B72226379CB00C921B8 /* iWiBi-orange-icon@3x.png in Resources */,
 				6D531B642263643900C921B8 /* 新世纪五笔字根键位图1.png in Resources */,
 				6D76E2EE22632992005EACCA /* 98版速成诀窍.html in Resources */,
 				6D531B6B22636C3100C921B8 /* 五笔98版字根键盘表.png in Resources */,
@@ -749,11 +793,15 @@
 				6D531B5E226363D800C921B8 /* 新世纪五笔字根图2.jpg in Resources */,
 				6D76E2EF22632992005EACCA /* 98版简明教程.html in Resources */,
 				6D76E2E422632984005EACCA /* 86版简明教程.html in Resources */,
+				6D531B8222637E8500C921B8 /* iWiBi-orange-blank@2x.png in Resources */,
 				6D3B8403225E43D800037787 /* iWuBi-word-bg.png in Resources */,
 				6D76E2E622632984005EACCA /* 86版五笔简码.html in Resources */,
 				6D531B59226362C900C921B8 /* 98五笔码元图-浅色.png in Resources */,
+				6D531B8122637E8500C921B8 /* iWiBi-orange-blank@3x.png in Resources */,
 				6D531B51226360C700C921B8 /* 98五笔码元-应用图.jpg in Resources */,
 				6DB88E2B225B8F430099AC80 /* AppLaunchScreen.storyboard in Resources */,
+				6D531B7522637A5000C921B8 /* iWiBi-orange-icon-light@2x.png in Resources */,
+				6D531B7D22637E4B00C921B8 /* iWiBi-orange-two@3x.png in Resources */,
 				6D531B5A226362C900C921B8 /* 98五笔字根全图白底.png in Resources */,
 				6DB88DF7225B8E340099AC80 /* App-TextLogo-Alpha.png in Resources */,
 				6D531B5F226363D800C921B8 /* 新世纪五笔字根图3.jpg in Resources */,

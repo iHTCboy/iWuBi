@@ -35,8 +35,8 @@ class IHTCMeViewController: UIViewController {
         return tableView
     }()
     
-    fileprivate var titles = ["0": "应用内评分:欢迎给\(kiTalker)打评分！,AppStore评价:欢迎给\(kiTalker)写评论!,分享给朋友:与身边的好友一起学习！",
-        "1":"意见反馈:欢迎到AppStore提需求或bug问题,邮件联系:如有问题欢迎来信,开源地址:未来逐步开放代码，欢迎关注,更多关注:了解更多，欢迎访问作者博客,关于应用:\(kiTalker)"] as [String : String]
+    fileprivate var titles = ["0": "切换App图标:选择你的最爱", "1": "应用内评分:欢迎给\(kiTalker)打评分！,AppStore评价:欢迎给\(kiTalker)写评论!,分享给朋友:与身边的好友一起学习！",
+        "2":"意见反馈:欢迎到AppStore提需求或bug问题,邮件联系:如有问题欢迎来信,开源地址:未来逐步开放代码，欢迎关注,更多关注:了解更多，欢迎访问作者博客,关于应用:\(kiTalker)"] as [String : String]
 
 }
 
@@ -106,15 +106,61 @@ extension IHTCMeViewController : UITableViewDelegate, UITableViewDataSource
         let row = indexPath.row;
         
         switch section {
-//        case 0:
-//            if row == 0 {
-////                let vc = NTWaterfallViewController.init(collectionViewLayout:CHTCollectionViewWaterfallLayout())
-////                let nav = NTNavigationController.init(rootViewController: vc)
-////                vc.title = "实拍面试题目"
-////                self.present(nav, animated: true, completion: nil);
-//            }
-//            break
         case 0:
+            if row == 0 {
+                let refreshAlert = UIAlertController(title: "切换App图标", message: "选择你喜欢的图标~", preferredStyle: UIAlertController.Style.alert)
+                
+                // icon1
+                let image1 = UIImage.init(named: "AppIcon-default")!
+                let defaltIcon = UIAlertAction(title: "默认图标", style: .default, handler: { (action: UIAlertAction!) in
+                    IAppleServiceUtil.changeAppIconWithName(iconName: nil)
+                    return
+                })
+                defaltIcon.setValue(image1.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), forKey: "image")
+                refreshAlert.addAction(defaltIcon)
+                // icon2
+                let name2 = "iWiBi-orange-icon-light"
+                let image2 = UIImage.init(named: name2)!
+                let newIcon1 = UIAlertAction(title: "橙色图标-轻亮", style: .default, handler: { (action: UIAlertAction!) in
+                    IAppleServiceUtil.changeAppIconWithName(iconName: name2)
+                    return
+                })
+                newIcon1.setValue(image2.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), forKey: "image")
+                refreshAlert.addAction(newIcon1)
+                // icon3
+                let name3 = "iWiBi-orange-icon"
+                let image3 = UIImage.init(named: name3)!
+                let newIcon3 = UIAlertAction(title: "橙色图标-墨深", style: .default, handler: { (action: UIAlertAction!) in
+                    IAppleServiceUtil.changeAppIconWithName(iconName: name3)
+                    return
+                })
+                newIcon3.setValue(image3.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), forKey: "image")
+                refreshAlert.addAction(newIcon3)
+                // icon4
+                let name4 = "iWiBi-orange-two"
+                let image4 = UIImage.init(named: name4)!
+                let newIcon4 = UIAlertAction(title: "橙色图标-全彩", style: .default, handler: { (action: UIAlertAction!) in
+                    IAppleServiceUtil.changeAppIconWithName(iconName: name4)
+                    return
+                })
+                newIcon4.setValue(image4.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), forKey: "image")
+                refreshAlert.addAction(newIcon4)
+                // icon5
+                let name5 = "iWiBi-orange-blank"
+                let image5 = UIImage.init(named: name5)!
+                let newIcon5 = UIAlertAction(title: "橙色图标-留白", style: .default, handler: { (action: UIAlertAction!) in
+                    IAppleServiceUtil.changeAppIconWithName(iconName: name5)
+                    return
+                })
+                newIcon5.setValue(image5.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), forKey: "image")
+                refreshAlert.addAction(newIcon5)
+                
+                let cancel = UIAlertAction(title:  "取消", style: .cancel, handler: nil)
+                refreshAlert.addAction(cancel)
+                self.present(refreshAlert, animated: true, completion: nil)
+            }
+            break
+        case 1:
             if row == 0 {
                 if #available(iOS 10.3, *) {
                     SKStoreReviewController.requestReview()
@@ -135,7 +181,7 @@ extension IHTCMeViewController : UITableViewDelegate, UITableViewDataSource
             }
             
             break
-        case 1:
+        case 2:
             if row == 0 {
                 IAppleServiceUtil.openAppstore(url: kAppDownloadURl, isAssessment: false)
             }

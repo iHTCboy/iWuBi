@@ -49,6 +49,23 @@ class IAppleServiceUtil: NSObject {
             openAppstore(url: url ?? "", isAssessment: true)
         }
     }
+    
+    class func changeAppIconWithName(iconName: String?) {
+        if #available(iOS 10.3, *) {
+            UIApplication.shared.setAlternateIconName(iconName) { (error) in
+                
+            }
+        } else {
+            let alert = UIAlertController(title: "提示",
+                                          message: "更换图标需要 iOS10.3 以上系统才能使用~",
+                                          preferredStyle: UIAlertController.Style.alert)
+            let cancelAction = UIAlertAction.init(title: "知道啦", style: .cancel) { (action: UIAlertAction) in
+                
+            }
+            alert.addAction(cancelAction)
+            UIApplication.shared.keyWindow?.rootViewController!.present(alert, animated: true, completion: nil)
+        }
+    }
 }
 
 class ImageHandle: NSObject {
