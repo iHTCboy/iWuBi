@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 import SafariServices
 
 class IAppleServiceUtil: NSObject {
@@ -32,6 +33,21 @@ class IAppleServiceUtil: NSObject {
     class func shareImage(image: UIImage, vc: UIViewController) {
         let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         vc.present(activityController, animated: true, completion: nil)
+    }
+    
+    class func openAppstore(url: String, isAssessment: Bool) {
+        let iURL = URL.init(string: url + (isAssessment ? "&action=write-review": ""))!
+        if UIApplication.shared.canOpenURL(iURL) {
+            UIApplication.shared.openURL(iURL)
+        }
+    }
+    
+    class func inAppRating(url: String?) {
+        if #available(iOS 10.3, *) {
+            SKStoreReviewController.requestReview()
+        } else {
+            openAppstore(url: url ?? "", isAssessment: true)
+        }
     }
 }
 
@@ -98,5 +114,23 @@ class ImageHandle: NSObject {
         UIGraphicsEndImageContext();
         
         return resultImage
+    }
+}
+
+
+extension UIViewController {
+    func topPresentedViewController() -> UIViewController {
+        
+        var vc = self
+        
+        while ((vc.presentedViewController) != nil) {
+            vc = vc.presentedViewController!;
+        }
+        
+        return vc;
+    }
+    
+    func currentRootViewController() -> UIViewController {
+        return UIApplication.shared.keyWindow!.rootViewController ?? self
     }
 }

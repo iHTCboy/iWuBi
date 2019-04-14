@@ -77,6 +77,12 @@ extension IHTCWordListViewController {
         view.addConstraints(vConstraints)
         view.addConstraints(hConstraints)
         view.layoutIfNeeded()
+        
+        // 判断系统版本，必须iOS 9及以上，同时检测是否支持触摸力度识别
+        if #available(iOS 9.0, *), traitCollection.forceTouchCapability == .available {
+            // 注册预览代理，self监听，tableview执行Peek
+            registerForPreviewing(with: self, sourceView: tableView)
+        }
     }
     
     @objc public func randomRefresh(sender: AnyObject) {
@@ -174,3 +180,33 @@ extension IHTCWordListViewController : UITableViewDelegate, UITableViewDataSourc
     }
 }
 
+// MARK: - UIViewControllerPreviewingDelegate
+@available(iOS 9.0, *)
+extension IHTCWordListViewController: UIViewControllerPreviewingDelegate {
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        // 模态弹出需要展现的控制器
+//        showDetailViewController(viewControllerToCommit, sender: nil)
+        // 通过导航栏push需要展现的控制器
+         show(viewControllerToCommit, sender: nil)
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        // 获取indexPath和cell
+        guard let indexPath = tableView.indexPathForRow(at: location), let cell = tableView.cellForRow(at: indexPath) else { return nil }
+        // 设置Peek视图突出显示的frame
+        previewingContext.sourceRect = cell.frame
+        
+        self.selectedCell = (tableView.cellForRow(at: indexPath) as! ITQuestionListViewCell)
+        
+        let question = self.listModel()[indexPath.row] as! Dictionary<String, Any>
+        let questionVC = IHTCWordDetailViewController()
+        questionVC.title = question["word"] as? String
+        questionVC.is86Word = self.title!.contains("86")
+        questionVC.questionModle = question
+        questionVC.hidesBottomBarWhenPushed = true
+        
+        // 返回需要弹出的控制权
+        return questionVC
+    }
+}

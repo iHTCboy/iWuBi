@@ -49,12 +49,6 @@ extension IHTCMeViewController
         tableView.dataSource = self
     }
     
-    func gotoAppstore(isAssessment: Bool) {
-        if UIApplication.shared.canOpenURL(URL.init(string: kAppDownloadURl + (isAssessment ? kReviewAction: ""))!) {
-            UIApplication.shared.openURL(URL.init(string: kAppDownloadURl + (isAssessment ? kReviewAction: ""))!)
-        }
-    }
-    
     override var prefersStatusBarHidden: Bool {
         return false
     }
@@ -125,11 +119,11 @@ extension IHTCMeViewController : UITableViewDelegate, UITableViewDataSource
                 if #available(iOS 10.3, *) {
                     SKStoreReviewController.requestReview()
                 } else {
-                    gotoAppstore(isAssessment: true)
+                    IAppleServiceUtil.openAppstore(url: kAppDownloadURl, isAssessment: true)
                 }
             }
             if row == 1 {
-                gotoAppstore(isAssessment: false)
+                IAppleServiceUtil.openAppstore(url: kAppDownloadURl, isAssessment: false)
             }
             if row == 2 {
 
@@ -143,7 +137,7 @@ extension IHTCMeViewController : UITableViewDelegate, UITableViewDataSource
             break
         case 1:
             if row == 0 {
-                gotoAppstore(isAssessment: false)
+                IAppleServiceUtil.openAppstore(url: kAppDownloadURl, isAssessment: false)
             }
             if row == 1 {
                 let message = "欢迎来信，写下你的问题吧" + "\n\n\n\n" + kMarginLine + "\n 当前\(kiTalker)版本：" + KAppVersion + "， 系统版本：" + String(Version.SYS_VERSION_FLOAT) + "， 设备信息：" + UIDevice.init().modelName

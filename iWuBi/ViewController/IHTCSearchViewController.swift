@@ -94,6 +94,12 @@ extension IHTCSearchViewController {
             versionItem.title = "98版"
         }
         
+        // 判断系统版本，必须iOS 9及以上，同时检测是否支持触摸力度识别
+        if #available(iOS 9.0, *), traitCollection.forceTouchCapability == .available {
+            // 注册预览代理，self监听，tableview执行Peek
+            registerForPreviewing(with: self, sourceView: tableView)
+        }
+        
     }
     
     func searchWordList(words: String) {
@@ -397,5 +403,37 @@ extension IHTCSearchViewController : UITableViewDelegate, UITableViewDataSource 
         questionVC.hidesBottomBarWhenPushed = true
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.pushViewController(questionVC, animated: true)
+    }
+}
+
+
+
+// MARK: - UIViewControllerPreviewingDelegate
+@available(iOS 9.0, *)
+extension IHTCSearchViewController: UIViewControllerPreviewingDelegate {
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        searchBar.resignFirstResponder()
+        // 模态弹出需要展现的控制器
+        //        showDetailViewController(viewControllerToCommit, sender: nil)
+        // 通过导航栏push需要展现的控制器
+        show(viewControllerToCommit, sender: nil)
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        // 获取indexPath和cell
+        guard let indexPath = tableView.indexPathForRow(at: location), let cell = tableView.cellForRow(at: indexPath) else { return nil }
+        // 设置Peek视图突出显示的frame
+        previewingContext.sourceRect = cell.frame
+        
+        let question = self.searchArray[indexPath.row]
+        let questionVC = IHTCSearchDetailVC()
+        questionVC.title = question["word"] as? String
+        questionVC.is86Word = self.is86Word
+        questionVC.questionModle = question
+        questionVC.hidesBottomBarWhenPushed = true
+        
+        // 返回需要弹出的控制权
+        return questionVC
     }
 }

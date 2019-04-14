@@ -25,6 +25,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+        if shortcutItem.type.contains("iWuBi://search") {
+            let vc = IHTCSearchViewController()
+            vc.is86Word = true
+            let navi = UINavigationController.init(rootViewController: vc)
+            navi.navigationBar.isHidden = true
+            UIApplication.shared.keyWindow?.rootViewController!.present(navi, animated: true, completion: nil)
+        }
+        
+        if shortcutItem.type.contains("iWuBi://love") {
+            IAppleServiceUtil.inAppRating(url: kAppDownloadURl)
+        }
+        
+        if shortcutItem.type.contains("iWuBi://feedback") {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+                IAppleServiceUtil.openAppstore(url: kAppDownloadURl, isAssessment: false)
+            })
+        }
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

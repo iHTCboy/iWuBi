@@ -56,6 +56,22 @@ class IHTCSearchDetailVC: UIViewController {
         let item = UIBarButtonItem.init(customView: infoBtn)
         return item
     }()
+    
+    @available(iOS 9.0, *)
+    lazy var previewActions: [UIPreviewActionItem] = {
+        let a = UIPreviewAction(title: "查字", style: .default, handler: { (action, vc) in
+            self.showWordInfo(item: action)
+        })
+        let b = UIPreviewAction(title: "分享", style: .default, handler: { (action, vc) in
+            self.sharedPageView(item: action)
+        })
+        return [a, b]
+    }()
+    
+    @available(iOS 9.0, *)
+    override var previewActionItems: [UIPreviewActionItem] {
+        return previewActions
+    }
 }
 
 
@@ -80,7 +96,7 @@ extension IHTCSearchDetailVC {
         navigationItem.rightBarButtonItems = [shareItem, infoItem]
     }
     
-    @objc func showWordInfo(item: UIBarButtonItem) {
+    @objc func showWordInfo(item: Any) {
         var url = "https://m.youdao.com/dict?q=" + self.title!
         if UIDevice.current.userInterfaceIdiom == .pad {
             url = "https://dict.youdao.com/w/eng/" + self.title!
@@ -98,14 +114,14 @@ extension IHTCSearchDetailVC {
             sfvc.dismissButtonStyle = .close
             sfvc.navigationItem.largeTitleDisplayMode = .never
         }
-        self.present(sfvc, animated: true, completion: nil)
+        UIApplication.shared.keyWindow?.rootViewController!.presentedViewController!.present(sfvc, animated: true, completion: nil)
     }
     
-    @objc func sharedPageView(item: UIBarButtonItem) {
+    @objc func sharedPageView(item: Any) {
         let masterImage = tableView.screenshot ?? UIImage.init(named: "App-share-Icon")
         let footerImage = IHTCShareFooterView.footerView(image: UIImage.init(named: "iWuBi-qrcode")!, title: kShareTitle, subTitle: kShareSubTitle).screenshot
         let image = ImageHandle.slaveImageWithMaster(masterImage: masterImage!, headerImage: UIImage(), footerImage: footerImage!)
-        IAppleServiceUtil.shareImage(image: image!, vc: self)
+        IAppleServiceUtil.shareImage(image: image!, vc: UIApplication.shared.keyWindow!.rootViewController!.presentedViewController!)
     }
     
     
