@@ -26,21 +26,33 @@ class IHTCModel: NSObject {
                              "98三级编码",
                              "98四级编码"]
     
-    fileprivate var defaultDict  = Dictionary<String, ITModel>()
-    fileprivate var tagsDict = Dictionary<String, ITModel>()
+    fileprivate var defaultDict  = Dictionary<String, Array<Any>>()
+    fileprivate var tagsDict = Dictionary<String, Array<Any>>()
+    
+    var search86Dict  = Dictionary<String, Dictionary<String, Any>>()
+    var search98Dict  = Dictionary<String, Dictionary<String, Any>>()
 }
 
 
 extension IHTCModel
 {
-    func defaultData() -> Dictionary<String, ITModel> {
+    func defaultData() -> Dictionary<String, Array<Any>> {
         return self.defaultDict
     }
     
-    func tagsData() -> Dictionary<String, ITModel> {
+    func tagsData() -> Dictionary<String, Array<Any>> {
         return self.tagsDict
     }
     
+    func shuffledData(title: String) {
+        if defaultArray.contains(title) {
+            defaultDict[title] = defaultDict[title]!.shuffled()
+        } else if tagsArray.contains(title) {
+            tagsDict[title] = tagsDict[title]!.shuffled()
+        }  else {
+            print("no shuffled title")
+        }
+    }
     
     func colorForKey(level: String) -> UIColor {
         switch level {
@@ -67,7 +79,7 @@ extension IHTCModel
                     // json is a dictionary
                     var dfDict = Dictionary<String, NSMutableArray>()
                     for df in self.defaultArray {
-                        dfDict[df] = NSMutableArray.init();
+                        dfDict[df] = NSMutableArray();
                     }
                     
                     let objs86 = objects["86"]
@@ -75,20 +87,22 @@ extension IHTCModel
                         // default
                         let allDict = dfDict["86版"]
                         let word86 = objs86![key86]
-                        allDict?.add([key86 : word86])
+                        let dict = ["word": key86 , "codes": word86 as Any]
+                        allDict?.add(dict)
+                        self.search86Dict[key86] = dict
                         
                         for word in word86! {
                             let wordLength = word.count
                             let wordKey = self.defaultArray[wordLength]
                             let wordDict = dfDict[wordKey]
-                            wordDict?.add([key86 : word86])
+                            wordDict?.add(dict)
                         }
                     }
                     
                     
                     var tagDict = Dictionary<String, NSMutableArray>()
                     for tag in self.tagsArray {
-                        tagDict[tag] = NSMutableArray.init();
+                        tagDict[tag] = NSMutableArray();
                     }
                     
                     let objs98 = objects["98"]
@@ -96,45 +110,26 @@ extension IHTCModel
                         // default
                         let allDict = tagDict["98版"]
                         let word98 = objs98![key98]
-                        allDict?.add([key98 : word98])
+                        let dict = ["word": key98 , "codes": word98 as Any]
+                        allDict?.add(dict)
+                        self.search98Dict[key98] = dict
                         
                         for word in word98! {
                             let wordLength = word.count
                             let wordKey = self.tagsArray[wordLength]
                             let wordDict = tagDict[wordKey]
-                            wordDict?.add([key98 : word98])
+                            wordDict?.add(dict)
                         }
                     }
                     
-                    // 转成模型。加快速度，先转100个字
-                    for dfKey in dfDict.keys {
-                        let model = ITModel.init(array:  Array(dfDict[dfKey]!.prefix(100)) as! Array<Dictionary<String, Any>>, word: dfKey)
-                        self.defaultDict[dfKey] = model
+                    if let df = dfDict as?  Dictionary<String, Array<Any>> {
+                        self.defaultDict = df
                     }
                     
-                    
-                    for tagKey in tagDict.keys {
-                        let model = ITModel.init(array:  Array(tagDict[tagKey]!.prefix(100)) as! Array<Dictionary<String, Any>>, word: tagKey)
-                        self.tagsDict[tagKey] = model
+                    if let tag = tagDict as?  Dictionary<String, Array<Any>> {
+                        self.tagsDict = tag
                     }
                     
-                    DispatchQueue.global(qos: .default).async {
-                        // 异步全部转成模型
-                        for dfKey in dfDict.keys {
-                            let model = ITModel.init(array: dfDict[dfKey] as! Array<Dictionary<String, Any>>, word: dfKey)
-                            self.defaultDict[dfKey] = model
-                        }
-
-                        for tagKey in tagDict.keys {
-                            let model = ITModel.init(array: tagDict[tagKey] as! Array<Dictionary<String, Any>>, word: tagKey)
-                            self.tagsDict[tagKey] = model
-                        }
-                        
-                        #if DEBUG
-                        print(NSDate())
-                        print("完成全部词典读取 ✅")
-                        #endif
-                    }
                 } else {
                     print("JSON is invalid")
                 }

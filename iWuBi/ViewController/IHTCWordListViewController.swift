@@ -1,6 +1,6 @@
 //
-//  ITQuestionListViewController.swift
-//  iTalker
+//  IHTCWordListViewController.swift
+//  iWuBi
 //
 //  Created by HTC on 2017/4/9.
 //  Copyright © 2017年 ihtc.cc @iHTCboy. All rights reserved.
@@ -8,15 +8,14 @@
 
 import UIKit
 
-class ITQuestionListViewController: UIViewController {
+class IHTCWordListViewController: UIViewController {
 
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpUI()
     }
-
+    
     override var prefersStatusBarHidden: Bool {
         return false
     }
@@ -35,7 +34,8 @@ class ITQuestionListViewController: UIViewController {
     
     // MARK:- 懒加载
     lazy var tableView: UITableView = {
-        var tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: kScreenW, height: kScreenH-64-58), style: .plain)
+        var tableView = UITableView.init(frame: CGRect.zero, style: .plain)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 40, right: 0)
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.estimatedRowHeight = 80
@@ -47,66 +47,54 @@ class ITQuestionListViewController: UIViewController {
         return tableView
     }()
     
-    var modelCounts = 0
-    
-    func listModel() -> ITModel {
-        var model = ITModel()
+    func listModel() -> Array<Any> {
+        var model = Array<Any>()
         if IHTCModel.shared.defaultArray.contains(self.title!) {
-            model = IHTCModel.shared.defaultData()[self.title!] as! ITModel
-            
+            model = IHTCModel.shared.defaultData()[self.title!] ?? Array()
         } else if IHTCModel.shared.tagsArray.contains(self.title!) {
-            model = IHTCModel.shared.tagsData()[self.title!] as! ITModel
-
+            model = IHTCModel.shared.tagsData()[self.title!] ?? Array()
         }  else {
             print("no featch title")
-        }
-        
-        if model.result.count != modelCounts {
-            modelCounts = model.result.count
-            self.tableView.reloadData()
         }
         
         return model
     }
     
-
 }
 
 
 // MARK:- Prive mothod
-extension ITQuestionListViewController {
+extension IHTCWordListViewController {
     fileprivate func setUpUI() {
         view.addSubview(tableView)
-//        tableView.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        let viewDict = [
-//            "tableView": tableView
-//            ]
-//        
-//        let vFormat = "V:|[tableView]|"
-//        let hFormat = "H:|[tableView]|"
-//        let vConstraints = NSLayoutConstraint.constraints(withVisualFormat: vFormat, options: [], metrics: nil, views: viewDict)
-//        let hConstraints = NSLayoutConstraint.constraints(withVisualFormat: hFormat, options: [], metrics: nil, views: viewDict)
-//        view.addConstraints(vConstraints)
-//        view.addConstraints(hConstraints)
+        let constraintViews = [
+            "tableView": tableView
+        ]
+        let vFormat = "V:|-0-[tableView]-0-|"
+        let hFormat = "H:|-0-[tableView]-0-|"
+        let vConstraints = NSLayoutConstraint.constraints(withVisualFormat: vFormat, options: [], metrics: [:], views: constraintViews)
+        let hConstraints = NSLayoutConstraint.constraints(withVisualFormat: hFormat, options: [], metrics: [:], views: constraintViews)
+        view.addConstraints(vConstraints)
+        view.addConstraints(hConstraints)
+        view.layoutIfNeeded()
     }
     
     @objc public func randomRefresh(sender: AnyObject) {
-        self.listModel().result.shuffle()
-        tableView.reloadData()
+        IHTCModel.shared.shuffledData(title: self.title!)
         refreshControl.endRefreshing()
+        tableView.reloadData()
     }
 }
 
 // MARK: Tableview Delegate
-extension ITQuestionListViewController : UITableViewDelegate, UITableViewDataSource {
+extension IHTCWordListViewController : UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listModel().result.count
+        return self.listModel().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -134,15 +122,17 @@ extension ITQuestionListViewController : UITableViewDelegate, UITableViewDataSou
         cell.num4Lbl.baselineAdjustment = .alignCenters
         cell.num4Lbl.backgroundColor = kColorAppGray
         
-        let question = self.listModel().result[indexPath.row]
-        cell.wordLbl.text = question.word
+        let question = self.listModel()[indexPath.row] as! Dictionary<String, Any>
+        cell.wordLbl.text = question["word"] as? String
+        
+        var codeArray = question["codes"] as? Array<String> ?? Array<String>()
         
         let lblArray = [cell.num1Lbl, cell.num2Lbl, cell.num3Lbl, cell.num4Lbl]
         
         for (index, lbl) in lblArray.enumerated() {
-            if index < question.codeArray.count {
+            if index < codeArray.count {
                 lbl?.isHidden = false
-                lbl?.text = question.codeArray[index].uppercased() + "   "
+                lbl?.text = codeArray[index].uppercased() + "   "
                 
             } else {
                 lbl?.isHidden = true
@@ -150,7 +140,7 @@ extension ITQuestionListViewController : UITableViewDelegate, UITableViewDataSou
         }
         
         let imgArray = [cell.img1, cell.img2, cell.img3, cell.img4]
-        let code = question.codeArray.first
+        let code = codeArray.first
         for (index, imgView) in imgArray.enumerated() {
             if index < code!.count {
                 imgView?.isHidden = false
@@ -174,39 +164,12 @@ extension ITQuestionListViewController : UITableViewDelegate, UITableViewDataSou
         
         self.selectedCell = (tableView.cellForRow(at: indexPath) as! ITQuestionListViewCell)
     
-        let question = self.listModel().result[indexPath.row]
-        let questionVC = ITQuestionDetailViewController()
-        questionVC.title = self.title
+        let question = self.listModel()[indexPath.row] as! Dictionary<String, Any>
+        let questionVC = IHTCWordDetailViewController()
+        questionVC.title = question["word"] as? String
         questionVC.questionModle = question
         questionVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(questionVC, animated: true)
     }
 }
-
-
-// MARK: 随机数
-extension MutableCollection where Indices.Iterator.Element == Index {
-    /// Shuffles the contents of this collection.
-    mutating func shuffle() {
-        let c = count
-        guard c > 1 else { return }
-        
-        for (firstUnshuffled , unshuffledCount) in zip(indices, stride(from: c, to: 1, by: -1)) {
-            let d: Int = numericCast(arc4random_uniform(numericCast(unshuffledCount)))
-            guard d != 0 else { continue }
-            let i = index(firstUnshuffled, offsetBy: d)
-            self.swapAt(firstUnshuffled, i)
-        }
-    }
-}
-
-extension Sequence {
-    /// Returns an array with the contents of this sequence, shuffled.
-    func shuffled() -> [Iterator.Element] {
-        var result = Array(self)
-        result.shuffle()
-        return result
-    }
-}
-
 

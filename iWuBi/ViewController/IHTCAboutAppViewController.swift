@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ITAboutAppVC: UIViewController {
+class IHTCAboutAppViewController: UIViewController {
 
     @IBOutlet weak var logoImgView: UIImageView!
-    
     @IBOutlet weak var appNameLbl: UILabel!
     @IBOutlet weak var versionLbl: UILabel!
     @IBOutlet weak var contentLbl: UILabel!
@@ -39,7 +38,7 @@ class ITAboutAppVC: UIViewController {
 
 }
 
-extension ITAboutAppVC
+extension IHTCAboutAppViewController
 {
     func setupUI() {
         self.title = "关于\(kiTalker)"
@@ -54,7 +53,10 @@ extension ITAboutAppVC
         self.appNameLbl.text = kiTalker
         self.versionLbl.text = "v" + KAppVersion
         self.contentLbl.text = kAppAbout
-        self.copylightLbl.text = "Copyright © 2019 " + "iHTCboy"
+        let formatter = DateFormatter.init()
+        formatter.dateFormat = "yyyy"
+        let yearString = formatter.string(from: Date.init())
+        self.copylightLbl.text = "Copyright © 2018-" + yearString + "iHTCboy"
     }
 }
 

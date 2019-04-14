@@ -10,7 +10,7 @@ import UIKit
 import StoreKit
 import SafariServices
 
-class ITProgrammerVC: UIViewController {
+class IHTCMeViewController: UIViewController {
 
     // MARK:- Lify Cycle
     override func viewDidLoad() {
@@ -41,7 +41,7 @@ class ITProgrammerVC: UIViewController {
 }
 
 
-extension ITProgrammerVC
+extension IHTCMeViewController
 {
     func setupUI() {
         view.addSubview(tableView)
@@ -66,7 +66,7 @@ extension ITProgrammerVC
 }
 
 // MARK: Tableview Delegate
-extension ITProgrammerVC : UITableViewDelegate, UITableViewDataSource
+extension IHTCMeViewController : UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 25
@@ -129,7 +129,7 @@ extension ITProgrammerVC : UITableViewDelegate, UITableViewDataSource
                 }
             }
             if row == 1 {
-                gotoAppstore(isAssessment: true)
+                gotoAppstore(isAssessment: false)
             }
             if row == 2 {
 
@@ -187,7 +187,7 @@ extension ITProgrammerVC : UITableViewDelegate, UITableViewDataSource
                 }
             }
             if row == 4 {
-                let vc = ITAboutAppVC()
+                let vc = IHTCAboutAppViewController()
                 vc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(vc, animated: true)
             }
@@ -197,8 +197,6 @@ extension ITProgrammerVC : UITableViewDelegate, UITableViewDataSource
             
         }
         
-        
-
     }
 }
 

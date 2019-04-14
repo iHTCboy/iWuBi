@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IHTCSearchViewController" customModule="iWuBi" customModuleProvider="target">
             <connections>
+                <outlet property="naviBar" destination="c52-ty-eGm" id="V4e-ND-JWj"/>
                 <outlet property="optionItem" destination="1OT-bu-bAD" id="MHO-oO-01k"/>
                 <outlet property="searchBar" destination="rM4-0j-H8r" id="xA7-8J-JgZ"/>
                 <outlet property="tableView" destination="dWQ-I2-ado" id="Woi-gm-1Cz"/>

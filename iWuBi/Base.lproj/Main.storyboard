@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9sW-Hr-DOm">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,13 +8,13 @@
         <!--爱五笔-->
         <scene sceneID="NjK-Ia-bCu">
             <objects>
-                <viewController id="hzK-He-MKE" customClass="ITProfessionViewController" customModule="iWuBi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hzK-He-MKE" customClass="IHTC98WordViewController" customModule="iWuBi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cTo-NT-IFU"/>
                         <viewControllerLayoutGuide type="bottom" id="bdh-Yz-2TZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hfH-ba-tb7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -59,13 +55,13 @@
         <!--爱五笔-->
         <scene sceneID="8VD-vo-IEO">
             <objects>
-                <viewController id="fYG-QD-d2T" customClass="ITProgrammerVC" customModule="iWuBi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fYG-QD-d2T" customClass="IHTCMeViewController" customModule="iWuBi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Abj-Ul-1bt"/>
                         <viewControllerLayoutGuide type="bottom" id="hlw-wn-SYs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XbG-OG-7oP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -105,7 +101,7 @@
                         <viewControllerLayoutGuide type="bottom" id="igb-6y-J3Q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wep-FW-oqd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -118,13 +114,13 @@
         <!--爱五笔-->
         <scene sceneID="UZP-wO-DqN">
             <objects>
-                <viewController id="9g4-eb-czi" customClass="ITLanguageViewController" customModule="iWuBi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9g4-eb-czi" customClass="IHTC86WordViewController" customModule="iWuBi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nH5-c1-Pxi"/>
                         <viewControllerLayoutGuide type="bottom" id="P9d-SD-y8W"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fPk-kt-uXR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

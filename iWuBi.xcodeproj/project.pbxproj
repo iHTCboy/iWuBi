@@ -9,12 +9,9 @@
 /* Begin PBXBuildFile section */
 		2D6303726115B67060D09E85 /* Pods_iWuBiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA5AA6FD67142615E34DC61 /* Pods_iWuBiTests.framework */; };
 		3719B7397CAA52057F9F1153 /* Pods_iWuBiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E83B6E1E91072EBEA6E329 /* Pods_iWuBiUITests.framework */; };
-		6D3B83D6225E238300037787 /* iWuBi-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B83D5225E238200037787 /* iWuBi-orange.png */; };
+		6D3B83D6225E238300037787 /* iWuBi-orange-word.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B83D5225E238200037787 /* iWuBi-orange-word.png */; };
 		6D3B83E0225E27B500037787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B83E2225E27B500037787 /* Main.storyboard */; };
 		6D3B83F2225E307700037787 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B83F4225E307700037787 /* InfoPlist.strings */; };
-		6D3B83FB225E341C00037787 /* ZMChineseConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3B83F7225E341C00037787 /* ZMChineseConvert.m */; };
-		6D3B83FC225E341C00037787 /* SimplifiedCode.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B83F8225E341C00037787 /* SimplifiedCode.txt */; };
-		6D3B83FD225E341C00037787 /* TraditionalCode.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B83FA225E341C00037787 /* TraditionalCode.txt */; };
 		6D3B8400225E42CC00037787 /* ITListTitleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3B83FE225E42CB00037787 /* ITListTitleViewCell.swift */; };
 		6D3B8401225E42CC00037787 /* ITListTitleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B83FF225E42CB00037787 /* ITListTitleViewCell.xib */; };
 		6D3B8403225E43D800037787 /* iWuBi-word-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B8402225E43D700037787 /* iWuBi-word-bg.png */; };
@@ -36,6 +33,7 @@
 		6D76E298225F9EFD005EACCA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D76E297225F9EFD005EACCA /* libz.tbd */; };
 		6D76E2A52260D7E8005EACCA /* IHTCSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2A32260D7E8005EACCA /* IHTCSearchViewController.swift */; };
 		6D76E2A72260D97E005EACCA /* IHTCSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2A92260D97E005EACCA /* IHTCSearchViewController.xib */; };
+		6D76E2B5226215A6005EACCA /* IHTCSearchDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2B4226215A6005EACCA /* IHTCSearchDetailVC.swift */; };
 		6DAD76FA225A277F00961BEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAD76F9225A277F00961BEC /* AppDelegate.swift */; };
 		6DAD7701225A278000961BEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DAD7700225A278000961BEC /* Assets.xcassets */; };
 		6DAD770F225A278000961BEC /* iWuBiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAD770E225A278000961BEC /* iWuBiTests.swift */; };
@@ -65,17 +63,15 @@
 		6DB88E0B225B8E340099AC80 /* ITPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DDB225B8E340099AC80 /* ITPageContentView.swift */; };
 		6DB88E0C225B8E340099AC80 /* ITQuestionListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88DDC225B8E340099AC80 /* ITQuestionListViewCell.xib */; };
 		6DB88E0D225B8E340099AC80 /* IHTCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DDE225B8E340099AC80 /* IHTCModel.swift */; };
-		6DB88E0E225B8E340099AC80 /* ITModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DDF225B8E340099AC80 /* ITModel.swift */; };
-		6DB88E0F225B8E340099AC80 /* ITQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DE0225B8E340099AC80 /* ITQuestionModel.swift */; };
-		6DB88E10225B8E340099AC80 /* ITAboutAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DE2225B8E340099AC80 /* ITAboutAppVC.swift */; };
-		6DB88E11225B8E340099AC80 /* ITProgrammerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DE3225B8E340099AC80 /* ITProgrammerVC.swift */; };
+		6DB88E10225B8E340099AC80 /* IHTCAboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DE2225B8E340099AC80 /* IHTCAboutAppViewController.swift */; };
+		6DB88E11225B8E340099AC80 /* IHTCMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DE3225B8E340099AC80 /* IHTCMeViewController.swift */; };
 		6DB88E13225B8E340099AC80 /* ITBasePopTransitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DE6225B8E340099AC80 /* ITBasePopTransitionVC.swift */; };
 		6DB88E14225B8E340099AC80 /* ITBasePushTransitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DE7225B8E340099AC80 /* ITBasePushTransitionVC.swift */; };
-		6DB88E15225B8E340099AC80 /* ITAboutAppVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88DE8225B8E340099AC80 /* ITAboutAppVC.xib */; };
-		6DB88E16225B8E340099AC80 /* ITQuestionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DE9225B8E340099AC80 /* ITQuestionDetailViewController.swift */; };
-		6DB88E17225B8E340099AC80 /* ITQuestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DEA225B8E340099AC80 /* ITQuestionListViewController.swift */; };
-		6DB88E18225B8E340099AC80 /* ITProfessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DEB225B8E340099AC80 /* ITProfessionViewController.swift */; };
-		6DB88E19225B8E340099AC80 /* ITLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DEC225B8E340099AC80 /* ITLanguageViewController.swift */; };
+		6DB88E15225B8E340099AC80 /* IHTCAboutAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88DE8225B8E340099AC80 /* IHTCAboutAppViewController.xib */; };
+		6DB88E16225B8E340099AC80 /* IHTCWordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DE9225B8E340099AC80 /* IHTCWordDetailViewController.swift */; };
+		6DB88E17225B8E340099AC80 /* IHTCWordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DEA225B8E340099AC80 /* IHTCWordListViewController.swift */; };
+		6DB88E18225B8E340099AC80 /* IHTC98WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DEB225B8E340099AC80 /* IHTC98WordViewController.swift */; };
+		6DB88E19225B8E340099AC80 /* IHTC86WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DEC225B8E340099AC80 /* IHTC86WordViewController.swift */; };
 		6DB88E1A225B8E340099AC80 /* ITScalePushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DEE225B8E340099AC80 /* ITScalePushTransition.swift */; };
 		6DB88E1B225B8E340099AC80 /* TCDataTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DEF225B8E340099AC80 /* TCDataTool.swift */; };
 		6DB88E1C225B8E340099AC80 /* ITScalePopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DF0225B8E340099AC80 /* ITScalePopTransition.swift */; };
@@ -111,7 +107,7 @@
 		4DC6FA5CB566AD8744AF9589 /* Pods-iWuBi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWuBi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iWuBi/Pods-iWuBi.debug.xcconfig"; sourceTree = "<group>"; };
 		5AA5AA6FD67142615E34DC61 /* Pods_iWuBiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iWuBiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FABFA1D936DFEDD99C5AC4A /* Pods_iWuBi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iWuBi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D3B83D5225E238200037787 /* iWuBi-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWuBi-orange.png"; sourceTree = "<group>"; };
+		6D3B83D5225E238200037787 /* iWuBi-orange-word.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWuBi-orange-word.png"; sourceTree = "<group>"; };
 		6D3B83E1225E27B500037787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D3B83E4225E27BC00037787 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		6D3B83E8225E2EFF00037787 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
@@ -119,10 +115,6 @@
 		6D3B83EE225E2FE200037787 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D3B83F3225E307700037787 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		6D3B83F5225E307E00037787 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		6D3B83F7225E341C00037787 /* ZMChineseConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMChineseConvert.m; sourceTree = "<group>"; };
-		6D3B83F8225E341C00037787 /* SimplifiedCode.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimplifiedCode.txt; sourceTree = "<group>"; };
-		6D3B83F9225E341C00037787 /* ZMChineseConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMChineseConvert.h; sourceTree = "<group>"; };
-		6D3B83FA225E341C00037787 /* TraditionalCode.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TraditionalCode.txt; sourceTree = "<group>"; };
 		6D3B83FE225E42CB00037787 /* ITListTitleViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITListTitleViewCell.swift; sourceTree = "<group>"; };
 		6D3B83FF225E42CB00037787 /* ITListTitleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ITListTitleViewCell.xib; sourceTree = "<group>"; };
 		6D3B8402225E43D700037787 /* iWuBi-word-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWuBi-word-bg.png"; sourceTree = "<group>"; };
@@ -148,6 +140,7 @@
 		6D76E2AB2260D983005EACCA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/IHTCSearchViewController.strings"; sourceTree = "<group>"; };
 		6D76E2AD2260D99E005EACCA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/IHTCSearchViewController.strings"; sourceTree = "<group>"; };
 		6D76E2AF2260D9AC005EACCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/IHTCSearchViewController.strings; sourceTree = "<group>"; };
+		6D76E2B4226215A6005EACCA /* IHTCSearchDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHTCSearchDetailVC.swift; sourceTree = "<group>"; };
 		6DAD76F6225A277F00961BEC /* iWuBi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iWuBi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DAD76F9225A277F00961BEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DAD7700225A278000961BEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -182,17 +175,15 @@
 		6DB88DDB225B8E340099AC80 /* ITPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITPageContentView.swift; sourceTree = "<group>"; };
 		6DB88DDC225B8E340099AC80 /* ITQuestionListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ITQuestionListViewCell.xib; sourceTree = "<group>"; };
 		6DB88DDE225B8E340099AC80 /* IHTCModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHTCModel.swift; sourceTree = "<group>"; };
-		6DB88DDF225B8E340099AC80 /* ITModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITModel.swift; sourceTree = "<group>"; };
-		6DB88DE0225B8E340099AC80 /* ITQuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITQuestionModel.swift; sourceTree = "<group>"; };
-		6DB88DE2225B8E340099AC80 /* ITAboutAppVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITAboutAppVC.swift; sourceTree = "<group>"; };
-		6DB88DE3225B8E340099AC80 /* ITProgrammerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITProgrammerVC.swift; sourceTree = "<group>"; };
+		6DB88DE2225B8E340099AC80 /* IHTCAboutAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHTCAboutAppViewController.swift; sourceTree = "<group>"; };
+		6DB88DE3225B8E340099AC80 /* IHTCMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHTCMeViewController.swift; sourceTree = "<group>"; };
 		6DB88DE6225B8E340099AC80 /* ITBasePopTransitionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITBasePopTransitionVC.swift; sourceTree = "<group>"; };
 		6DB88DE7225B8E340099AC80 /* ITBasePushTransitionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITBasePushTransitionVC.swift; sourceTree = "<group>"; };
-		6DB88DE8225B8E340099AC80 /* ITAboutAppVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ITAboutAppVC.xib; sourceTree = "<group>"; };
-		6DB88DE9225B8E340099AC80 /* ITQuestionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITQuestionDetailViewController.swift; sourceTree = "<group>"; };
-		6DB88DEA225B8E340099AC80 /* ITQuestionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITQuestionListViewController.swift; sourceTree = "<group>"; };
-		6DB88DEB225B8E340099AC80 /* ITProfessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITProfessionViewController.swift; sourceTree = "<group>"; };
-		6DB88DEC225B8E340099AC80 /* ITLanguageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITLanguageViewController.swift; sourceTree = "<group>"; };
+		6DB88DE8225B8E340099AC80 /* IHTCAboutAppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IHTCAboutAppViewController.xib; sourceTree = "<group>"; };
+		6DB88DE9225B8E340099AC80 /* IHTCWordDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHTCWordDetailViewController.swift; sourceTree = "<group>"; };
+		6DB88DEA225B8E340099AC80 /* IHTCWordListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHTCWordListViewController.swift; sourceTree = "<group>"; };
+		6DB88DEB225B8E340099AC80 /* IHTC98WordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHTC98WordViewController.swift; sourceTree = "<group>"; };
+		6DB88DEC225B8E340099AC80 /* IHTC86WordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHTC86WordViewController.swift; sourceTree = "<group>"; };
 		6DB88DEE225B8E340099AC80 /* ITScalePushTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITScalePushTransition.swift; sourceTree = "<group>"; };
 		6DB88DEF225B8E340099AC80 /* TCDataTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCDataTool.swift; sourceTree = "<group>"; };
 		6DB88DF0225B8E340099AC80 /* ITScalePopTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITScalePopTransition.swift; sourceTree = "<group>"; };
@@ -249,17 +240,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6D3B83F6225E341C00037787 /* ChineseConvert */ = {
-			isa = PBXGroup;
-			children = (
-				6D3B83F9225E341C00037787 /* ZMChineseConvert.h */,
-				6D3B83F7225E341C00037787 /* ZMChineseConvert.m */,
-				6D3B83F8225E341C00037787 /* SimplifiedCode.txt */,
-				6D3B83FA225E341C00037787 /* TraditionalCode.txt */,
-			);
-			path = ChineseConvert;
-			sourceTree = "<group>";
-		};
 		6DAD76ED225A277F00961BEC = {
 			isa = PBXGroup;
 			children = (
@@ -339,7 +319,7 @@
 				6D76E276225F883C005EACCA /* iWuBi-98-keyboard.png */,
 				6D76E274225F8829005EACCA /* iWuBi-86-keyboard.png */,
 				6D3B8402225E43D700037787 /* iWuBi-word-bg.png */,
-				6D3B83D5225E238200037787 /* iWuBi-orange.png */,
+				6D3B83D5225E238200037787 /* iWuBi-orange-word.png */,
 				6DB88DBA225B8E340099AC80 /* language_tabbar_selected@2x.png */,
 				6DB88DBB225B8E340099AC80 /* italkerman_gray@3x.png */,
 				6DB88DBC225B8E340099AC80 /* company_tabbar_selected@2x.png */,
@@ -381,7 +361,6 @@
 		6DB88DD0225B8E340099AC80 /* Thirdparty */ = {
 			isa = PBXGroup;
 			children = (
-				6D3B83F6225E341C00037787 /* ChineseConvert */,
 				6DB88DD1225B8E340099AC80 /* ios_api */,
 			);
 			path = Thirdparty;
@@ -424,8 +403,6 @@
 			isa = PBXGroup;
 			children = (
 				6DB88DDE225B8E340099AC80 /* IHTCModel.swift */,
-				6DB88DDF225B8E340099AC80 /* ITModel.swift */,
-				6DB88DE0225B8E340099AC80 /* ITQuestionModel.swift */,
 				6D76E27B225F9064005EACCA /* IHTCImgModel.swift */,
 			);
 			path = Model;
@@ -435,15 +412,16 @@
 			isa = PBXGroup;
 			children = (
 				6DB88DE5225B8E340099AC80 /* BaseVC */,
-				6DB88DEC225B8E340099AC80 /* ITLanguageViewController.swift */,
-				6DB88DEB225B8E340099AC80 /* ITProfessionViewController.swift */,
-				6DB88DEA225B8E340099AC80 /* ITQuestionListViewController.swift */,
-				6DB88DE9225B8E340099AC80 /* ITQuestionDetailViewController.swift */,
+				6DB88DEC225B8E340099AC80 /* IHTC86WordViewController.swift */,
+				6DB88DEB225B8E340099AC80 /* IHTC98WordViewController.swift */,
+				6DB88DEA225B8E340099AC80 /* IHTCWordListViewController.swift */,
+				6DB88DE9225B8E340099AC80 /* IHTCWordDetailViewController.swift */,
+				6D76E2B4226215A6005EACCA /* IHTCSearchDetailVC.swift */,
 				6D76E2A32260D7E8005EACCA /* IHTCSearchViewController.swift */,
 				6D76E2A92260D97E005EACCA /* IHTCSearchViewController.xib */,
-				6DB88DE3225B8E340099AC80 /* ITProgrammerVC.swift */,
-				6DB88DE2225B8E340099AC80 /* ITAboutAppVC.swift */,
-				6DB88DE8225B8E340099AC80 /* ITAboutAppVC.xib */,
+				6DB88DE3225B8E340099AC80 /* IHTCMeViewController.swift */,
+				6DB88DE2225B8E340099AC80 /* IHTCAboutAppViewController.swift */,
+				6DB88DE8225B8E340099AC80 /* IHTCAboutAppViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -632,17 +610,15 @@
 				6DB88E03225B8E340099AC80 /* language_tabbar_normal@3x.png in Resources */,
 				6DB88E0C225B8E340099AC80 /* ITQuestionListViewCell.xib in Resources */,
 				6DB88DF5225B8E340099AC80 /* italkerman_gray@2x.png in Resources */,
-				6D3B83D6225E238300037787 /* iWuBi-orange.png in Resources */,
+				6D3B83D6225E238300037787 /* iWuBi-orange-word.png in Resources */,
 				6D3B83F2225E307700037787 /* InfoPlist.strings in Resources */,
 				6DEF6236225C0FDA001A6530 /* iWuBi_code.json in Resources */,
-				6D3B83FD225E341C00037787 /* TraditionalCode.txt in Resources */,
 				6DB88E01225B8E340099AC80 /* company_tabbar_normal@3x.png in Resources */,
 				6D76E277225F883C005EACCA /* iWuBi-98-keyboard.png in Resources */,
 				6DB88DF8225B8E340099AC80 /* App-share-Icon.png in Resources */,
 				6DB88DFF225B8E340099AC80 /* iTalkerman_blue@3x.png in Resources */,
 				6DB88DF9225B8E340099AC80 /* Engineer_selected@3x.png in Resources */,
-				6D3B83FC225E341C00037787 /* SimplifiedCode.txt in Resources */,
-				6DB88E15225B8E340099AC80 /* ITAboutAppVC.xib in Resources */,
+				6DB88E15225B8E340099AC80 /* IHTCAboutAppViewController.xib in Resources */,
 				6DB88E00225B8E340099AC80 /* iTalkerman_blue@2x.png in Resources */,
 				6D3B8403225E43D800037787 /* iWuBi-word-bg.png in Resources */,
 				6DB88DF1225B8E340099AC80 /* language_tabbar_selected@2x.png in Resources */,
@@ -750,30 +726,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DB88E18225B8E340099AC80 /* ITProfessionViewController.swift in Sources */,
-				6DB88E10225B8E340099AC80 /* ITAboutAppVC.swift in Sources */,
-				6DB88E11225B8E340099AC80 /* ITProgrammerVC.swift in Sources */,
+				6DB88E18225B8E340099AC80 /* IHTC98WordViewController.swift in Sources */,
+				6DB88E10225B8E340099AC80 /* IHTCAboutAppViewController.swift in Sources */,
+				6DB88E11225B8E340099AC80 /* IHTCMeViewController.swift in Sources */,
 				6DB88E0B225B8E340099AC80 /* ITPageContentView.swift in Sources */,
+				6D76E2B5226215A6005EACCA /* IHTCSearchDetailVC.swift in Sources */,
 				6DB88E21225B8E720099AC80 /* ITCommonAPI.swift in Sources */,
 				6DB88E1B225B8E340099AC80 /* TCDataTool.swift in Sources */,
 				6DB88E0D225B8E340099AC80 /* IHTCModel.swift in Sources */,
 				6DB88E1A225B8E340099AC80 /* ITScalePushTransition.swift in Sources */,
 				6DAD76FA225A277F00961BEC /* AppDelegate.swift in Sources */,
-				6DB88E16225B8E340099AC80 /* ITQuestionDetailViewController.swift in Sources */,
+				6DB88E16225B8E340099AC80 /* IHTCWordDetailViewController.swift in Sources */,
 				6D3B8400225E42CC00037787 /* ITListTitleViewCell.swift in Sources */,
 				6DB88E08225B8E340099AC80 /* ITQuestionListViewCell.swift in Sources */,
 				6DB88E09225B8E340099AC80 /* ITCopyLabel.swift in Sources */,
-				6DB88E0E225B8E340099AC80 /* ITModel.swift in Sources */,
-				6DB88E19225B8E340099AC80 /* ITLanguageViewController.swift in Sources */,
+				6DB88E19225B8E340099AC80 /* IHTC86WordViewController.swift in Sources */,
 				6DB88E14225B8E340099AC80 /* ITBasePushTransitionVC.swift in Sources */,
 				6D76E27F225F95F7005EACCA /* IHTCWuBiWordViewCell.swift in Sources */,
-				6DB88E0F225B8E340099AC80 /* ITQuestionModel.swift in Sources */,
-				6D3B83FB225E341C00037787 /* ZMChineseConvert.m in Sources */,
 				6D76E27C225F9064005EACCA /* IHTCImgModel.swift in Sources */,
 				6DB88E1C225B8E340099AC80 /* ITScalePopTransition.swift in Sources */,
 				6DB88E0A225B8E340099AC80 /* ITPageTitleView.swift in Sources */,
 				6DB88E13225B8E340099AC80 /* ITBasePopTransitionVC.swift in Sources */,
-				6DB88E17225B8E340099AC80 /* ITQuestionListViewController.swift in Sources */,
+				6DB88E17225B8E340099AC80 /* IHTCWordListViewController.swift in Sources */,
 				6D76E2A52260D7E8005EACCA /* IHTCSearchViewController.swift in Sources */,
 				6DB88E20225B8E720099AC80 /* CommonDefine.swift in Sources */,
 			);

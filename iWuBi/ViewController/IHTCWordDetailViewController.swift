@@ -1,5 +1,5 @@
 //
-//  ITQuestionDetailViewController.swift
+//  IHTCWordDetailViewController.swift
 //  iTalker
 //
 //  Created by HTC on 2017/4/9.
@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 
 
-class ITQuestionDetailViewController: ITBasePopTransitionVC {
+class IHTCWordDetailViewController: ITBasePopTransitionVC {
  
     // MARK: Life Cycle
     override func viewDidLoad() {
@@ -31,11 +31,12 @@ class ITQuestionDetailViewController: ITBasePopTransitionVC {
     
     var selectedCell: ITListTitleViewCell!
     
-    var questionModle : ITQuestionModel?
+    var questionModle : Dictionary<String, Any>?
     var isShowZH : Bool = false
     
     lazy var tableView: UITableView = {
-        var tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: kScreenW, height: kScreenH), style: .plain)
+        var tableView = UITableView.init(frame: CGRect.zero, style: .plain)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.estimatedRowHeight = 80
         tableView.estimatedSectionHeaderHeight = 80
@@ -48,42 +49,47 @@ class ITQuestionDetailViewController: ITBasePopTransitionVC {
 }
 
 
-extension ITQuestionDetailViewController {
+extension IHTCWordDetailViewController {
     fileprivate func setUpUI() {
         view.addSubview(tableView)
         tableView.delegate = self;
         tableView.dataSource = self;
+        let constraintViews = [
+            "tableView": tableView
+        ]
+        let vFormat = "V:|-0-[tableView]-0-|"
+        let hFormat = "H:|-0-[tableView]-0-|"
+        let vConstraints = NSLayoutConstraint.constraints(withVisualFormat: vFormat, options: [], metrics: [:], views: constraintViews)
+        let hConstraints = NSLayoutConstraint.constraints(withVisualFormat: hFormat, options: [], metrics: [:], views: constraintViews)
+        view.addConstraints(vConstraints)
+        view.addConstraints(hConstraints)
+        view.layoutIfNeeded()
         
         let add = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(addTapped))
-        let play = UIBarButtonItem(title: "繁體", style: .plain, target: self, action: #selector(playTapped))
-        navigationItem.rightBarButtonItems = [play]
+//        let play = UIBarButtonItem(title: "繁體", style: .plain, target: self, action: #selector(playTapped))
+        navigationItem.rightBarButtonItems = [add]
     }
     
     @objc func addTapped(item: UIBarButtonItem) {
         
-        let alert = UIAlertController(title: "提示",
-                                      message: "请选择要显示的解答的答案的语言\nSelect the language of the answer for the solution",
-                                      preferredStyle: UIAlertController.Style.alert)
-        
-        let zhAction = UIAlertAction.init(title: "中文", style: .default) { (action: UIAlertAction) in
-            let url = "https://leetcode-cn.com/articles/" + self.questionModle!.link
-            self.showWebView(url: url)
+        var url = "https://m.youdao.com/dict?q=" + self.title!
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            url = "https://dict.youdao.com/w/eng/" + self.title!
         }
-        alert.addAction(zhAction)
-        
-        let enAction = UIAlertAction.init(title: "English", style: .default) { (action: UIAlertAction) in
-            let url = "https://leetcode.com/articles/" + self.questionModle!.link
-            self.showWebView(url: url)
+        let urlEncoding = url.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed)
+        let URLs = URL.init(string: urlEncoding!)!
+        let sfvc = SFSafariViewController.init(url: URLs)
+        sfvc.hidesBottomBarWhenPushed = true
+        sfvc.title = "Search"
+        if #available(iOS 10.0, *) {
+            sfvc.preferredBarTintColor = kColorAppOrange
+            sfvc.preferredControlTintColor = UIColor.white
         }
-        alert.addAction(enAction)
-        
-        let cancelAction = UIAlertAction.init(title: "Cancel", style: .cancel) { (action: UIAlertAction) in
-            
+        if #available(iOS 11.0, *) {
+            sfvc.dismissButtonStyle = .close
+            sfvc.navigationItem.largeTitleDisplayMode = .never
         }
-        alert.addAction(cancelAction)
-        self.present(alert, animated: true, completion: {
-            //print("UIAlertController present");
-        })
+        self.present(sfvc, animated: true, completion: nil)
     }
     
     @objc func playTapped(item: UIBarButtonItem) {
@@ -124,14 +130,14 @@ extension ITQuestionDetailViewController {
 }
 
 
-extension ITQuestionDetailViewController : UITableViewDelegate, UITableViewDataSource {
+extension IHTCWordDetailViewController : UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return questionModle?.codeArray.count ?? 0
+        return (questionModle?["codes"] as! Array<String>).count as Int 
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -160,16 +166,18 @@ extension ITQuestionDetailViewController : UITableViewDelegate, UITableViewDataS
         cell.num4Lbl.baselineAdjustment = .alignCenters
         cell.num4Lbl.backgroundColor = kColorAppGray
         
-        let question = questionModle!
+        let question = questionModle! as! Dictionary<String, Any>
         
-        cell.wordLbl.text = question.word
+        cell.wordLbl.text = question["word"] as? String
+        
+        var codeArray = question["codes"] as? Array<String> ?? Array<String>()
         
         let lblArray = [cell.num1Lbl, cell.num2Lbl, cell.num3Lbl, cell.num4Lbl]
         
         for (index, lbl) in lblArray.enumerated() {
-            if index < question.codeArray.count {
+            if index < codeArray.count {
                 lbl?.isHidden = false
-                lbl?.text = question.codeArray[index].uppercased() + "   "
+                lbl?.text = codeArray[index].uppercased() + "   "
                 
             } else {
                 lbl?.isHidden = true
@@ -192,13 +200,15 @@ extension ITQuestionDetailViewController : UITableViewDelegate, UITableViewDataS
         cell.num1Lbl.backgroundColor = kColorAppBlue
         
         let question = questionModle!
-        if isShowZH {
-            cell.num1Lbl.text = ZMChineseConvert.convert(toSimplified: question.word)
-        }else{
-            cell.num1Lbl.text = ZMChineseConvert.convert(toTraditional: question.word)
-        }
         
-        let code = question.codeArray[indexPath.row].uppercased()
+        cell.num1Lbl.text = question["word"] as? String
+        
+        var codeArray = question["codes"] as? Array<String> ?? Array<String>()
+        
+        var code = ""
+        if codeArray.count > 0 {
+            code = codeArray[indexPath.row].uppercased()
+        }
         
         cell.num2Lbl.text = "编码：\(code)"
         

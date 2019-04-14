@@ -17,7 +17,7 @@ let kReviewAction = "&action=write-review"
 let kGithubURL = "https://github.com/iHTCboy/iWuBi"
 let kiHTCboyURL = "https://ihtcboy.com"
 let kEmail = "ihetiancong@gmail.com"
-let kAppShare = "Hello, \(kiTalker)! 这是一款为IT工程师们提供算法知识充电的应用，IT算法和数据结构知识，求职面试必备的好工具哦！" + "iOS下载链接：" + kAppDownloadURl
+let kAppShare = "Hello, \(kiTalker)! 是一款五笔学习的工具，支持86版和98版，简体和繁体字显示！30000+词库，满足你五笔求知欲望！让大家在零碎时间也可以快速和简单的学习get! " + "iOS下载链接：" + kAppDownloadURl
 let kAppAbout = "\(kiTalker) 为一款五笔学习的工具，不断努力打造更多更好方式呈现更有趣的知识，让大家在零碎时间也可以快速和简单的学习get! \n \n 1、30000+词库，满足你五笔求知欲望！\n2、支持86版和98版，简体和繁体字显示！"
 
 

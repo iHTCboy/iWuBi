@@ -16,8 +16,8 @@ class ITScalePushTransition: NSObject, UIViewControllerAnimatedTransitioning {
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         //1.获取动画的源控制器和目标控制器
         let prentVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) as! ITBasePushTransitionVC
-        let fromVC = prentVC.children[prentVC.selectTitleIndex] as! ITQuestionListViewController
-        let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) as! ITQuestionDetailViewController
+        let fromVC = prentVC.children[prentVC.selectTitleIndex] as! IHTCWordListViewController
+        let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) as! IHTCWordDetailViewController
         let container = transitionContext.containerView
         
         //2.创建一个 Cell 中 imageView 的截图，并把 imageView 隐藏，造成使用户以为移动的就是 imageView 的假象

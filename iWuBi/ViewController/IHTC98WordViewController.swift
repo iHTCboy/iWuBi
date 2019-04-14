@@ -1,14 +1,15 @@
 //
-//  ITLanguageViewController.swift
-//  iTalker
+//  IHTC98WordViewController.swift
+//  iWuBi
 //
 //  Created by HTC on 2017/4/8.
-//  Copyright © 2017年 ihtc.cc @iHTCboy. All rights reserved.
+//  Copyright © 2017年 iHTCboy. All rights reserved.
 //
 
 import UIKit
 
-class IHTC86WordViewController: ITBasePushTransitionVC {
+class IHTC98WordViewController: ITBasePushTransitionVC
+{
     
     // MARK: Life Cycle
     override func viewDidLoad() {
@@ -21,12 +22,10 @@ class IHTC86WordViewController: ITBasePushTransitionVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        launchAnimate()
-        self.tabBarController?.tabBar.tintColor = UIColor.orange
     }
     
     // MARK:- 懒加载
-    fileprivate var titles = IHTCModel.shared.defaultArray
+    fileprivate var titles = IHTCModel.shared.tagsArray
     
     fileprivate lazy var pageTitleView: ITPageTitleView = {
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH, width: kScreenW, height: kTitleViewH)
@@ -44,32 +43,29 @@ class IHTC86WordViewController: ITBasePushTransitionVC {
         var childVcs = [UIViewController]()
         if let counts = self?.titles.count {
             for i in 0..<counts {
-                let vc = ITQuestionListViewController()
+                let vc = IHTCWordListViewController()
                 vc.title = self?.titles[i]
                 childVcs.append(vc)
             }
         }
         
-    let contentView = ITPageContentView(frame: contentFrame, childVcs: childVcs, parentVc: self)
-    contentView.delegate = self
-    return contentView
-    }()
-    
-    var isFirstLaunch = false
+        let contentView = ITPageContentView(frame: contentFrame, childVcs: childVcs, parentVc: self)
+        contentView.delegate = self
+        return contentView
+        }()
     
     @IBAction func clickedSearchItem(_ sender: Any) {
         let vc = IHTCSearchViewController()
-        vc.is86Word = true
+        vc.is86Word = false
         let navi = UINavigationController.init(rootViewController: vc)
         navi.navigationBar.isHidden = true
         self.present(navi, animated: true, completion: nil)
     }
-    
 }
 
 
 // MARK:- 设置 UI
-extension IHTC86WordViewController {
+extension IHTC98WordViewController {
     fileprivate func setUpUI() {
         // 0. 不允许系统调整 scrollview 内边距
         automaticallyAdjustsScrollViewInsets = false
@@ -79,27 +75,6 @@ extension IHTC86WordViewController {
         
         // 2. 添加 contentview
         view.addSubview(pageContentView)
-    }
-    
-    func launchAnimate() {
-        if !isFirstLaunch {
-            isFirstLaunch = true
-            
-            let vc = UIStoryboard.init(name: "AppLaunchScreen", bundle: nil);
-            let launchView = vc.instantiateInitialViewController()!.view
-            let window =  UIWindow.init(frame: (view?.frame)!)
-            window.windowLevel = UIWindow.Level.alert
-            window.backgroundColor = UIColor.clear
-            window.addSubview(launchView!)
-            window.makeKeyAndVisible()
-            
-            UIView.animate(withDuration: 0.25, delay: 0.8, options: .beginFromCurrentState, animations: {
-                launchView?.layer.transform = CATransform3DScale(CATransform3DIdentity, 2, 2, 1)
-                launchView?.alpha = 0.0
-            }, completion: { (true) in
-                window.removeFromSuperview()
-            })
-        }
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -113,21 +88,18 @@ extension IHTC86WordViewController {
 }
 
 // MARK:- pageTitleViewDelegate
-extension IHTC86WordViewController: ITPageTitleViewDelegate {
+extension IHTC98WordViewController: ITPageTitleViewDelegate {
     func pageTitleView(pageTitleView: ITPageTitleView, didSelectedIndex index: Int) {
         pageContentView.scrollToIndex(index: index)
-        selectTitleIndex = index
+        self.selectTitleIndex = index
     }
 }
 
 // MARK:- pageContentViewDelegate
-extension IHTC86WordViewController: ITPageContentViewDelegate {
+extension IHTC98WordViewController: ITPageContentViewDelegate {
     func pageContentView(pageContentView: ITPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
         pageTitleView.setTitleWithProgerss(sourceIndex: sourceIndex, targetIndex: targetIndex, progress: progress)
-        selectTitleIndex = targetIndex
+        self.selectTitleIndex = targetIndex
     }
 }
-
-
-
 
