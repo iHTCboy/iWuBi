@@ -29,7 +29,7 @@ class IHTCMeViewController: UIViewController {
     // MARK:- 懒加载
     lazy var tableView: UITableView = {
         var tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: kScreenW, height: kScreenH-49), style: .grouped)
-        tableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: -49, right: 0)
+        tableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 20, right: 0)
         tableView.sectionFooterHeight = 0.1;
         tableView.estimatedRowHeight = 55
         return tableView

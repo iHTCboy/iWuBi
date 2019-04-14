@@ -30,7 +30,7 @@
                     <items>
                         <navigationItem title="Search" id="sn4-2G-rIV">
                             <leftBarButtonItems>
-                                <barButtonItem title="单字" style="plain" id="1OT-bu-bAD">
+                                <barButtonItem title="单字" id="1OT-bu-bAD">
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
                                         <action selector="clickedOptionItem:" destination="-1" id="MYq-4g-dIu"/>
