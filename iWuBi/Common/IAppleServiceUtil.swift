@@ -11,7 +11,7 @@ import StoreKit
 import SafariServices
 
 class IAppleServiceUtil: NSObject {
-    class func showWebView(url: String, tintColor: UIColor, vc: UIViewController) {
+    class func openWebView(url: String, tintColor: UIColor, vc: UIViewController) {
         let sf = SFSafariViewController(url: URL(string: url
             )!, entersReaderIfAvailable: true)
         if #available(iOS 10.0, *) {

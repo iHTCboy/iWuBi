@@ -36,7 +36,7 @@ class IHTCMeViewController: UIViewController {
     }()
     
     fileprivate var titles = ["0": "切换App图标:选择你的最爱", "1": "应用内评分:欢迎给\(kiTalker)打评分！,AppStore评价:欢迎给\(kiTalker)写评论!,分享给朋友:与身边的好友一起学习！",
-        "2":"意见反馈:欢迎到AppStore提需求或bug问题,邮件联系:如有问题欢迎来信,开源地址:未来逐步开放代码，欢迎关注,更多关注:了解更多，欢迎访问作者博客,关于应用:\(kiTalker)"] as [String : String]
+        "2":"意见反馈:欢迎到AppStore提需求或bug问题,邮件联系:如有问题欢迎来信,隐私条款:用户使用服务协议,开源地址:未来逐步开放代码，欢迎关注,更多关注:了解更多，欢迎访问作者博客,关于应用:\(kiTalker)"] as [String : String]
 
 }
 
@@ -199,42 +199,15 @@ extension IHTCMeViewController : UITableViewDelegate, UITableViewDataSource
                 ITCommonAPI.shared.sendEmail(recipients: [kEmail], messae: message, vc: self)
             }
             if row == 2 {
-                if #available(iOS 9.0, *) {
-                    let vc = SFSafariViewController(url: URL(string: kGithubURL
-                        )!, entersReaderIfAvailable: true)
-                    if #available(iOS 10.0, *) {
-                        vc.preferredBarTintColor = kColorAppOrange
-                        vc.preferredControlTintColor = UIColor.white
-                    }
-                    if #available(iOS 11.0, *) {
-                        vc.dismissButtonStyle = .close
-                    }
-                    present(vc, animated: true)
-                } else {
-                    if UIApplication.shared.canOpenURL(URL.init(string: kGithubURL )!) {
-                        UIApplication.shared.openURL(URL.init(string: kGithubURL)!)
-                    }
-                }
+                IAppleServiceUtil.openWebView(url: kLicenseURL, tintColor: kColorAppOrange, vc: self)
             }
             if row == 3 {
-                if #available(iOS 9.0, *) {
-                    let vc = SFSafariViewController(url: URL(string: kiHTCboyURL
-                        )!, entersReaderIfAvailable: true)
-                    if #available(iOS 10.0, *) {
-                        vc.preferredBarTintColor = kColorAppOrange
-                        vc.preferredControlTintColor = UIColor.white
-                    }
-                    if #available(iOS 11.0, *) {
-                        vc.dismissButtonStyle = .close
-                    }
-                    present(vc, animated: true)
-                } else {
-                    if UIApplication.shared.canOpenURL(URL.init(string: kiHTCboyURL )!) {
-                        UIApplication.shared.openURL(URL.init(string: kiHTCboyURL)!)
-                    }
-                }
+                IAppleServiceUtil.openWebView(url: kGithubURL, tintColor: kColorAppOrange, vc: self)
             }
             if row == 4 {
+                IAppleServiceUtil.openWebView(url: kiHTCboyURL, tintColor: kColorAppOrange, vc: self)
+            }
+            if row == 5 {
                 let vc = IHTCAboutAppViewController()
                 vc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(vc, animated: true)

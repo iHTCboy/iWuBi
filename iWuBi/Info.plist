@@ -66,7 +66,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0.0</string>
+	<string>2.1.0</string>
 	<key>CFBundleVersion</key>
 	<string>2019.04.14.02</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -75,11 +75,19 @@
 	<array>
 		<dict>
 			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeMessage</string>
+			<string>UIApplicationShortcutIconTypeSearch</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>快速查询字词</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>iWuBi://search</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeLove</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>问题建议反馈</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>iWuBi://feedback</string>
+			<string>iWuBi://love</string>
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconType</key>
@@ -87,15 +95,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>应用星级评价</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>iWuBi://love</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeSearch</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>快速查询字词</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>iWuBi://search</string>
+			<string>iWuBi://star</string>
 		</dict>
 	</array>
 	<key>UILaunchStoryboardName</key>

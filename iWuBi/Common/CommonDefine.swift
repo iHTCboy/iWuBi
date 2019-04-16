@@ -15,6 +15,7 @@ let kAppAppleId = "1459028801"
 let kAppDownloadURl = "https://itunes.apple.com/cn/app/iWuBi/id1459028801?l=zh&ls=1&mt=8"
 let kReviewAction = "&action=write-review"
 let kGithubURL = "https://github.com/iHTCboy/iWuBi"
+let kLicenseURL = "https://raw.githubusercontent.com/iHTCboy/iWuBi/master/LICENSE"
 let kiHTCboyURL = "https://ihtcboy.com"
 let kEmail = "ihetiancong@gmail.com"
 let kAppShare = "Hello, \(kiTalker) 是一款五笔学习的工具，支持86版和98版，简体和繁体字显示！30000+词库，满足你五笔求知欲望！让大家在零碎时间也可以快速和简单的学习get! " + "iOS下载链接：" + kAppDownloadURl

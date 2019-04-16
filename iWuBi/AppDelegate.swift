@@ -35,11 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIApplication.shared.keyWindow?.rootViewController!.present(navi, animated: true, completion: nil)
         }
         
-        if shortcutItem.type.contains("iWuBi://love") {
+        if shortcutItem.type.contains("iWuBi://star") {
             IAppleServiceUtil.inAppRating(url: kAppDownloadURl)
         }
         
-        if shortcutItem.type.contains("iWuBi://feedback") {
+        if shortcutItem.type.contains("iWuBi://love") {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
                 IAppleServiceUtil.openAppstore(url: kAppDownloadURl, isAssessment: false)
             })
@@ -96,7 +96,7 @@ extension AppDelegate {
         statTracker?.logEvent("DateAndDeviceName", eventLabel: currentDate + " " + UIDevice.current.name)
         statTracker?.logEvent("Devices", eventLabel:UIDevice.current.name)
         #endif
-        //         statTracker.enableDebugOn = true;
+        // statTracker.enableDebugOn = true;
         
     }
     
