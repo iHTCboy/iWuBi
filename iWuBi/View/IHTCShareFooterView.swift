@@ -39,6 +39,10 @@ class IHTCShareFooterView: UIView {
         fview.shareImage.image = image
         fview.shareTitle.text = title
         fview.shareSubTitle.text = subTitle
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            fview.shareTitle.font = UIFont.systemFont(ofSize: 21)
+            fview.shareSubTitle.font = UIFont.systemFont(ofSize: 16)
+        }
         return fview
     }
 

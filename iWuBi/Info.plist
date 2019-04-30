@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>请求访问相册，以便保存App截图</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>请求访问相册，以便保存App截图</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -70,11 +66,15 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.1.0</string>
+	<string>2.2.0</string>
 	<key>CFBundleVersion</key>
-	<string>2019.04.14.02</string>
+	<string>2019.04.30</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>请求访问相册，以便保存App截图</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>请求访问相册，以便保存App截图</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>

@@ -93,6 +93,10 @@
 		6DAD7701225A278000961BEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DAD7700225A278000961BEC /* Assets.xcassets */; };
 		6DAD770F225A278000961BEC /* iWuBiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAD770E225A278000961BEC /* iWuBiTests.swift */; };
 		6DAD771A225A278000961BEC /* iWuBiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAD7719225A278000961BEC /* iWuBiUITests.swift */; };
+		6DB1AF942278A75D0051A288 /* TableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DB1AF922278A75C0051A288 /* TableHeaderView.xib */; };
+		6DB1AF952278A75D0051A288 /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB1AF932278A75D0051A288 /* TableHeaderView.swift */; };
+		6DB1AF972278A7640051A288 /* ITAdvancelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB1AF962278A7640051A288 /* ITAdvancelDetailViewController.swift */; };
+		6DB1AF992278A7710051A288 /* iHTCboyApp.json in Resources */ = {isa = PBXBuildFile; fileRef = 6DB1AF982278A7710051A288 /* iHTCboyApp.json */; };
 		6DB88DF7225B8E340099AC80 /* App-TextLogo-Alpha.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88DC0225B8E340099AC80 /* App-TextLogo-Alpha.png */; };
 		6DB88DF8225B8E340099AC80 /* App-share-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88DC1225B8E340099AC80 /* App-share-Icon.png */; };
 		6DB88E05225B8E340099AC80 /* libBaiduMobStat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB88DD2225B8E340099AC80 /* libBaiduMobStat.a */; };
@@ -246,6 +250,10 @@
 		6DAD7715225A278000961BEC /* iWuBiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iWuBiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DAD7719225A278000961BEC /* iWuBiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iWuBiUITests.swift; sourceTree = "<group>"; };
 		6DAD771B225A278000961BEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DB1AF922278A75C0051A288 /* TableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableHeaderView.xib; sourceTree = "<group>"; };
+		6DB1AF932278A75D0051A288 /* TableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
+		6DB1AF962278A7640051A288 /* ITAdvancelDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITAdvancelDetailViewController.swift; sourceTree = "<group>"; };
+		6DB1AF982278A7710051A288 /* iHTCboyApp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iHTCboyApp.json; sourceTree = "<group>"; };
 		6DB88DC0225B8E340099AC80 /* App-TextLogo-Alpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-TextLogo-Alpha.png"; sourceTree = "<group>"; };
 		6DB88DC1225B8E340099AC80 /* App-share-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-share-Icon.png"; sourceTree = "<group>"; };
 		6DB88DD2225B8E340099AC80 /* libBaiduMobStat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduMobStat.a; sourceTree = "<group>"; };
@@ -488,6 +496,7 @@
 		6DB88DCD225B8E340099AC80 /* Documents */ = {
 			isa = PBXGroup;
 			children = (
+				6DB1AF982278A7710051A288 /* iHTCboyApp.json */,
 				6D531B672263691400C921B8 /* 五笔知识点.txt */,
 				6D76E2DB2263150B005EACCA /* iWuBi_learning.plist */,
 				6D76E2DD22632972005EACCA /* HTML */,
@@ -524,6 +533,8 @@
 		6DB88DD4225B8E340099AC80 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6DB1AF932278A75D0051A288 /* TableHeaderView.swift */,
+				6DB1AF922278A75C0051A288 /* TableHeaderView.xib */,
 				6D3B83FE225E42CB00037787 /* ITListTitleViewCell.swift */,
 				6D3B83FF225E42CB00037787 /* ITListTitleViewCell.xib */,
 				6DB88DD7225B8E340099AC80 /* ITQuestionListViewCell.swift */,
@@ -572,6 +583,7 @@
 				6DB88DE3225B8E340099AC80 /* IHTCMeViewController.swift */,
 				6DB88DE2225B8E340099AC80 /* IHTCAboutAppViewController.swift */,
 				6DB88DE8225B8E340099AC80 /* IHTCAboutAppViewController.xib */,
+				6DB1AF962278A7640051A288 /* ITAdvancelDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -756,6 +768,7 @@
 				6D531B662263648E00C921B8 /* 新世纪版与86版变动对比图表.png in Resources */,
 				6D76E2D42263118D005EACCA /* tabbar_selected_86@3x.png in Resources */,
 				6D531B7E22637E4B00C921B8 /* iWiBi-orange-two@2x.png in Resources */,
+				6DB1AF942278A75D0051A288 /* TableHeaderView.xib in Resources */,
 				6D531B53226360C700C921B8 /* 98透明码元图001.png in Resources */,
 				6D76E2C62262DC75005EACCA /* IHTCShareFooterView.xib in Resources */,
 				6D531B6922636BF400C921B8 /* 五笔86版字根键盘表.png in Resources */,
@@ -816,6 +829,7 @@
 				6D76E2D32263118D005EACCA /* tabbar_selected_learning@3x.png in Resources */,
 				6D76E2D52263118D005EACCA /* tabbar_selected_98@2x.png in Resources */,
 				6D76E280225F95F7005EACCA /* IHTCWuBiWordViewCell.xib in Resources */,
+				6DB1AF992278A7710051A288 /* iHTCboyApp.json in Resources */,
 				6D531B58226362C900C921B8 /* 98五笔码元图-白底.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -950,6 +964,7 @@
 				6DAD76FA225A277F00961BEC /* AppDelegate.swift in Sources */,
 				6DB88E16225B8E340099AC80 /* IHTCWordDetailViewController.swift in Sources */,
 				6D76E2BD2262D34E005EACCA /* UIScrollView+Additions.swift in Sources */,
+				6DB1AF972278A7640051A288 /* ITAdvancelDetailViewController.swift in Sources */,
 				6D76E2C02262D34E005EACCA /* UIView+Additions.swift in Sources */,
 				6D3B8400225E42CC00037787 /* ITListTitleViewCell.swift in Sources */,
 				6DB88E08225B8E340099AC80 /* ITQuestionListViewCell.swift in Sources */,
@@ -961,6 +976,7 @@
 				6D76E27C225F9064005EACCA /* IHTCImgModel.swift in Sources */,
 				6DB88E1C225B8E340099AC80 /* ITScalePopTransition.swift in Sources */,
 				6D76E2F122632C1F005EACCA /* IHTCLearnDetailViewController.swift in Sources */,
+				6DB1AF952278A75D0051A288 /* TableHeaderView.swift in Sources */,
 				6DB88E0A225B8E340099AC80 /* ITPageTitleView.swift in Sources */,
 				6DB88E13225B8E340099AC80 /* ITBasePopTransitionVC.swift in Sources */,
 				6DB88E17225B8E340099AC80 /* IHTCWordListViewController.swift in Sources */,

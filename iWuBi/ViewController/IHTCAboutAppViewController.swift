@@ -56,7 +56,7 @@ extension IHTCAboutAppViewController
         let formatter = DateFormatter.init()
         formatter.dateFormat = "yyyy"
         let yearString = formatter.string(from: Date.init())
-        self.copylightLbl.text = "Copyright © 2018-" + yearString + "iHTCboy"
+        self.copylightLbl.text = "Copyright © 2018-" + yearString + " iHTCboy"
     }
 }
 
