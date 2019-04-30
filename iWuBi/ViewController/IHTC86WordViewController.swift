@@ -84,7 +84,7 @@ extension IHTC86WordViewController {
     func launchAnimate() {
         if !isFirstLaunch {
             isFirstLaunch = true
-            
+
             let vc = UIStoryboard.init(name: "AppLaunchScreen", bundle: nil);
             let launchView = vc.instantiateInitialViewController()!.view
             let window =  UIWindow.init(frame: (view?.frame)!)
@@ -92,6 +92,13 @@ extension IHTC86WordViewController {
             window.backgroundColor = UIColor.clear
             window.addSubview(launchView!)
             window.makeKeyAndVisible()
+            
+            UIView.animate(withDuration: 0.25, delay: 0.8, options: .beginFromCurrentState, animations: {
+                launchView?.layer.transform = CATransform3DScale(CATransform3DIdentity, 2, 2, 1)
+                launchView?.alpha = 0.0
+            }, completion: { (true) in
+                window.removeFromSuperview()
+            })
             
         }
     }
