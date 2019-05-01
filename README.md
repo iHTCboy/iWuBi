@@ -35,3 +35,13 @@ iWuBi 是一款五笔输入法相关知识的学习App，目的是为了方便�
 
 ### 下载地址
 收费人民币1元以表示意  [iOS App Store](https://itunes.apple.com/cn/app/iWuBi/id1459028801?l=zh&ls=1&mt=8)
+
+
+### 应用截图
+![](screenshot/01.png)
+![](screenshot/02.png)
+![](screenshot/03.png)
+![](screenshot/04.png)
+![](screenshot/05.png)
+![](screenshot/06.png)
+![](screenshot/07.png)

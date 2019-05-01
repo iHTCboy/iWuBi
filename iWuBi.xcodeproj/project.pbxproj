@@ -423,8 +423,8 @@
 		6DAD76F8225A277F00961BEC /* iWuBi */ = {
 			isa = PBXGroup;
 			children = (
-				6DAD76F9225A277F00961BEC /* AppDelegate.swift */,
 				6DB88E23225B8EFE0099AC80 /* iWuBi-Bridging-Header.h */,
+				6DAD76F9225A277F00961BEC /* AppDelegate.swift */,
 				6DB88DE1225B8E340099AC80 /* ViewController */,
 				6DB88DD4225B8E340099AC80 /* View */,
 				6DB88DDD225B8E340099AC80 /* Model */,
