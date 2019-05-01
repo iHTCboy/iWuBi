@@ -36,7 +36,7 @@ class IHTCWordListViewController: UIViewController {
     lazy var tableView: UITableView = {
         var tableView = UITableView.init(frame: CGRect.zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 40, right: 0)
+        tableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 58 + 40, right: 0) //tabBarHeight 58
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.estimatedRowHeight = 80
         tableView.delegate = self;
