@@ -314,6 +314,10 @@ extension IHTCSearchViewController : UITableViewDelegate, UITableViewDataSource 
             cell.num4Lbl.baselineAdjustment = .alignCenters
             cell.num4Lbl.backgroundColor = kColorAppGray
             
+            if DeviceType.IS_IPHONE_5_OR_LESS {
+                cell.wordHeightConstraint.constant = UIScreen.getScreenItemWidth(width: 7.0)
+            }
+            
             let question = self.searchArray[indexPath.row]
             cell.wordLbl.text = question["word"] as? String
             
@@ -358,6 +362,10 @@ extension IHTCSearchViewController : UITableViewDelegate, UITableViewDataSource 
             cell.num1Lbl.adjustsFontSizeToFitWidth = true
             cell.num1Lbl.baselineAdjustment = .alignCenters
             cell.num1Lbl.backgroundColor = kColorAppBlue
+            
+            if DeviceType.IS_IPHONE_5_OR_LESS {
+                cell.wordHeightConstraint.constant = UIScreen.getScreenItemWidth(width: 5.0)
+            }
             
             let question = self.searchArray[indexPath.row]
             

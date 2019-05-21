@@ -93,7 +93,7 @@ extension IHTC86WordViewController {
             window.addSubview(launchView!)
             window.makeKeyAndVisible()
             
-            UIView.animate(withDuration: 0.25, delay: 0.8, options: .beginFromCurrentState, animations: {
+            UIView.animate(withDuration: 0.25, delay: 0.3, options: .beginFromCurrentState, animations: {
                 launchView?.layer.transform = CATransform3DScale(CATransform3DIdentity, 2, 2, 1)
                 launchView?.alpha = 0.0
             }, completion: { (true) in

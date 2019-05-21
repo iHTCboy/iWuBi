@@ -23,6 +23,7 @@ class IHTCWuBiWordViewCell: UITableViewCell {
     
     @IBOutlet weak var img4: UIImageView!
     
+    @IBOutlet weak var wordHeightConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()

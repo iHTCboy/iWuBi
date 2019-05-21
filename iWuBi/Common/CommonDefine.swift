@@ -63,6 +63,7 @@ struct ScreenSize
 struct DeviceType
 {
     static let IS_IPHONE_4_OR_LESS  = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH < 568.0
+    static let IS_IPHONE_5_OR_LESS  = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH <= 568.0
     static let IS_IPHONE_5          = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH == 568.0
     static let IS_IPHONE_6_7          = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH == 667.0
     static let IS_IPHONE_6P_7P         = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH == 736.0
@@ -72,7 +73,7 @@ struct DeviceType
     static let IS_IPAD_PRO          = UIDevice.current.userInterfaceIdiom == .pad && ScreenSize.SCREEN_MAX_LENGTH == 1366.0
 }
 
-struct Version{
+struct Version {
     static let SYS_VERSION_FLOAT = (UIDevice.current.systemVersion as NSString).floatValue
     static let iOS7 = (Version.SYS_VERSION_FLOAT < 8.0 && Version.SYS_VERSION_FLOAT >= 7.0)
     static let iOS8 = (Version.SYS_VERSION_FLOAT >= 8.0 && Version.SYS_VERSION_FLOAT < 9.0)
@@ -133,5 +134,18 @@ public extension UIDevice {
         case "i386", "x86_64":                          return "Simulator"
         default:                                        return identifier
         }
+    }
+}
+
+
+public extension UIScreen {
+    class func getScreenItemWidth(width: Double) -> CGFloat {
+        let items = CGFloat(width)
+        var width = UIScreen.main.bounds.size.width / items
+        let isLandscape = (UIApplication.shared.statusBarOrientation == .landscapeRight) || (UIApplication.shared.statusBarOrientation == .landscapeRight)
+        if isLandscape {
+            width = UIScreen.main.bounds.size.height / items
+        }
+        return width
     }
 }

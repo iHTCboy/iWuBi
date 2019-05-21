@@ -84,37 +84,35 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="08V-BU-nzB" userLabel="Img1">
                         <rect key="frame" x="105" y="66" width="55" height="55"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="55" id="Gn8-7n-B2l"/>
-                            <constraint firstAttribute="height" constant="55" id="ZC2-q9-kXG"/>
+                            <constraint firstAttribute="width" secondItem="08V-BU-nzB" secondAttribute="height" multiplier="1:1" id="877-Ge-HIU"/>
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cQL-JC-eLQ" userLabel="Img2">
                         <rect key="frame" x="168" y="66" width="55" height="55"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="55" id="t3Z-dZ-juH"/>
-                            <constraint firstAttribute="width" constant="55" id="tP1-A6-cNI"/>
+                            <constraint firstAttribute="width" secondItem="cQL-JC-eLQ" secondAttribute="height" multiplier="1:1" id="uV1-QQ-TiT"/>
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="buM-Db-kU1" userLabel="Img3">
                         <rect key="frame" x="231" y="66" width="55" height="55"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="55" id="38t-bB-Eir"/>
-                            <constraint firstAttribute="width" constant="55" id="aWc-BS-7K7"/>
+                            <constraint firstAttribute="width" secondItem="buM-Db-kU1" secondAttribute="height" multiplier="1:1" id="QWt-9L-1Pv"/>
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GRb-BL-Ru1" userLabel="Img4">
                         <rect key="frame" x="294" y="66" width="55" height="55"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="55" id="eKD-hh-0Gh"/>
-                            <constraint firstAttribute="height" constant="55" id="wnQ-Nh-2bL"/>
+                            <constraint firstAttribute="width" secondItem="GRb-BL-Ru1" secondAttribute="height" multiplier="1:1" id="VAS-x0-IUf"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="0iT-FL-dXy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="1ua-pD-Ly1"/>
                     <constraint firstItem="liJ-13-czE" firstAttribute="width" secondItem="7Uc-TE-V7e" secondAttribute="width" id="3AJ-D6-wk2"/>
+                    <constraint firstItem="buM-Db-kU1" firstAttribute="height" secondItem="cQL-JC-eLQ" secondAttribute="height" id="4SD-oK-ZI3"/>
                     <constraint firstItem="Ca7-QA-H6s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="6bG-xQ-TJp"/>
                     <constraint firstItem="wr1-c5-CJj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="BUS-Ck-siJ"/>
+                    <constraint firstItem="GRb-BL-Ru1" firstAttribute="height" secondItem="buM-Db-kU1" secondAttribute="height" id="F4O-Zv-Q3s"/>
                     <constraint firstItem="buM-Db-kU1" firstAttribute="leading" secondItem="cQL-JC-eLQ" secondAttribute="trailing" constant="8" id="FUI-sG-ch4"/>
                     <constraint firstItem="liJ-13-czE" firstAttribute="centerX" secondItem="7Uc-TE-V7e" secondAttribute="centerX" id="HRV-I4-qsX"/>
                     <constraint firstItem="cQL-JC-eLQ" firstAttribute="centerY" secondItem="08V-BU-nzB" secondAttribute="centerY" id="IHg-dt-aox"/>
@@ -139,6 +137,8 @@
                     <constraint firstItem="GRb-BL-Ru1" firstAttribute="centerY" secondItem="08V-BU-nzB" secondAttribute="centerY" id="u9u-CI-LaA"/>
                     <constraint firstItem="7Uc-TE-V7e" firstAttribute="top" secondItem="wr1-c5-CJj" secondAttribute="bottom" constant="10" id="vk0-tY-BJ5"/>
                     <constraint firstItem="GRb-BL-Ru1" firstAttribute="leading" secondItem="buM-Db-kU1" secondAttribute="trailing" constant="8" id="wEc-DJ-IfI"/>
+                    <constraint firstItem="cQL-JC-eLQ" firstAttribute="height" secondItem="08V-BU-nzB" secondAttribute="height" id="x1u-42-nYK"/>
+                    <constraint firstItem="08V-BU-nzB" firstAttribute="height" secondItem="7Uc-TE-V7e" secondAttribute="height" id="xFp-R5-nWC"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -150,6 +150,7 @@
                 <outlet property="num2Lbl" destination="Ca7-QA-H6s" id="hXG-M9-Aof"/>
                 <outlet property="num3Lbl" destination="0iT-FL-dXy" id="iy2-11-3jf"/>
                 <outlet property="num4Lbl" destination="k9m-Hw-2gV" id="aYV-PW-Qwk"/>
+                <outlet property="wordHeightConstraint" destination="bwg-pH-7dk" id="kg2-A9-0gf"/>
                 <outlet property="wordLbl" destination="7Uc-TE-V7e" id="MSV-DD-4bF"/>
             </connections>
             <point key="canvasLocation" x="-317.578125" y="20.204978038067349"/>

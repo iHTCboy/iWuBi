@@ -28,6 +28,8 @@ class ITQuestionListViewCell: UITableViewCell {
     
     @IBOutlet weak var wordLbl: ITCopyLabel!
     
+    @IBOutlet weak var wordHeightConstraint: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

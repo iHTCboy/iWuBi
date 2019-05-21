@@ -210,6 +210,10 @@ extension IHTCWordDetailViewController : UITableViewDelegate, UITableViewDataSou
         cell.num1Lbl.baselineAdjustment = .alignCenters
         cell.num1Lbl.backgroundColor = kColorAppBlue
         
+        if DeviceType.IS_IPHONE_5_OR_LESS {
+            cell.wordHeightConstraint.constant = UIScreen.getScreenItemWidth(width: 5.0)
+        }
+        
         let question = questionModle!
         
         cell.num1Lbl.text = question["word"] as? String

@@ -103,7 +103,7 @@ extension IHTCLearnViewController : UITableViewDelegate, UITableViewDataSource
         let data = array![indexPath.row] as! Dictionary<String, String>
     
         cell!.textLabel?.text = data["title"]
-        cell?.detailTextLabel?.text = (data["content"]?.prefix(8))! + "..."
+        cell?.detailTextLabel?.text = (DeviceType.IS_IPAD ? data["content"]?.prefix(20) : data["content"]?.prefix(8))! + "..."
         
         return cell!
     }

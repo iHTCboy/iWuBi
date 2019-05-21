@@ -128,6 +128,10 @@ extension IHTCWordListViewController : UITableViewDelegate, UITableViewDataSourc
         cell.num4Lbl.baselineAdjustment = .alignCenters
         cell.num4Lbl.backgroundColor = kColorAppGray
         
+        if DeviceType.IS_IPHONE_5_OR_LESS {
+            cell.wordHeightConstraint.constant = UIScreen.getScreenItemWidth(width: 7.0)
+        }
+        
         let question = self.listModel()[indexPath.row] as! Dictionary<String, Any>
         cell.wordLbl.text = question["word"] as? String
         
