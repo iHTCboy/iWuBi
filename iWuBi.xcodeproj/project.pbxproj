@@ -127,6 +127,8 @@
 		6DC9406D243084D7009A9994 /* iWiBi-dark-one@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DC9406B243084D7009A9994 /* iWiBi-dark-one@2x.png */; };
 		6DC9407024308595009A9994 /* iWiBi-dark-two@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DC9406E24308594009A9994 /* iWiBi-dark-two@2x.png */; };
 		6DC9407124308595009A9994 /* iWiBi-dark-two@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DC9406F24308595009A9994 /* iWiBi-dark-two@3x.png */; };
+		6DC9407624308B4C009A9994 /* IHTCAppearanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC9407524308B4C009A9994 /* IHTCAppearanceVC.swift */; };
+		6DC9407824308D0B009A9994 /* IHTCUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC9407724308D0B009A9994 /* IHTCUserDefaults.swift */; };
 		6DEF6236225C0FDA001A6530 /* iWuBi_code.json in Resources */ = {isa = PBXBuildFile; fileRef = 6DEF6235225C0FDA001A6530 /* iWuBi_code.json */; };
 		C833D47BF34102E21135BC39 /* Pods_iWuBi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FABFA1D936DFEDD99C5AC4A /* Pods_iWuBi.framework */; };
 /* End PBXBuildFile section */
@@ -289,6 +291,9 @@
 		6DC9406B243084D7009A9994 /* iWiBi-dark-one@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-dark-one@2x.png"; sourceTree = "<group>"; };
 		6DC9406E24308594009A9994 /* iWiBi-dark-two@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-dark-two@2x.png"; sourceTree = "<group>"; };
 		6DC9406F24308595009A9994 /* iWiBi-dark-two@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-dark-two@3x.png"; sourceTree = "<group>"; };
+		6DC9407524308B4C009A9994 /* IHTCAppearanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHTCAppearanceVC.swift; sourceTree = "<group>"; };
+		6DC9407724308D0B009A9994 /* IHTCUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHTCUserDefaults.swift; sourceTree = "<group>"; };
+		6DC9407924309D19009A9994 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6DEF6235225C0FDA001A6530 /* iWuBi_code.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iWuBi_code.json; sourceTree = "<group>"; };
 		75F9BBE4FFB8D6E6566B36DE /* Pods-iWuBi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWuBi.release.xcconfig"; path = "Pods/Target Support Files/Pods-iWuBi/Pods-iWuBi.release.xcconfig"; sourceTree = "<group>"; };
 		8142ECC9484EECD7A5D29993 /* Pods-iWuBiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWuBiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iWuBiTests/Pods-iWuBiTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -573,6 +578,7 @@
 		6DB88DDD225B8E340099AC80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6DC9407724308D0B009A9994 /* IHTCUserDefaults.swift */,
 				6DB88DDE225B8E340099AC80 /* IHTCModel.swift */,
 				6D76E27B225F9064005EACCA /* IHTCImgModel.swift */,
 			);
@@ -596,6 +602,7 @@
 				6DB88DE2225B8E340099AC80 /* IHTCAboutAppViewController.swift */,
 				6DB88DE8225B8E340099AC80 /* IHTCAboutAppViewController.xib */,
 				6DB1AF962278A7640051A288 /* ITAdvancelDetailViewController.swift */,
+				6DC9407524308B4C009A9994 /* IHTCAppearanceVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -976,11 +983,13 @@
 				6D76E2DA22631267005EACCA /* IHTCLearnViewController.swift in Sources */,
 				6D76E2BE2262D34E005EACCA /* UIImage+Additions.swift in Sources */,
 				6D76E2BF2262D34E005EACCA /* UITableView+Additions.swift in Sources */,
+				6DC9407824308D0B009A9994 /* IHTCUserDefaults.swift in Sources */,
 				6DB88E1A225B8E340099AC80 /* ITScalePushTransition.swift in Sources */,
 				6DAD76FA225A277F00961BEC /* AppDelegate.swift in Sources */,
 				6DB88E16225B8E340099AC80 /* IHTCWordDetailViewController.swift in Sources */,
 				6D76E2BD2262D34E005EACCA /* UIScrollView+Additions.swift in Sources */,
 				6DB1AF972278A7640051A288 /* ITAdvancelDetailViewController.swift in Sources */,
+				6DC9407624308B4C009A9994 /* IHTCAppearanceVC.swift in Sources */,
 				6D76E2C02262D34E005EACCA /* UIView+Additions.swift in Sources */,
 				6D3B8400225E42CC00037787 /* ITListTitleViewCell.swift in Sources */,
 				6DB88E08225B8E340099AC80 /* ITQuestionListViewCell.swift in Sources */,
@@ -1048,6 +1057,7 @@
 			children = (
 				6D3B83F3225E307700037787 /* zh-Hant */,
 				6D3B83F5225E307E00037787 /* zh-Hans */,
+				6DC9407924309D19009A9994 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

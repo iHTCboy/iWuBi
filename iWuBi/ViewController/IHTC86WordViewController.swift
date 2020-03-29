@@ -14,6 +14,10 @@ class IHTC86WordViewController: ITBasePushTransitionVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 设置默认主题
+        let IHTCUD = IHTCUserDefaults.shared
+        IHTCUD.setDefaultAppAppearance(style: IHTCUD.getAppAppearance())
+        
         // 设置 UI 界面
         setUpUI()
     }

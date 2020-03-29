@@ -38,7 +38,7 @@ class IHTCMeViewController: UIViewController {
         return tableView
     }()
     
-    fileprivate var titles = ["0": "切换App图标:选择你的最爱", "1": "应用内评分:欢迎给\(kiTalker)打评分！,AppStore评价:欢迎给\(kiTalker)写评论!,分享给朋友:与身边的好友一起学习！",
+    fileprivate var titles = ["0": "切换App图标:选择你的最爱,设置主题外观:暗黑or浅色", "1": "应用内评分:欢迎给\(kiTalker)打评分！,AppStore评价:欢迎给\(kiTalker)写评论!,分享给朋友:与身边的好友一起学习！",
         "2":"意见反馈:欢迎到AppStore提需求或bug问题,邮件联系:如有问题欢迎来信,隐私条款:用户使用服务协议,开源地址:现已开源代码，欢迎关注,更多关注:欢迎访问作者博客,更多学习:更多开发者内容推荐,关于应用:\(kiTalker)"] as [String : String]
 
 }
@@ -188,6 +188,11 @@ extension IHTCMeViewController : UITableViewDelegate, UITableViewDataSource
                 let cancel = UIAlertAction(title:  "取消", style: .cancel, handler: nil)
                 refreshAlert.addAction(cancel)
                 self.present(refreshAlert, animated: true, completion: nil)
+            }
+            if row == 1 {
+                let vc = IHTCAppearanceVC()
+                vc.hidesBottomBarWhenPushed = true
+                navigationController?.pushViewController(vc, animated: true)
             }
             break
         case 1:
