@@ -127,20 +127,24 @@ extension IHTCLearnViewController : UITableViewDelegate, UITableViewDataSource
         let data = array![indexPath.row] as! Dictionary<String, String>
         let type = data["type"]
         if type == "image" {
+            let browser = JXPhotoBrowser()
             // 数据源
-            let dataSource = JXLocalDataSource(numberOfItems: {
-                // 共有多少项
-                return array!.count
-            }, localImage: { index -> UIImage? in
+            browser.numberOfItems = {
+                array!.count // 共有多少项
+            }
+            browser.reloadCellAtIndex = { context in
+                let browserCell = context.cell as? JXPhotoBrowserImageCell
                 // 每一项的图片对象
-                let data = array![index] as! Dictionary<String, String>
+                let data = array![context.index] as! Dictionary<String, String>
                 let imageName = data["content"]
-                return UIImage(named: imageName!)
-            })
-            // 视图代理，实现了数字型页码指示器
-            let delegate = JXNumberPageControlDelegate()
+                browserCell?.imageView.image = UIImage(named: imageName!)
+            }
+            // 指定打开图片浏览器时定位到哪一页
+            browser.pageIndex = indexPath.row
+            // 数字样式的页码指示器
+            browser.pageIndicator = JXPhotoBrowserNumberPageIndicator()
             // 打开浏览器
-            JXPhotoBrowser(dataSource: dataSource, delegate: delegate).show(pageIndex: indexPath.row)
+            browser.show()
         } else {
             let vc = IHTCLearnDetailViewController()
             vc.title = data["title"]

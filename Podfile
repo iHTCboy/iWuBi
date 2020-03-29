@@ -7,6 +7,7 @@ target 'iWuBi' do
 
   # Pods for iWuBi
   pod 'JXPhotoBrowser'
+  pod 'BaiduMobStatCodeless' #无埋点SDK
 
   target 'iWuBiTests' do
     inherit! :search_paths

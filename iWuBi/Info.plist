@@ -10,6 +10,24 @@
 	<dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
+			<key>iWiBi-dark-one</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>iWiBi-dark-one</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>iWiBi-dark-two</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>iWiBi-dark-two</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
 			<key>iWiBi-orange-blank</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -42,24 +60,6 @@
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>iWiBi-orange-two</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>iWiBi-dark-one</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>iWiBi-dark-one</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>iWiBi-dark-two</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>iWiBi-dark-two</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -156,5 +156,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>mtj_appkey</key>
+	<string>ba31e87e48</string>
+	<key>mtj_deubglog</key>
+	<string>0</string>
 </dict>
 </plist>

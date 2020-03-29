@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -99,7 +99,6 @@
 		6DB1AF992278A7710051A288 /* iHTCboyApp.json in Resources */ = {isa = PBXBuildFile; fileRef = 6DB1AF982278A7710051A288 /* iHTCboyApp.json */; };
 		6DB88DF7225B8E340099AC80 /* App-TextLogo-Alpha.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88DC0225B8E340099AC80 /* App-TextLogo-Alpha.png */; };
 		6DB88DF8225B8E340099AC80 /* App-share-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88DC1225B8E340099AC80 /* App-share-Icon.png */; };
-		6DB88E05225B8E340099AC80 /* libBaiduMobStat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB88DD2225B8E340099AC80 /* libBaiduMobStat.a */; };
 		6DB88E08225B8E340099AC80 /* ITQuestionListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DD7225B8E340099AC80 /* ITQuestionListViewCell.swift */; };
 		6DB88E09225B8E340099AC80 /* ITCopyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DD8225B8E340099AC80 /* ITCopyLabel.swift */; };
 		6DB88E0A225B8E340099AC80 /* ITPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DDA225B8E340099AC80 /* ITPageTitleView.swift */; };
@@ -262,7 +261,6 @@
 		6DB1AF982278A7710051A288 /* iHTCboyApp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iHTCboyApp.json; sourceTree = "<group>"; };
 		6DB88DC0225B8E340099AC80 /* App-TextLogo-Alpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-TextLogo-Alpha.png"; sourceTree = "<group>"; };
 		6DB88DC1225B8E340099AC80 /* App-share-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-share-Icon.png"; sourceTree = "<group>"; };
-		6DB88DD2225B8E340099AC80 /* libBaiduMobStat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduMobStat.a; sourceTree = "<group>"; };
 		6DB88DD7225B8E340099AC80 /* ITQuestionListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITQuestionListViewCell.swift; sourceTree = "<group>"; };
 		6DB88DD8225B8E340099AC80 /* ITCopyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCopyLabel.swift; sourceTree = "<group>"; };
 		6DB88DDA225B8E340099AC80 /* ITPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITPageTitleView.swift; sourceTree = "<group>"; };
@@ -283,7 +281,6 @@
 		6DB88DF0225B8E340099AC80 /* ITScalePopTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITScalePopTransition.swift; sourceTree = "<group>"; };
 		6DB88E1E225B8E720099AC80 /* CommonDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonDefine.swift; sourceTree = "<group>"; };
 		6DB88E1F225B8E720099AC80 /* ITCommonAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITCommonAPI.swift; sourceTree = "<group>"; };
-		6DB88E22225B8EE90099AC80 /* BaiduMobStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobStat.h; sourceTree = "<group>"; };
 		6DB88E23225B8EFE0099AC80 /* iWuBi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iWuBi-Bridging-Header.h"; sourceTree = "<group>"; };
 		6DB88E28225B8F420099AC80 /* AppLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppLaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DB88E29225B8F420099AC80 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -318,7 +315,6 @@
 				6D76E28A225F9E53005EACCA /* CoreGraphics.framework in Frameworks */,
 				6D76E288225F9E4D005EACCA /* Security.framework in Frameworks */,
 				6D76E282225F9E0B005EACCA /* SystemConfiguration.framework in Frameworks */,
-				6DB88E05225B8E340099AC80 /* libBaiduMobStat.a in Frameworks */,
 				C833D47BF34102E21135BC39 /* Pods_iWuBi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,7 +481,6 @@
 				6D531B54226360CB00C921B8 /* wubi-img */,
 				6DB88DB9225B8E340099AC80 /* Images */,
 				6DB88DCD225B8E340099AC80 /* Documents */,
-				6DB88DD0225B8E340099AC80 /* Thirdparty */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -528,23 +523,6 @@
 				6DEF6235225C0FDA001A6530 /* iWuBi_code.json */,
 			);
 			path = jsonFiles;
-			sourceTree = "<group>";
-		};
-		6DB88DD0225B8E340099AC80 /* Thirdparty */ = {
-			isa = PBXGroup;
-			children = (
-				6DB88DD1225B8E340099AC80 /* ios_api */,
-			);
-			path = Thirdparty;
-			sourceTree = "<group>";
-		};
-		6DB88DD1225B8E340099AC80 /* ios_api */ = {
-			isa = PBXGroup;
-			children = (
-				6DB88E22225B8EE90099AC80 /* BaiduMobStat.h */,
-				6DB88DD2225B8E340099AC80 /* libBaiduMobStat.a */,
-			);
-			path = ios_api;
 			sourceTree = "<group>";
 		};
 		6DB88DD4225B8E340099AC80 /* View */ = {
@@ -902,22 +880,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iWuBi/Pods-iWuBi-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/JXPhotoBrowser/JXPhotoBrowser.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-iWuBi/Pods-iWuBi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXPhotoBrowser.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-iWuBi/Pods-iWuBi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iWuBi/Pods-iWuBi-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iWuBi/Pods-iWuBi-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BFF21BD209DC66F9B1210992 /* [CP] Check Pods Manifest.lock */ = {
@@ -1201,7 +1172,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020.03.29;
+				CURRENT_PROJECT_VERSION = 2020.03.30;
 				DEVELOPMENT_TEAM = 28PV6G96R7;
 				INFOPLIST_FILE = iWuBi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1230,7 +1201,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020.03.29;
+				CURRENT_PROJECT_VERSION = 2020.03.30;
 				DEVELOPMENT_TEAM = 28PV6G96R7;
 				INFOPLIST_FILE = iWuBi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
