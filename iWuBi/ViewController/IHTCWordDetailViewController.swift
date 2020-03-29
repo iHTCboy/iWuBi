@@ -175,7 +175,7 @@ extension IHTCWordDetailViewController : UITableViewDelegate, UITableViewDataSou
         
         cell.wordLbl.text = question["word"] as? String
         
-        var codeArray = question["codes"] as? Array<String> ?? Array<String>()
+        let codeArray = question["codes"] as? Array<String> ?? Array<String>()
         
         let lblArray = [cell.num1Lbl, cell.num2Lbl, cell.num3Lbl, cell.num4Lbl]
         
@@ -218,7 +218,7 @@ extension IHTCWordDetailViewController : UITableViewDelegate, UITableViewDataSou
         
         cell.num1Lbl.text = question["word"] as? String
         
-        var codeArray = question["codes"] as? Array<String> ?? Array<String>()
+        let codeArray = question["codes"] as? Array<String> ?? Array<String>()
         
         var code = ""
         if codeArray.count > 0 {

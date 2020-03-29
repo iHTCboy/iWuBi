@@ -129,7 +129,11 @@ extension ITAdvancelDetailViewController : UITableViewDelegate, UITableViewDataS
         if (cell  == nil) {
             cell = UITableViewCell.init(style: .value1, reuseIdentifier: "ITAdvanceLearningViewCell")
             cell?.accessoryType = .disclosureIndicator
-            cell?.backgroundColor = .white
+            if #available(iOS 13.0, *) {
+                cell?.backgroundColor = .systemGroupedBackground
+            } else {
+                cell?.backgroundColor = .white
+            }
             cell?.selectedBackgroundView = UIView.init(frame: cell!.frame)
             cell?.selectedBackgroundView?.backgroundColor = kColorAppOrange.withAlphaComponent(0.7)
             cell?.textLabel?.font = UIFont.systemFont(ofSize: DeviceType.IS_IPAD ? 20:16.5)

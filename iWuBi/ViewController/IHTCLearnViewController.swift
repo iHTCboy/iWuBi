@@ -25,9 +25,12 @@ class IHTCLearnViewController: UIViewController {
     
     // MARK:- 懒加载
     lazy var tableView: UITableView = {
-        var tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: kScreenW, height: kScreenH-49), style: .grouped)
+        var tableView = UITableView.init(frame: CGRect.zero, style: .grouped)
         tableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 20, right: 0)
         tableView.estimatedRowHeight = 55
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
         return tableView
     }()
     
@@ -49,8 +52,16 @@ extension IHTCLearnViewController
 {
     func setupUI() {
         view.addSubview(tableView)
-        tableView.delegate = self
-        tableView.dataSource = self
+        let constraintViews = [
+            "tableView": tableView
+        ]
+        let vFormat = "V:|-0-[tableView]-0-|"
+        let hFormat = "H:|-0-[tableView]-0-|"
+        let vConstraints = NSLayoutConstraint.constraints(withVisualFormat: vFormat, options: [], metrics: [:], views: constraintViews)
+        let hConstraints = NSLayoutConstraint.constraints(withVisualFormat: hFormat, options: [], metrics: [:], views: constraintViews)
+        view.addConstraints(vConstraints)
+        view.addConstraints(hConstraints)
+        view.layoutIfNeeded()
     }
     
     override var prefersStatusBarHidden: Bool {

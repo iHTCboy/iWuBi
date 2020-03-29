@@ -14,9 +14,19 @@ class IHTCLearnDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupUI()
+        setupUI(isChange: false)
     }
 
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        // trait发生了改变
+        if #available(iOS 13.0, *) {
+            if (self.traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection)) {
+                // 执行操作
+                setupUI(isChange: true)
+            }
+        }
+    }
     
     var dataDict: Dictionary<String, String> = [:]
 
@@ -34,33 +44,51 @@ class IHTCLearnDetailViewController: UIViewController {
     }()
     
     lazy var webView: WKWebView = {
-        var webView = WKWebView.init(frame: CGRect.zero, configuration: WKWebViewConfiguration.init())
+        let preferences = WKPreferences()
+        preferences.javaScriptEnabled = true
+        let configuration = WKWebViewConfiguration()
+        configuration.preferences = preferences
+        var webView = WKWebView.init(frame: CGRect.zero, configuration: configuration)
         webView.translatesAutoresizingMaskIntoConstraints = false
         webView.scrollView.contentInset = UIEdgeInsets.init(top: 15, left: 0, bottom: 20, right: 0)
+        webView.isOpaque = false;
+        if #available(iOS 13.0, *) {
+            webView.backgroundColor = .tertiarySystemGroupedBackground
+        } else {
+            webView.backgroundColor = .groupTableViewBackground
+        }
         return webView
     }()
 }
 
 
 extension IHTCLearnDetailViewController {
-    func setupUI() {
-        view.backgroundColor = .white
+    func setupUI(isChange: Bool) {
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .systemBackground
+        } else {
+            view.backgroundColor = .white
+        }
         let shareItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(sharedPageView))
         navigationItem.rightBarButtonItems = [shareItem]
         
         switch dataDict["type"] {
             case "text":
-                setTextContent()
+                setTextContent(isChange: isChange)
                 break
             case "html":
-                setHTMLContent()
+                setHTMLContent(isChange: isChange)
                 break
             default: break
         }
     }
     
     
-    func setTextContent() {
+    func setTextContent(isChange: Bool) {
+        if isChange {
+            return
+        }
+        
         view.addSubview(textView)
         let constraintViews = [
             "textView": textView
@@ -79,9 +107,19 @@ extension IHTCLearnDetailViewController {
                           NSAttributedString.Key.font: DeviceType.IS_IPAD ? UIFont.systemFont(ofSize: 20) :  UIFont.systemFont(ofSize: 18)
         ]
         textView.attributedText = NSAttributedString.init(string: dataDict["content"] ?? "", attributes: attributes)
+        if #available(iOS 13.0, *) {
+            textView.backgroundColor = .secondarySystemGroupedBackground
+            textView.textColor = .secondaryLabel
+        }
+        textView.scrollRangeToVisible(NSRange.init(location: 0, length: 0))
     }
     
-    func setHTMLContent() {
+    func setHTMLContent(isChange: Bool) {
+        if isChange {
+            webView(webView, didFinish: nil)
+            return
+        }
+        
         view.addSubview(webView)
         webView.uiDelegate = self
         webView.navigationDelegate = self
@@ -98,7 +136,7 @@ extension IHTCLearnDetailViewController {
         view.layoutIfNeeded()
         
         let url = Bundle.main.url(forResource: dataDict["content"] ?? "", withExtension: nil)!
-        webView.loadFileURL(url, allowingReadAccessTo: url)        
+        webView.loadFileURL(url, allowingReadAccessTo: url)
     }
     
     @objc func sharedPageView(item: Any) {
@@ -122,5 +160,13 @@ extension IHTCLearnDetailViewController {
 }
 
 extension IHTCLearnDetailViewController: WKNavigationDelegate, WKUIDelegate {
-    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        if #available(iOS 13.0, *) {
+            if (UITraitCollection.current.userInterfaceStyle == .dark) {
+                webView.evaluateJavaScript("document.body.style.background='#2b2c2e'; document.body.style.color='white';", completionHandler: nil)
+            } else {
+                webView.evaluateJavaScript("document.body.style.background='white'; document.body.style.color='black';", completionHandler: nil)
+            }
+        }
+    }
 }

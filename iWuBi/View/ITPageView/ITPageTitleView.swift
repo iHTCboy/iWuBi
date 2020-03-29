@@ -62,6 +62,10 @@ class ITPageTitleView: UIView {
 // MARK:- 设置 UI 界面
 extension ITPageTitleView {
     fileprivate func setUpUI() {
+        if #available(iOS 13.0, *) {
+            self.backgroundColor = UIColor.secondarySystemGroupedBackground
+        }
+        
         // 1. 添加 scrollview
         addSubview(scrollView)
         scrollView.frame = bounds
@@ -116,7 +120,11 @@ extension ITPageTitleView {
     fileprivate func setUpBottomLineAndScroLine() {
         // 1. 添加底线
         let bottomLine = UIView()
-        bottomLine.backgroundColor = UIColor.lightGray
+        if #available(iOS 13.0, *) {
+            bottomLine.backgroundColor = .systemGray3
+        } else {
+            bottomLine.backgroundColor = .lightGray
+        }
         let lineH: CGFloat = 0.5
         bottomLine.frame = CGRect(x: 0, y: frame.height - lineH, width: frame.width, height: lineH)
         addSubview(bottomLine)

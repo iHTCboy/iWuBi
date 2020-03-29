@@ -39,7 +39,7 @@ class IHTCMeViewController: UIViewController {
     }()
     
     fileprivate var titles = ["0": "切换App图标:选择你的最爱", "1": "应用内评分:欢迎给\(kiTalker)打评分！,AppStore评价:欢迎给\(kiTalker)写评论!,分享给朋友:与身边的好友一起学习！",
-        "2":"意见反馈:欢迎到AppStore提需求或bug问题,邮件联系:如有问题欢迎来信,隐私条款:用户使用服务协议,开源地址:未来逐步开放代码，欢迎关注,更多关注:欢迎访问作者博客,更多学习:更多开发者内容推荐,关于应用:\(kiTalker)"] as [String : String]
+        "2":"意见反馈:欢迎到AppStore提需求或bug问题,邮件联系:如有问题欢迎来信,隐私条款:用户使用服务协议,开源地址:现已开源代码，欢迎关注,更多关注:欢迎访问作者博客,更多学习:更多开发者内容推荐,关于应用:\(kiTalker)"] as [String : String]
 
 }
 
@@ -123,7 +123,7 @@ extension IHTCMeViewController : UITableViewDelegate, UITableViewDataSource
                 
                 // icon1
                 let image1 = UIImage.init(named: "AppIcon-default")!
-                let defaltIcon = UIAlertAction(title: "默认图标", style: .default, handler: { (action: UIAlertAction!) in
+                let defaltIcon = UIAlertAction(title: "默认图标-经典", style: .default, handler: { (action: UIAlertAction!) in
                     IAppleServiceUtil.changeAppIconWithName(iconName: nil)
                     return
                 })
@@ -165,6 +165,25 @@ extension IHTCMeViewController : UITableViewDelegate, UITableViewDataSource
                 })
                 newIcon5.setValue(image5.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), forKey: "image")
                 refreshAlert.addAction(newIcon5)
+                // icon6
+                let name6 = "iWiBi-dark-one"
+                let image6 = UIImage.init(named: name6)!
+                let newIcon6 = UIAlertAction(title: "橙色图标-暗黑", style: .default, handler: { (action: UIAlertAction!) in
+                    IAppleServiceUtil.changeAppIconWithName(iconName: name6)
+                    return
+                })
+                newIcon6.setValue(image6.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), forKey: "image")
+                refreshAlert.addAction(newIcon6)
+                
+                // icon7
+                let name7 = "iWiBi-dark-two"
+                let image7 = UIImage.init(named: name7)!
+                let newIcon7 = UIAlertAction(title: "橙色图标-至黑", style: .default, handler: { (action: UIAlertAction!) in
+                    IAppleServiceUtil.changeAppIconWithName(iconName: name7)
+                    return
+                })
+                newIcon7.setValue(image7.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), forKey: "image")
+                refreshAlert.addAction(newIcon7)
                 
                 let cancel = UIAlertAction(title:  "取消", style: .cancel, handler: nil)
                 refreshAlert.addAction(cancel)
