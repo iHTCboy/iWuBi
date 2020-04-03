@@ -26,7 +26,7 @@ class IHTC86WordViewController: ITBasePushTransitionVC {
         super.viewWillAppear(animated)
         
         launchAnimate()
-        self.tabBarController?.tabBar.tintColor = UIColor.orange
+        self.tabBarController?.tabBar.tintColor = UIColor(red:0.979, green:0.322, blue:0.000, alpha:1.000)
     }
     
     // MARK:- 懒加载

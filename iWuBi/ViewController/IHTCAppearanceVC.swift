@@ -21,6 +21,9 @@ class IHTCAppearanceVC: UITableViewController {
     
     func setupUI() {
         title = "设置主题"
+        if #available(iOS 13.0, *) {
+            tableView.backgroundColor = .secondarySystemBackground
+        }
         if #available(iOS 11.0, *) {
             self.navigationItem.largeTitleDisplayMode = .never
         }
@@ -47,6 +50,9 @@ class IHTCAppearanceVC: UITableViewController {
         var cell = tableView.dequeueReusableCell(withIdentifier: "IHTCAppearanceTableViewCell")
         if (cell  == nil) {
             cell = UITableViewCell.init(style: .value1, reuseIdentifier: "IHTCAppearanceTableViewCell")
+            if #available(iOS 13.0, *) {
+                cell?.backgroundColor = .secondarySystemBackground
+            }
         }
         
         cell?.accessoryType = .none

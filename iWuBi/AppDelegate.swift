@@ -74,37 +74,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     
     func startBaiduMobStat() {
-        
-        #if DEBUG
-        print("Debug modle")
-        //statTracker?.channelId = "Debug"
-        #else
+                
         let statTracker = BaiduMobStat.default()
-        statTracker?.channelId = "AppStore"
-        statTracker?.shortAppVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        statTracker?.start(withAppId: "ba31e87e48")
-        
+#if DEBUG
+        print("Debug modle")
+        //statTracker.enableDebugOn = true;
+        statTracker.channelId = "Debug"
+#else
+        statTracker.shortAppVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String 
+        statTracker.channelId = "AppStore"
+        statTracker.start(withAppId: "16b4ffd70b")
         let formatter = DateFormatter()
         formatter.locale = Locale.current
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let currentDate = formatter.string(from: Date())
         
         // 自定义事件
-        statTracker?.logEvent("usermodelName", eventLabel: UIDevice.init().modelName)
-        statTracker?.logEvent("systemVersion", eventLabel: UIDevice.current.systemVersion)
-        statTracker?.logEvent("DateSystemVersion", eventLabel: currentDate + " " + UIDevice.current.systemVersion)
-        statTracker?.logEvent("DateAndDeviceName", eventLabel: currentDate + " " + UIDevice.current.name)
-        statTracker?.logEvent("Devices", eventLabel:UIDevice.current.name)
-        statTracker?.logEvent("AppName", eventLabel:( Bundle.main.infoDictionary?["CFBundleName"] as! String))
-        #endif
-        // statTracker.enableDebugOn = true;
-        
+        statTracker.logEvent("usermodelName", eventLabel: UIDevice.init().modelName)
+        statTracker.logEvent("systemVersion", eventLabel: UIDevice.current.systemVersion)
+        statTracker.logEvent("DateSystemVersion", eventLabel: currentDate + " " + UIDevice.current.systemVersion)
+        statTracker.logEvent("DateAndDeviceName", eventLabel: currentDate + " " + UIDevice.current.name)
+        statTracker.logEvent("Devices", eventLabel:UIDevice.current.name)
+        statTracker.logEvent("AppName", eventLabel:( Bundle.main.infoDictionary?["CFBundleName"] as! String))
+#endif
     }
     
     func setupBaseUI() {
         let ui = UINavigationBar.appearance()
         ui.tintColor = .white
-        ui.barTintColor = kColorAppOrange
+        ui.barTintColor = UIColor(red:0.979, green:0.322, blue:0.000, alpha:1.000)
         ui.barStyle = .black
         //        UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
         //        UIApplication.shared.setStatusBarHidden(false, with: .none)

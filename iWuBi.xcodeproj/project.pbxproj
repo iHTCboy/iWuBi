@@ -1180,10 +1180,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/iWuBi/Resource/Thirdparty/ios_api",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iHTCboy.iWuBi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1209,10 +1206,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/iWuBi/Resource/Thirdparty/ios_api",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iHTCboy.iWuBi;
 				PRODUCT_NAME = "$(TARGET_NAME)";

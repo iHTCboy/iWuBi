@@ -12,7 +12,7 @@ import UIKit
 fileprivate let kScroLineH: CGFloat = 2
 fileprivate let kTitleMargin: CGFloat = 20
 fileprivate let kNormalColor: (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
-fileprivate let kSelectColor: (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
+fileprivate let kSelectColor: (CGFloat, CGFloat, CGFloat) = (255, 82, 0)
 
 // MARK:- 定义协议
 protocol ITPageTitleViewDelegate: class {
@@ -39,7 +39,7 @@ class ITPageTitleView: UIView {
     
     fileprivate lazy var scrollLine: UIView = {
         let scrollLine = UIView()
-        scrollLine.backgroundColor = UIColor.orange
+        scrollLine.backgroundColor = UIColor(red:0.979, green:0.322, blue:0.000, alpha:1.000)
         return scrollLine
     }()
     
