@@ -104,7 +104,7 @@ extension IHTCLearnDetailViewController {
         let paragraphStyle = NSMutableParagraphStyle.init()
         paragraphStyle.lineSpacing = 5
         let attributes = [NSAttributedString.Key.paragraphStyle: paragraphStyle,
-                          NSAttributedString.Key.font: DeviceType.IS_IPAD ? UIFont.systemFont(ofSize: 20) :  UIFont.systemFont(ofSize: 18)
+                          NSAttributedString.Key.font: DeviceType.IS_IPAD ? UIFont.systemFont(ofSize: 18) :  UIFont.systemFont(ofSize: 16)
         ]
         textView.attributedText = NSAttributedString.init(string: dataDict["content"] ?? "", attributes: attributes)
         if #available(iOS 13.0, *) {
@@ -162,11 +162,23 @@ extension IHTCLearnDetailViewController {
 extension IHTCLearnDetailViewController: WKNavigationDelegate, WKUIDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         if #available(iOS 13.0, *) {
-            if (UITraitCollection.current.userInterfaceStyle == .dark) {
-                webView.evaluateJavaScript("document.body.style.background='#2b2c2e'; document.body.style.color='white';", completionHandler: nil)
-            } else {
-                webView.evaluateJavaScript("document.body.style.background='white'; document.body.style.color='black';", completionHandler: nil)
+            var js = ""
+            switch IHTCUserDefaults.shared.getAppAppearance() {
+            case .Default:
+                if (UITraitCollection.current.userInterfaceStyle == .dark) {
+                    js = "document.body.style.background='#2b2c2e'; document.body.style.color='white';"
+                } else {
+                    js = "document.body.style.background='white'; document.body.style.color='black';"
+                }
+                break
+            case .Light:
+                js = "document.body.style.background='white'; document.body.style.color='black';"
+                break
+            case .Dark:
+                js = "document.body.style.background='#2b2c2e'; document.body.style.color='white';"
+                break
             }
+            webView.evaluateJavaScript(js, completionHandler: nil)
         }
     }
 }

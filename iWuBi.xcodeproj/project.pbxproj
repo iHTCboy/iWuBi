@@ -129,6 +129,8 @@
 		6DC9407624308B4C009A9994 /* IHTCAppearanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC9407524308B4C009A9994 /* IHTCAppearanceVC.swift */; };
 		6DC9407824308D0B009A9994 /* IHTCUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC9407724308D0B009A9994 /* IHTCUserDefaults.swift */; };
 		6DEF6236225C0FDA001A6530 /* iWuBi_code.json in Resources */ = {isa = PBXBuildFile; fileRef = 6DEF6235225C0FDA001A6530 /* iWuBi_code.json */; };
+		6DF6BAC024383D59008BCD66 /* iWiBi-gray-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF6BABE24383D59008BCD66 /* iWiBi-gray-icon@2x.png */; };
+		6DF6BAC124383D59008BCD66 /* iWiBi-gray-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF6BABF24383D59008BCD66 /* iWiBi-gray-icon@3x.png */; };
 		C833D47BF34102E21135BC39 /* Pods_iWuBi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FABFA1D936DFEDD99C5AC4A /* Pods_iWuBi.framework */; };
 /* End PBXBuildFile section */
 
@@ -292,6 +294,8 @@
 		6DC9407724308D0B009A9994 /* IHTCUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHTCUserDefaults.swift; sourceTree = "<group>"; };
 		6DC9407924309D19009A9994 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6DEF6235225C0FDA001A6530 /* iWuBi_code.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iWuBi_code.json; sourceTree = "<group>"; };
+		6DF6BABE24383D59008BCD66 /* iWiBi-gray-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-gray-icon@2x.png"; sourceTree = "<group>"; };
+		6DF6BABF24383D59008BCD66 /* iWiBi-gray-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-gray-icon@3x.png"; sourceTree = "<group>"; };
 		75F9BBE4FFB8D6E6566B36DE /* Pods-iWuBi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWuBi.release.xcconfig"; path = "Pods/Target Support Files/Pods-iWuBi/Pods-iWuBi.release.xcconfig"; sourceTree = "<group>"; };
 		8142ECC9484EECD7A5D29993 /* Pods-iWuBiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWuBiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iWuBiTests/Pods-iWuBiTests.release.xcconfig"; sourceTree = "<group>"; };
 		A6D1DB830F43BCBB17C8F556 /* Pods-iWuBiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWuBiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iWuBiTests/Pods-iWuBiTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -366,6 +370,8 @@
 		6D531B6C22636D9E00C921B8 /* app-icon */ = {
 			isa = PBXGroup;
 			children = (
+				6DF6BABE24383D59008BCD66 /* iWiBi-gray-icon@2x.png */,
+				6DF6BABF24383D59008BCD66 /* iWiBi-gray-icon@3x.png */,
 				6DC9406E24308594009A9994 /* iWiBi-dark-two@2x.png */,
 				6DC9406F24308595009A9994 /* iWiBi-dark-two@3x.png */,
 				6DC9406B243084D7009A9994 /* iWiBi-dark-one@2x.png */,
@@ -793,6 +799,7 @@
 				6D76E277225F883C005EACCA /* iWuBi-98-keyboard.png in Resources */,
 				6DB88DF8225B8E340099AC80 /* App-share-Icon.png in Resources */,
 				6D531B7622637A5000C921B8 /* iWiBi-orange-icon-light@3x.png in Resources */,
+				6DF6BAC024383D59008BCD66 /* iWiBi-gray-icon@2x.png in Resources */,
 				6D531B52226360C700C921B8 /* 98透明码元图002.png in Resources */,
 				6D531B72226379CB00C921B8 /* iWiBi-orange-icon@3x.png in Resources */,
 				6D531B642263643900C921B8 /* 新世纪五笔字根键位图1.png in Resources */,
@@ -807,6 +814,7 @@
 				6D76E2E422632984005EACCA /* 86版简明教程.html in Resources */,
 				6D531B8222637E8500C921B8 /* iWiBi-orange-blank@2x.png in Resources */,
 				6D3B8403225E43D800037787 /* iWuBi-word-bg.png in Resources */,
+				6DF6BAC124383D59008BCD66 /* iWiBi-gray-icon@3x.png in Resources */,
 				6D76E2E622632984005EACCA /* 86版五笔简码.html in Resources */,
 				6D531B59226362C900C921B8 /* 98五笔码元图-浅色.png in Resources */,
 				6D531B8122637E8500C921B8 /* iWiBi-orange-blank@3x.png in Resources */,
@@ -1172,7 +1180,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020.03.30;
+				CURRENT_PROJECT_VERSION = 2020.04.04;
 				DEVELOPMENT_TEAM = 28PV6G96R7;
 				INFOPLIST_FILE = iWuBi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1181,7 +1189,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iHTCboy.iWuBi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iWuBi/iWuBi-Bridging-Header.h";
@@ -1198,7 +1206,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020.03.30;
+				CURRENT_PROJECT_VERSION = 2020.04.04;
 				DEVELOPMENT_TEAM = 28PV6G96R7;
 				INFOPLIST_FILE = iWuBi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1207,7 +1215,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iHTCboy.iWuBi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iWuBi/iWuBi-Bridging-Header.h";

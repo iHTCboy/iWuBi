@@ -64,6 +64,15 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+			<key>iWiBi-gray-icon</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>iWiBi-gray-icon</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
 		</dict>
 		<key>CFBundlePrimaryIcon</key>
 		<dict>

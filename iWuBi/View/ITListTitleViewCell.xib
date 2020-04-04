@@ -59,13 +59,17 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r64-Rm-FMh">
-                        <rect key="frame" x="0.0" y="131" width="421" height="1"/>
-                        <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xu0-gi-oVv">
+                        <rect key="frame" x="95" y="53" width="40" height="20"/>
+                        <color key="backgroundColor" red="0.97480666039999997" green="0.52825597879999997" blue="0.069089337319999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="0.80000000000000004" id="etT-Ob-Wuz"/>
+                            <constraint firstAttribute="height" constant="20" id="jXz-25-Ddg"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="wnf-5P-fhm"/>
                         </constraints>
-                    </view>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iWuBi-word-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ziv-cc-lNx">
                         <rect key="frame" x="30" y="23" width="55" height="55"/>
                         <constraints>
@@ -79,7 +83,7 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xnx-N5-q9f" userLabel="height">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xnx-N5-q9f" userLabel="HeightView">
                         <rect key="frame" x="0.0" y="0.0" width="1" height="132"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -87,17 +91,13 @@
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="88" id="etH-2Y-dBx"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xu0-gi-oVv">
-                        <rect key="frame" x="95" y="53" width="40" height="20"/>
-                        <color key="backgroundColor" red="0.97480666039999997" green="0.52825597879999997" blue="0.069089337319999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r64-Rm-FMh" userLabel="LineView">
+                        <rect key="frame" x="0.0" y="131" width="421" height="1"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="jXz-25-Ddg"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="wnf-5P-fhm"/>
+                            <constraint firstAttribute="height" constant="0.80000000000000004" id="etT-Ob-Wuz"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                 <constraints>

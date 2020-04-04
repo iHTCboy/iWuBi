@@ -185,6 +185,16 @@ extension IHTCMeViewController : UITableViewDelegate, UITableViewDataSource
                 newIcon7.setValue(image7.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), forKey: "image")
                 refreshAlert.addAction(newIcon7)
                 
+                // icon8
+                let name8 = "iWiBi-gray-icon"
+                let image8 = UIImage.init(named: name8)!
+                let newIcon8 = UIAlertAction(title: "橙色图标-怀念", style: .default, handler: { (action: UIAlertAction!) in
+                   IAppleServiceUtil.changeAppIconWithName(iconName: name8)
+                   return
+                })
+                newIcon8.setValue(image8.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), forKey: "image")
+                refreshAlert.addAction(newIcon8)
+                
                 let cancel = UIAlertAction(title:  "取消", style: .cancel, handler: nil)
                 refreshAlert.addAction(cancel)
                 self.present(refreshAlert, animated: true, completion: nil)
