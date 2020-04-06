@@ -28,6 +28,15 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+			<key>iWiBi-gray-icon</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>iWiBi-gray-icon</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
 			<key>iWiBi-orange-blank</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -60,15 +69,6 @@
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>iWiBi-orange-two</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>iWiBi-gray-icon</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>iWiBi-gray-icon</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -157,6 +157,7 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

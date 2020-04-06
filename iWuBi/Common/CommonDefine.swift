@@ -45,6 +45,11 @@ let kColorAppGray = UIColor(red:0.512, green:0.572, blue:0.630, alpha:1.000)
 // 系统
 let KAppVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
 
+// 多语言
+func HTCLocalized(_ key: String) -> String {
+    return NSLocalizedString(key, tableName: nil, comment: "")
+}
+
 enum UIUserInterfaceIdiom : Int
 {
     case Unspecified

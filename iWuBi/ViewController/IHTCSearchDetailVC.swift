@@ -45,6 +45,7 @@ class IHTCSearchDetailVC: UIViewController {
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.estimatedRowHeight = 80
         tableView.estimatedSectionHeaderHeight = 80
+        tableView.showsVerticalScrollIndicator = true
         tableView.register(UINib.init(nibName: "ITListTitleViewCell", bundle: Bundle.main), forCellReuseIdentifier: "ITListTitleViewCell")
         tableView.register(UINib.init(nibName: "IHTCWuBiWordViewCell", bundle: Bundle.main), forCellReuseIdentifier: "IHTCWuBiWordViewCell")
         return tableView

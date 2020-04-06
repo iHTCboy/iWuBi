@@ -18,7 +18,13 @@ class IHTCMeViewController: UIViewController {
         
         setupUI()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -106,6 +112,20 @@ extension IHTCMeViewController : UITableViewDelegate, UITableViewDataSource
         let titleA = titles?.components(separatedBy: ":")
         cell!.textLabel?.text = titleA?[0]
         cell?.detailTextLabel?.text = titleA?[1]
+        
+        if (indexPath.section == 0 && indexPath.row == 1) {
+            switch IHTCUserDefaults.shared.getAppAppearance() {
+            case .Default:
+                cell?.detailTextLabel?.text = "跟随系统"
+                break
+            case .Light:
+                cell?.detailTextLabel?.text = "浅色主题"
+                break
+            case .Dark:
+                cell?.detailTextLabel?.text = "深色主题"
+                break
+            }
+        }
         
         return cell!
     }
