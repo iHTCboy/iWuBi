@@ -7,3 +7,5 @@
 */
 
 CFBundleDisplayName = "iWuBi";
+"NSPhotoLibraryUsageDescription" = "Request access to the album, in order to save App Screenshots";
+"NSPhotoLibraryAddUsageDescription" = "Request access to the album, in order to save App Screenshots";
