@@ -74,7 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     
     func startBaiduMobStat() {
-                
+        #if !targetEnvironment(macCatalyst)
         let statTracker = BaiduMobStat.default()
 #if DEBUG
         print("Debug modle")
@@ -97,6 +97,7 @@ extension AppDelegate {
         statTracker.logEvent("Devices", eventLabel:UIDevice.current.name)
         statTracker.logEvent("AppName", eventLabel:( Bundle.main.infoDictionary?["CFBundleName"] as! String))
 #endif
+        #endif
     }
     
     func setupBaseUI() {

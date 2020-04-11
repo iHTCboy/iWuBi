@@ -9,6 +9,126 @@
 /* Begin PBXBuildFile section */
 		2D6303726115B67060D09E85 /* Pods_iWuBiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA5AA6FD67142615E34DC61 /* Pods_iWuBiTests.framework */; };
 		3719B7397CAA52057F9F1153 /* Pods_iWuBiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E83B6E1E91072EBEA6E329 /* Pods_iWuBiUITests.framework */; };
+		6D0BF3BF2442186B009EA94B /* IHTC98WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DEB225B8E340099AC80 /* IHTC98WordViewController.swift */; };
+		6D0BF3C02442186B009EA94B /* IHTCAboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DE2225B8E340099AC80 /* IHTCAboutAppViewController.swift */; };
+		6D0BF3C12442186B009EA94B /* IHTCMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DE3225B8E340099AC80 /* IHTCMeViewController.swift */; };
+		6D0BF3C22442186B009EA94B /* IHTCShareFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2C72262DF37005EACCA /* IHTCShareFooterView.swift */; };
+		6D0BF3C32442186B009EA94B /* ITPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DDB225B8E340099AC80 /* ITPageContentView.swift */; };
+		6D0BF3C42442186B009EA94B /* IHTCSearchDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2B4226215A6005EACCA /* IHTCSearchDetailVC.swift */; };
+		6D0BF3C52442186B009EA94B /* ITCommonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88E1F225B8E720099AC80 /* ITCommonAPI.swift */; };
+		6D0BF3C62442186B009EA94B /* TCDataTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DEF225B8E340099AC80 /* TCDataTool.swift */; };
+		6D0BF3C72442186B009EA94B /* IHTCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DDE225B8E340099AC80 /* IHTCModel.swift */; };
+		6D0BF3C82442186B009EA94B /* IHTCLearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2D922631267005EACCA /* IHTCLearnViewController.swift */; };
+		6D0BF3C92442186B009EA94B /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2BA2262D34D005EACCA /* UIImage+Additions.swift */; };
+		6D0BF3CA2442186B009EA94B /* UITableView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2BB2262D34D005EACCA /* UITableView+Additions.swift */; };
+		6D0BF3CB2442186B009EA94B /* IHTCUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC9407724308D0B009A9994 /* IHTCUserDefaults.swift */; };
+		6D0BF3CC2442186B009EA94B /* ITScalePushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DEE225B8E340099AC80 /* ITScalePushTransition.swift */; };
+		6D0BF3CD2442186B009EA94B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAD76F9225A277F00961BEC /* AppDelegate.swift */; };
+		6D0BF3CE2442186B009EA94B /* IHTCWordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DE9225B8E340099AC80 /* IHTCWordDetailViewController.swift */; };
+		6D0BF3CF2442186B009EA94B /* UIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2B92262D34D005EACCA /* UIScrollView+Additions.swift */; };
+		6D0BF3D02442186B009EA94B /* ITAdvancelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB1AF962278A7640051A288 /* ITAdvancelDetailViewController.swift */; };
+		6D0BF3D12442186B009EA94B /* IHTCAppearanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC9407524308B4C009A9994 /* IHTCAppearanceVC.swift */; };
+		6D0BF3D22442186B009EA94B /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2BC2262D34E005EACCA /* UIView+Additions.swift */; };
+		6D0BF3D32442186B009EA94B /* ITListTitleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3B83FE225E42CB00037787 /* ITListTitleViewCell.swift */; };
+		6D0BF3D42442186B009EA94B /* ITQuestionListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DD7225B8E340099AC80 /* ITQuestionListViewCell.swift */; };
+		6D0BF3D52442186B009EA94B /* ITCopyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DD8225B8E340099AC80 /* ITCopyLabel.swift */; };
+		6D0BF3D62442186B009EA94B /* IAppleServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2B62262C613005EACCA /* IAppleServiceUtil.swift */; };
+		6D0BF3D72442186B009EA94B /* IHTC86WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DEC225B8E340099AC80 /* IHTC86WordViewController.swift */; };
+		6D0BF3D82442186B009EA94B /* ITBasePushTransitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DE7225B8E340099AC80 /* ITBasePushTransitionVC.swift */; };
+		6D0BF3D92442186B009EA94B /* IHTCWuBiWordViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E27D225F95F7005EACCA /* IHTCWuBiWordViewCell.swift */; };
+		6D0BF3DA2442186B009EA94B /* IHTCImgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E27B225F9064005EACCA /* IHTCImgModel.swift */; };
+		6D0BF3DB2442186B009EA94B /* ITScalePopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DF0225B8E340099AC80 /* ITScalePopTransition.swift */; };
+		6D0BF3DC2442186B009EA94B /* IHTCLearnDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2F022632C1F005EACCA /* IHTCLearnDetailViewController.swift */; };
+		6D0BF3DD2442186B009EA94B /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB1AF932278A75D0051A288 /* TableHeaderView.swift */; };
+		6D0BF3DE2442186B009EA94B /* ITPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DDA225B8E340099AC80 /* ITPageTitleView.swift */; };
+		6D0BF3DF2442186B009EA94B /* ITBasePopTransitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DE6225B8E340099AC80 /* ITBasePopTransitionVC.swift */; };
+		6D0BF3E02442186B009EA94B /* IHTCWordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DEA225B8E340099AC80 /* IHTCWordListViewController.swift */; };
+		6D0BF3E12442186B009EA94B /* IHTCSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E2A32260D7E8005EACCA /* IHTCSearchViewController.swift */; };
+		6D0BF3E22442186B009EA94B /* CommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88E1E225B8E720099AC80 /* CommonDefine.swift */; };
+		6D0BF3E42442186B009EA94B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D531B48226336BF00C921B8 /* WebKit.framework */; };
+		6D0BF3E52442186B009EA94B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D76E297225F9EFD005EACCA /* libz.tbd */; };
+		6D0BF3E62442186B009EA94B /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D76E295225F9EE9005EACCA /* JavaScriptCore.framework */; };
+		6D0BF3E72442186B009EA94B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D76E285225F9E3E005EACCA /* CoreTelephony.framework */; };
+		6D0BF3E82442186B009EA94B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D76E293225F9E8B005EACCA /* StoreKit.framework */; };
+		6D0BF3E92442186B009EA94B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D76E291225F9E7F005EACCA /* CFNetwork.framework */; };
+		6D0BF3EA2442186B009EA94B /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D76E28F225F9E6F005EACCA /* libc++.tbd */; };
+		6D0BF3EB2442186B009EA94B /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D76E28D225F9E6A005EACCA /* SafariServices.framework */; };
+		6D0BF3EC2442186B009EA94B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D76E28B225F9E5B005EACCA /* CoreLocation.framework */; };
+		6D0BF3ED2442186B009EA94B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D76E289225F9E53005EACCA /* CoreGraphics.framework */; };
+		6D0BF3EE2442186B009EA94B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D76E287225F9E4D005EACCA /* Security.framework */; };
+		6D0BF3EF2442186B009EA94B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D76E281225F9E0B005EACCA /* SystemConfiguration.framework */; };
+		6D0BF3F22442186B009EA94B /* 新世纪版与86版变动对比图表.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B652263648E00C921B8 /* 新世纪版与86版变动对比图表.png */; };
+		6D0BF3F32442186B009EA94B /* tabbar_selected_86@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2CE2263118C005EACCA /* tabbar_selected_86@3x.png */; };
+		6D0BF3F42442186B009EA94B /* iWiBi-orange-two@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7C22637E4A00C921B8 /* iWiBi-orange-two@2x.png */; };
+		6D0BF3F52442186B009EA94B /* TableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DB1AF922278A75C0051A288 /* TableHeaderView.xib */; };
+		6D0BF3F62442186B009EA94B /* 98透明码元图001.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B4E226360C600C921B8 /* 98透明码元图001.png */; };
+		6D0BF3F72442186B009EA94B /* IHTCShareFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2C52262DC75005EACCA /* IHTCShareFooterView.xib */; };
+		6D0BF3F82442186B009EA94B /* 五笔86版字根键盘表.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B6822636BF400C921B8 /* 五笔86版字根键盘表.png */; };
+		6D0BF3F92442186B009EA94B /* 86版速成诀窍.html in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2E222632984005EACCA /* 86版速成诀窍.html */; };
+		6D0BF3FA2442186B009EA94B /* iWiBi-dark-one@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DC9406A243084D6009A9994 /* iWiBi-dark-one@3x.png */; };
+		6D0BF3FB2442186B009EA94B /* iWuBi-qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2C12262DA79005EACCA /* iWuBi-qrcode.png */; };
+		6D0BF3FC2442186B009EA94B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DAD7700225A278000961BEC /* Assets.xcassets */; };
+		6D0BF3FD2442186B009EA94B /* iWuBi-style.css in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2E022632984005EACCA /* iWuBi-style.css */; };
+		6D0BF3FE2442186B009EA94B /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		6D0BF3FF2442186B009EA94B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88E29225B8F420099AC80 /* LaunchScreen.storyboard */; };
+		6D0BF4002442186B009EA94B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B83E2225E27B500037787 /* Main.storyboard */; };
+		6D0BF4012442186B009EA94B /* tabbar_selected_98@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2D12263118D005EACCA /* tabbar_selected_98@3x.png */; };
+		6D0BF4022442186B009EA94B /* ITQuestionListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88DDC225B8E340099AC80 /* ITQuestionListViewCell.xib */; };
+		6D0BF4032442186B009EA94B /* iWiBi-orange-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B6F226379CA00C921B8 /* iWiBi-orange-icon@2x.png */; };
+		6D0BF4042442186B009EA94B /* iWuBi-orange-word.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B83D5225E238200037787 /* iWuBi-orange-word.png */; };
+		6D0BF4052442186B009EA94B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B83F4225E307700037787 /* InfoPlist.strings */; };
+		6D0BF4062442186B009EA94B /* 98五笔码元-全图-浅黄.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B4B226360C400C921B8 /* 98五笔码元-全图-浅黄.jpg */; };
+		6D0BF4072442186B009EA94B /* iWuBi_code.json in Resources */ = {isa = PBXBuildFile; fileRef = 6DEF6235225C0FDA001A6530 /* iWuBi_code.json */; };
+		6D0BF4082442186B009EA94B /* 98五笔码元-全图-青葱.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B4A226360C400C921B8 /* 98五笔码元-全图-青葱.jpg */; };
+		6D0BF4092442186B009EA94B /* AppIcon-default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7822637B2A00C921B8 /* AppIcon-default@3x.png */; };
+		6D0BF40A2442186B009EA94B /* iWiBi-dark-one@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DC9406B243084D7009A9994 /* iWiBi-dark-one@2x.png */; };
+		6D0BF40B2442186B009EA94B /* AppIcon-default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7722637B2A00C921B8 /* AppIcon-default@2x.png */; };
+		6D0BF40C2442186B009EA94B /* tabbar_selected_learning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2D22263118D005EACCA /* tabbar_selected_learning@2x.png */; };
+		6D0BF40D2442186B009EA94B /* 86版五笔字根表.html in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2DE22632983005EACCA /* 86版五笔字根表.html */; };
+		6D0BF40E2442186B009EA94B /* iWuBi-98-keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E276225F883C005EACCA /* iWuBi-98-keyboard.png */; };
+		6D0BF40F2442186B009EA94B /* App-share-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88DC1225B8E340099AC80 /* App-share-Icon.png */; };
+		6D0BF4102442186B009EA94B /* iWiBi-orange-icon-light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7422637A5000C921B8 /* iWiBi-orange-icon-light@3x.png */; };
+		6D0BF4112442186B009EA94B /* iWiBi-gray-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF6BABE24383D59008BCD66 /* iWiBi-gray-icon@2x.png */; };
+		6D0BF4122442186B009EA94B /* 98透明码元图002.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B4D226360C600C921B8 /* 98透明码元图002.png */; };
+		6D0BF4132442186B009EA94B /* iWiBi-orange-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B70226379CB00C921B8 /* iWiBi-orange-icon@3x.png */; };
+		6D0BF4142442186B009EA94B /* 新世纪五笔字根键位图1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B622263643800C921B8 /* 新世纪五笔字根键位图1.png */; };
+		6D0BF4152442186B009EA94B /* 98版速成诀窍.html in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2EA22632991005EACCA /* 98版速成诀窍.html */; };
+		6D0BF4162442186B009EA94B /* 五笔98版字根键盘表.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B6A22636C3100C921B8 /* 五笔98版字根键盘表.png */; };
+		6D0BF4172442186B009EA94B /* tabbar_selected_86@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2D02263118D005EACCA /* tabbar_selected_86@2x.png */; };
+		6D0BF4182442186B009EA94B /* IHTCAboutAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88DE8225B8E340099AC80 /* IHTCAboutAppViewController.xib */; };
+		6D0BF4192442186B009EA94B /* 98版五笔字根表.html in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2E822632991005EACCA /* 98版五笔字根表.html */; };
+		6D0BF41A2442186B009EA94B /* tabbar_selected_setting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2CA226310CE005EACCA /* tabbar_selected_setting@3x.png */; };
+		6D0BF41B2442186B009EA94B /* 新世纪五笔字根图2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B5B226363D700C921B8 /* 新世纪五笔字根图2.jpg */; };
+		6D0BF41C2442186B009EA94B /* 98版简明教程.html in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2EB22632991005EACCA /* 98版简明教程.html */; };
+		6D0BF41D2442186B009EA94B /* 86版简明教程.html in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2DF22632984005EACCA /* 86版简明教程.html */; };
+		6D0BF41E2442186B009EA94B /* iWiBi-orange-blank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B8022637E8400C921B8 /* iWiBi-orange-blank@2x.png */; };
+		6D0BF41F2442186B009EA94B /* iWuBi-word-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B8402225E43D700037787 /* iWuBi-word-bg.png */; };
+		6D0BF4202442186B009EA94B /* iWiBi-gray-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF6BABF24383D59008BCD66 /* iWiBi-gray-icon@3x.png */; };
+		6D0BF4212442186B009EA94B /* 86版五笔简码.html in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2E122632984005EACCA /* 86版五笔简码.html */; };
+		6D0BF4222442186B009EA94B /* 98五笔码元图-浅色.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B56226362C800C921B8 /* 98五笔码元图-浅色.png */; };
+		6D0BF4232442186B009EA94B /* iWiBi-orange-blank@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7F22637E8400C921B8 /* iWiBi-orange-blank@3x.png */; };
+		6D0BF4242442186B009EA94B /* 98五笔码元-应用图.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B4C226360C500C921B8 /* 98五笔码元-应用图.jpg */; };
+		6D0BF4252442186B009EA94B /* AppLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88E28225B8F420099AC80 /* AppLaunchScreen.storyboard */; };
+		6D0BF4262442186B009EA94B /* iWiBi-orange-icon-light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7322637A5000C921B8 /* iWiBi-orange-icon-light@2x.png */; };
+		6D0BF4272442186B009EA94B /* iWiBi-dark-two@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DC9406E24308594009A9994 /* iWiBi-dark-two@2x.png */; };
+		6D0BF4282442186B009EA94B /* iWiBi-orange-two@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7B22637E4A00C921B8 /* iWiBi-orange-two@3x.png */; };
+		6D0BF4292442186B009EA94B /* 98五笔字根全图白底.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B57226362C800C921B8 /* 98五笔字根全图白底.png */; };
+		6D0BF42A2442186B009EA94B /* App-TextLogo-Alpha.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88DC0225B8E340099AC80 /* App-TextLogo-Alpha.png */; };
+		6D0BF42B2442186B009EA94B /* 新世纪五笔字根图3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B5C226363D700C921B8 /* 新世纪五笔字根图3.jpg */; };
+		6D0BF42C2442186B009EA94B /* iWuBi-86-keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E274225F8829005EACCA /* iWuBi-86-keyboard.png */; };
+		6D0BF42D2442186B009EA94B /* 98版五笔简码.html in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2E922632991005EACCA /* 98版五笔简码.html */; };
+		6D0BF42E2442186B009EA94B /* ITListTitleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B83FF225E42CB00037787 /* ITListTitleViewCell.xib */; };
+		6D0BF42F2442186B009EA94B /* 新世纪五笔字根图1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B5D226363D700C921B8 /* 新世纪五笔字根图1.jpg */; };
+		6D0BF4302442186B009EA94B /* iWuBi_learning.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2DB2263150B005EACCA /* iWuBi_learning.plist */; };
+		6D0BF4312442186B009EA94B /* 新世纪五笔字根键位图2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B612263643800C921B8 /* 新世纪五笔字根键位图2.png */; };
+		6D0BF4322442186B009EA94B /* IHTCSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2A92260D97E005EACCA /* IHTCSearchViewController.xib */; };
+		6D0BF4332442186B009EA94B /* tabbar_selected_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2C9226310CE005EACCA /* tabbar_selected_setting@2x.png */; };
+		6D0BF4342442186B009EA94B /* tabbar_selected_learning@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2CD2263118C005EACCA /* tabbar_selected_learning@3x.png */; };
+		6D0BF4352442186B009EA94B /* iWiBi-dark-two@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DC9406F24308595009A9994 /* iWiBi-dark-two@3x.png */; };
+		6D0BF4362442186B009EA94B /* tabbar_selected_98@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2CF2263118C005EACCA /* tabbar_selected_98@2x.png */; };
+		6D0BF4372442186B009EA94B /* IHTCWuBiWordViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E27E225F95F7005EACCA /* IHTCWuBiWordViewCell.xib */; };
+		6D0BF4382442186B009EA94B /* iHTCboyApp.json in Resources */ = {isa = PBXBuildFile; fileRef = 6DB1AF982278A7710051A288 /* iHTCboyApp.json */; };
+		6D0BF4392442186B009EA94B /* 98五笔码元图-白底.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B55226362C800C921B8 /* 98五笔码元图-白底.png */; };
 		6D3B83D6225E238300037787 /* iWuBi-orange-word.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B83D5225E238200037787 /* iWuBi-orange-word.png */; };
 		6D3B83E0225E27B500037787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B83E2225E27B500037787 /* Main.storyboard */; };
 		6D3B83F2225E307700037787 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B83F4225E307700037787 /* InfoPlist.strings */; };
@@ -119,7 +239,7 @@
 		6DB88E1C225B8E340099AC80 /* ITScalePopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DF0225B8E340099AC80 /* ITScalePopTransition.swift */; };
 		6DB88E20225B8E720099AC80 /* CommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88E1E225B8E720099AC80 /* CommonDefine.swift */; };
 		6DB88E21225B8E720099AC80 /* ITCommonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88E1F225B8E720099AC80 /* ITCommonAPI.swift */; };
-		6DB88E2A225B8F430099AC80 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		6DB88E2A225B8F430099AC80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		6DB88E2B225B8F430099AC80 /* AppLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88E28225B8F420099AC80 /* AppLaunchScreen.storyboard */; };
 		6DB88E2C225B8F430099AC80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88E29225B8F420099AC80 /* LaunchScreen.storyboard */; };
 		6DC9406C243084D7009A9994 /* iWiBi-dark-one@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DC9406A243084D6009A9994 /* iWiBi-dark-one@3x.png */; };
@@ -132,6 +252,7 @@
 		6DF6BAC024383D59008BCD66 /* iWiBi-gray-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF6BABE24383D59008BCD66 /* iWiBi-gray-icon@2x.png */; };
 		6DF6BAC124383D59008BCD66 /* iWiBi-gray-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF6BABF24383D59008BCD66 /* iWiBi-gray-icon@3x.png */; };
 		C833D47BF34102E21135BC39 /* Pods_iWuBi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FABFA1D936DFEDD99C5AC4A /* Pods_iWuBi.framework */; };
+		CD1B0969F2EA0F4217E3A6FA /* libPods-iWuBi-MacCatylyst.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFAA5851858A4D9CB53BF20 /* libPods-iWuBi-MacCatylyst.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,10 +274,15 @@
 
 /* Begin PBXFileReference section */
 		0EF4ABF9754CD5F1B9DEC378 /* Pods-iWuBiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWuBiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iWuBiUITests/Pods-iWuBiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		34354E2CF44B405B1CEEFEBD /* Pods-iWuBi-MacCatylyst.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWuBi-MacCatylyst.release.xcconfig"; path = "Pods/Target Support Files/Pods-iWuBi-MacCatylyst/Pods-iWuBi-MacCatylyst.release.xcconfig"; sourceTree = "<group>"; };
 		37928F92B064255A22FB885E /* Pods-iWuBiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWuBiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iWuBiUITests/Pods-iWuBiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4DC6FA5CB566AD8744AF9589 /* Pods-iWuBi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWuBi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iWuBi/Pods-iWuBi.debug.xcconfig"; sourceTree = "<group>"; };
+		4DFAA5851858A4D9CB53BF20 /* libPods-iWuBi-MacCatylyst.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iWuBi-MacCatylyst.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA5AA6FD67142615E34DC61 /* Pods_iWuBiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iWuBiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FABFA1D936DFEDD99C5AC4A /* Pods_iWuBi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iWuBi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D0BF43E2442186B009EA94B /* iWuBi-MacCatylyst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iWuBi-MacCatylyst.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D0BF43F2442186C009EA94B /* iWuBi copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iWuBi copy-Info.plist"; path = "/Users/HTC/Documents/Programing/HTCiOS/iWuBi/iWuBi copy-Info.plist"; sourceTree = "<absolute>"; };
+		6D0BF441244218FC009EA94B /* iWuBi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iWuBi.entitlements; sourceTree = "<group>"; };
 		6D3B83D5225E238200037787 /* iWuBi-orange-word.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWuBi-orange-word.png"; sourceTree = "<group>"; };
 		6D3B83E1225E27B500037787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D3B83E4225E27BC00037787 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -298,11 +424,32 @@
 		6DF6BABF24383D59008BCD66 /* iWiBi-gray-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-gray-icon@3x.png"; sourceTree = "<group>"; };
 		75F9BBE4FFB8D6E6566B36DE /* Pods-iWuBi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWuBi.release.xcconfig"; path = "Pods/Target Support Files/Pods-iWuBi/Pods-iWuBi.release.xcconfig"; sourceTree = "<group>"; };
 		8142ECC9484EECD7A5D29993 /* Pods-iWuBiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWuBiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iWuBiTests/Pods-iWuBiTests.release.xcconfig"; sourceTree = "<group>"; };
+		9DEA0C3024C0DC7DC43BF413 /* Pods-iWuBi-MacCatylyst.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWuBi-MacCatylyst.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iWuBi-MacCatylyst/Pods-iWuBi-MacCatylyst.debug.xcconfig"; sourceTree = "<group>"; };
 		A6D1DB830F43BCBB17C8F556 /* Pods-iWuBiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWuBiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iWuBiTests/Pods-iWuBiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F6E83B6E1E91072EBEA6E329 /* Pods_iWuBiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iWuBiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6D0BF3E32442186B009EA94B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D0BF3E42442186B009EA94B /* WebKit.framework in Frameworks */,
+				6D0BF3E52442186B009EA94B /* libz.tbd in Frameworks */,
+				6D0BF3E62442186B009EA94B /* JavaScriptCore.framework in Frameworks */,
+				6D0BF3E72442186B009EA94B /* CoreTelephony.framework in Frameworks */,
+				6D0BF3E82442186B009EA94B /* StoreKit.framework in Frameworks */,
+				6D0BF3E92442186B009EA94B /* CFNetwork.framework in Frameworks */,
+				6D0BF3EA2442186B009EA94B /* libc++.tbd in Frameworks */,
+				6D0BF3EB2442186B009EA94B /* SafariServices.framework in Frameworks */,
+				6D0BF3EC2442186B009EA94B /* CoreLocation.framework in Frameworks */,
+				6D0BF3ED2442186B009EA94B /* CoreGraphics.framework in Frameworks */,
+				6D0BF3EE2442186B009EA94B /* Security.framework in Frameworks */,
+				6D0BF3EF2442186B009EA94B /* SystemConfiguration.framework in Frameworks */,
+				CD1B0969F2EA0F4217E3A6FA /* libPods-iWuBi-MacCatylyst.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6DAD76F3225A277F00961BEC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -426,6 +573,7 @@
 				6DAD76F7225A277F00961BEC /* Products */,
 				6E0C741675ABE6B74F564B0C /* Pods */,
 				7367FB66A9A425040287456A /* Frameworks */,
+				6D0BF43F2442186C009EA94B /* iWuBi copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -435,6 +583,7 @@
 				6DAD76F6225A277F00961BEC /* iWuBi.app */,
 				6DAD770A225A278000961BEC /* iWuBiTests.xctest */,
 				6DAD7715225A278000961BEC /* iWuBiUITests.xctest */,
+				6D0BF43E2442186B009EA94B /* iWuBi-MacCatylyst.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -442,6 +591,7 @@
 		6DAD76F8225A277F00961BEC /* iWuBi */ = {
 			isa = PBXGroup;
 			children = (
+				6D0BF441244218FC009EA94B /* iWuBi.entitlements */,
 				6DB88E23225B8EFE0099AC80 /* iWuBi-Bridging-Header.h */,
 				6DAD76F9225A277F00961BEC /* AppDelegate.swift */,
 				6DB88DE1225B8E340099AC80 /* ViewController */,
@@ -630,6 +780,8 @@
 				8142ECC9484EECD7A5D29993 /* Pods-iWuBiTests.release.xcconfig */,
 				37928F92B064255A22FB885E /* Pods-iWuBiUITests.debug.xcconfig */,
 				0EF4ABF9754CD5F1B9DEC378 /* Pods-iWuBiUITests.release.xcconfig */,
+				9DEA0C3024C0DC7DC43BF413 /* Pods-iWuBi-MacCatylyst.debug.xcconfig */,
+				34354E2CF44B405B1CEEFEBD /* Pods-iWuBi-MacCatylyst.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -653,6 +805,7 @@
 				5FABFA1D936DFEDD99C5AC4A /* Pods_iWuBi.framework */,
 				5AA5AA6FD67142615E34DC61 /* Pods_iWuBiTests.framework */,
 				F6E83B6E1E91072EBEA6E329 /* Pods_iWuBiUITests.framework */,
+				4DFAA5851858A4D9CB53BF20 /* libPods-iWuBi-MacCatylyst.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -660,6 +813,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6D0BF3BC2442186B009EA94B /* iWuBi-MacCatylyst */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D0BF43B2442186B009EA94B /* Build configuration list for PBXNativeTarget "iWuBi-MacCatylyst" */;
+			buildPhases = (
+				6D0BF3BD2442186B009EA94B /* [CP] Check Pods Manifest.lock */,
+				6D0BF3BE2442186B009EA94B /* Sources */,
+				6D0BF3E32442186B009EA94B /* Frameworks */,
+				6D0BF3F12442186B009EA94B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iWuBi-MacCatylyst";
+			productName = iWuBi;
+			productReference = 6D0BF43E2442186B009EA94B /* iWuBi-MacCatylyst.app */;
+			productType = "com.apple.product-type.application";
+		};
 		6DAD76F5225A277F00961BEC /* iWuBi */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6DAD771E225A278000961BEC /* Build configuration list for PBXNativeTarget "iWuBi" */;
@@ -757,6 +928,7 @@
 			projectRoot = "";
 			targets = (
 				6DAD76F5225A277F00961BEC /* iWuBi */,
+				6D0BF3BC2442186B009EA94B /* iWuBi-MacCatylyst */,
 				6DAD7709225A278000961BEC /* iWuBiTests */,
 				6DAD7714225A278000961BEC /* iWuBiUITests */,
 			);
@@ -764,6 +936,85 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6D0BF3F12442186B009EA94B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D0BF3F22442186B009EA94B /* 新世纪版与86版变动对比图表.png in Resources */,
+				6D0BF3F32442186B009EA94B /* tabbar_selected_86@3x.png in Resources */,
+				6D0BF3F42442186B009EA94B /* iWiBi-orange-two@2x.png in Resources */,
+				6D0BF3F52442186B009EA94B /* TableHeaderView.xib in Resources */,
+				6D0BF3F62442186B009EA94B /* 98透明码元图001.png in Resources */,
+				6D0BF3F72442186B009EA94B /* IHTCShareFooterView.xib in Resources */,
+				6D0BF3F82442186B009EA94B /* 五笔86版字根键盘表.png in Resources */,
+				6D0BF3F92442186B009EA94B /* 86版速成诀窍.html in Resources */,
+				6D0BF3FA2442186B009EA94B /* iWiBi-dark-one@3x.png in Resources */,
+				6D0BF3FB2442186B009EA94B /* iWuBi-qrcode.png in Resources */,
+				6D0BF3FC2442186B009EA94B /* Assets.xcassets in Resources */,
+				6D0BF3FD2442186B009EA94B /* iWuBi-style.css in Resources */,
+				6D0BF3FE2442186B009EA94B /* BuildFile in Resources */,
+				6D0BF3FF2442186B009EA94B /* LaunchScreen.storyboard in Resources */,
+				6D0BF4002442186B009EA94B /* Main.storyboard in Resources */,
+				6D0BF4012442186B009EA94B /* tabbar_selected_98@3x.png in Resources */,
+				6D0BF4022442186B009EA94B /* ITQuestionListViewCell.xib in Resources */,
+				6D0BF4032442186B009EA94B /* iWiBi-orange-icon@2x.png in Resources */,
+				6D0BF4042442186B009EA94B /* iWuBi-orange-word.png in Resources */,
+				6D0BF4052442186B009EA94B /* InfoPlist.strings in Resources */,
+				6D0BF4062442186B009EA94B /* 98五笔码元-全图-浅黄.jpg in Resources */,
+				6D0BF4072442186B009EA94B /* iWuBi_code.json in Resources */,
+				6D0BF4082442186B009EA94B /* 98五笔码元-全图-青葱.jpg in Resources */,
+				6D0BF4092442186B009EA94B /* AppIcon-default@3x.png in Resources */,
+				6D0BF40A2442186B009EA94B /* iWiBi-dark-one@2x.png in Resources */,
+				6D0BF40B2442186B009EA94B /* AppIcon-default@2x.png in Resources */,
+				6D0BF40C2442186B009EA94B /* tabbar_selected_learning@2x.png in Resources */,
+				6D0BF40D2442186B009EA94B /* 86版五笔字根表.html in Resources */,
+				6D0BF40E2442186B009EA94B /* iWuBi-98-keyboard.png in Resources */,
+				6D0BF40F2442186B009EA94B /* App-share-Icon.png in Resources */,
+				6D0BF4102442186B009EA94B /* iWiBi-orange-icon-light@3x.png in Resources */,
+				6D0BF4112442186B009EA94B /* iWiBi-gray-icon@2x.png in Resources */,
+				6D0BF4122442186B009EA94B /* 98透明码元图002.png in Resources */,
+				6D0BF4132442186B009EA94B /* iWiBi-orange-icon@3x.png in Resources */,
+				6D0BF4142442186B009EA94B /* 新世纪五笔字根键位图1.png in Resources */,
+				6D0BF4152442186B009EA94B /* 98版速成诀窍.html in Resources */,
+				6D0BF4162442186B009EA94B /* 五笔98版字根键盘表.png in Resources */,
+				6D0BF4172442186B009EA94B /* tabbar_selected_86@2x.png in Resources */,
+				6D0BF4182442186B009EA94B /* IHTCAboutAppViewController.xib in Resources */,
+				6D0BF4192442186B009EA94B /* 98版五笔字根表.html in Resources */,
+				6D0BF41A2442186B009EA94B /* tabbar_selected_setting@3x.png in Resources */,
+				6D0BF41B2442186B009EA94B /* 新世纪五笔字根图2.jpg in Resources */,
+				6D0BF41C2442186B009EA94B /* 98版简明教程.html in Resources */,
+				6D0BF41D2442186B009EA94B /* 86版简明教程.html in Resources */,
+				6D0BF41E2442186B009EA94B /* iWiBi-orange-blank@2x.png in Resources */,
+				6D0BF41F2442186B009EA94B /* iWuBi-word-bg.png in Resources */,
+				6D0BF4202442186B009EA94B /* iWiBi-gray-icon@3x.png in Resources */,
+				6D0BF4212442186B009EA94B /* 86版五笔简码.html in Resources */,
+				6D0BF4222442186B009EA94B /* 98五笔码元图-浅色.png in Resources */,
+				6D0BF4232442186B009EA94B /* iWiBi-orange-blank@3x.png in Resources */,
+				6D0BF4242442186B009EA94B /* 98五笔码元-应用图.jpg in Resources */,
+				6D0BF4252442186B009EA94B /* AppLaunchScreen.storyboard in Resources */,
+				6D0BF4262442186B009EA94B /* iWiBi-orange-icon-light@2x.png in Resources */,
+				6D0BF4272442186B009EA94B /* iWiBi-dark-two@2x.png in Resources */,
+				6D0BF4282442186B009EA94B /* iWiBi-orange-two@3x.png in Resources */,
+				6D0BF4292442186B009EA94B /* 98五笔字根全图白底.png in Resources */,
+				6D0BF42A2442186B009EA94B /* App-TextLogo-Alpha.png in Resources */,
+				6D0BF42B2442186B009EA94B /* 新世纪五笔字根图3.jpg in Resources */,
+				6D0BF42C2442186B009EA94B /* iWuBi-86-keyboard.png in Resources */,
+				6D0BF42D2442186B009EA94B /* 98版五笔简码.html in Resources */,
+				6D0BF42E2442186B009EA94B /* ITListTitleViewCell.xib in Resources */,
+				6D0BF42F2442186B009EA94B /* 新世纪五笔字根图1.jpg in Resources */,
+				6D0BF4302442186B009EA94B /* iWuBi_learning.plist in Resources */,
+				6D0BF4312442186B009EA94B /* 新世纪五笔字根键位图2.png in Resources */,
+				6D0BF4322442186B009EA94B /* IHTCSearchViewController.xib in Resources */,
+				6D0BF4332442186B009EA94B /* tabbar_selected_setting@2x.png in Resources */,
+				6D0BF4342442186B009EA94B /* tabbar_selected_learning@3x.png in Resources */,
+				6D0BF4352442186B009EA94B /* iWiBi-dark-two@3x.png in Resources */,
+				6D0BF4362442186B009EA94B /* tabbar_selected_98@2x.png in Resources */,
+				6D0BF4372442186B009EA94B /* IHTCWuBiWordViewCell.xib in Resources */,
+				6D0BF4382442186B009EA94B /* iHTCboyApp.json in Resources */,
+				6D0BF4392442186B009EA94B /* 98五笔码元图-白底.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6DAD76F4225A277F00961BEC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -780,7 +1031,7 @@
 				6D76E2C22262DA7A005EACCA /* iWuBi-qrcode.png in Resources */,
 				6DAD7701225A278000961BEC /* Assets.xcassets in Resources */,
 				6D76E2E522632984005EACCA /* iWuBi-style.css in Resources */,
-				6DB88E2A225B8F430099AC80 /* (null) in Resources */,
+				6DB88E2A225B8F430099AC80 /* BuildFile in Resources */,
 				6DB88E2C225B8F430099AC80 /* LaunchScreen.storyboard in Resources */,
 				6D3B83E0225E27B500037787 /* Main.storyboard in Resources */,
 				6D76E2D72263118D005EACCA /* tabbar_selected_98@3x.png in Resources */,
@@ -899,6 +1150,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iWuBi/Pods-iWuBi-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6D0BF3BD2442186B009EA94B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iWuBi-MacCatylyst-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BFF21BD209DC66F9B1210992 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -946,6 +1219,49 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6D0BF3BE2442186B009EA94B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D0BF3BF2442186B009EA94B /* IHTC98WordViewController.swift in Sources */,
+				6D0BF3C02442186B009EA94B /* IHTCAboutAppViewController.swift in Sources */,
+				6D0BF3C12442186B009EA94B /* IHTCMeViewController.swift in Sources */,
+				6D0BF3C22442186B009EA94B /* IHTCShareFooterView.swift in Sources */,
+				6D0BF3C32442186B009EA94B /* ITPageContentView.swift in Sources */,
+				6D0BF3C42442186B009EA94B /* IHTCSearchDetailVC.swift in Sources */,
+				6D0BF3C52442186B009EA94B /* ITCommonAPI.swift in Sources */,
+				6D0BF3C62442186B009EA94B /* TCDataTool.swift in Sources */,
+				6D0BF3C72442186B009EA94B /* IHTCModel.swift in Sources */,
+				6D0BF3C82442186B009EA94B /* IHTCLearnViewController.swift in Sources */,
+				6D0BF3C92442186B009EA94B /* UIImage+Additions.swift in Sources */,
+				6D0BF3CA2442186B009EA94B /* UITableView+Additions.swift in Sources */,
+				6D0BF3CB2442186B009EA94B /* IHTCUserDefaults.swift in Sources */,
+				6D0BF3CC2442186B009EA94B /* ITScalePushTransition.swift in Sources */,
+				6D0BF3CD2442186B009EA94B /* AppDelegate.swift in Sources */,
+				6D0BF3CE2442186B009EA94B /* IHTCWordDetailViewController.swift in Sources */,
+				6D0BF3CF2442186B009EA94B /* UIScrollView+Additions.swift in Sources */,
+				6D0BF3D02442186B009EA94B /* ITAdvancelDetailViewController.swift in Sources */,
+				6D0BF3D12442186B009EA94B /* IHTCAppearanceVC.swift in Sources */,
+				6D0BF3D22442186B009EA94B /* UIView+Additions.swift in Sources */,
+				6D0BF3D32442186B009EA94B /* ITListTitleViewCell.swift in Sources */,
+				6D0BF3D42442186B009EA94B /* ITQuestionListViewCell.swift in Sources */,
+				6D0BF3D52442186B009EA94B /* ITCopyLabel.swift in Sources */,
+				6D0BF3D62442186B009EA94B /* IAppleServiceUtil.swift in Sources */,
+				6D0BF3D72442186B009EA94B /* IHTC86WordViewController.swift in Sources */,
+				6D0BF3D82442186B009EA94B /* ITBasePushTransitionVC.swift in Sources */,
+				6D0BF3D92442186B009EA94B /* IHTCWuBiWordViewCell.swift in Sources */,
+				6D0BF3DA2442186B009EA94B /* IHTCImgModel.swift in Sources */,
+				6D0BF3DB2442186B009EA94B /* ITScalePopTransition.swift in Sources */,
+				6D0BF3DC2442186B009EA94B /* IHTCLearnDetailViewController.swift in Sources */,
+				6D0BF3DD2442186B009EA94B /* TableHeaderView.swift in Sources */,
+				6D0BF3DE2442186B009EA94B /* ITPageTitleView.swift in Sources */,
+				6D0BF3DF2442186B009EA94B /* ITBasePopTransitionVC.swift in Sources */,
+				6D0BF3E02442186B009EA94B /* IHTCWordListViewController.swift in Sources */,
+				6D0BF3E12442186B009EA94B /* IHTCSearchViewController.swift in Sources */,
+				6D0BF3E22442186B009EA94B /* CommonDefine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6DAD76F2225A277F00961BEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1055,6 +1371,63 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6D0BF43C2442186B009EA94B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DEA0C3024C0DC7DC43BF413 /* Pods-iWuBi-MacCatylyst.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = iWuBi/iWuBi.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2020.04.12;
+				DEVELOPMENT_TEAM = 28PV6G96R7;
+				INFOPLIST_FILE = "iWuBi copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 5.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iHTCboy.iWuBi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D0BF43D2442186B009EA94B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34354E2CF44B405B1CEEFEBD /* Pods-iWuBi-MacCatylyst.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = iWuBi/iWuBi.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2020.04.12;
+				DEVELOPMENT_TEAM = 28PV6G96R7;
+				INFOPLIST_FILE = "iWuBi copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 5.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iHTCboy.iWuBi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		6DAD771C225A278000961BEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1179,8 +1552,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = iWuBi/iWuBi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020.04.07;
+				CURRENT_PROJECT_VERSION = 2020.04.12;
 				DEVELOPMENT_TEAM = 28PV6G96R7;
 				INFOPLIST_FILE = iWuBi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1189,9 +1563,10 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 3.2.1;
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iHTCboy.iWuBi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "iWuBi/iWuBi-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1205,8 +1580,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = iWuBi/iWuBi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020.04.07;
+				CURRENT_PROJECT_VERSION = 2020.04.12;
 				DEVELOPMENT_TEAM = 28PV6G96R7;
 				INFOPLIST_FILE = iWuBi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1215,9 +1591,10 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 3.2.1;
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iHTCboy.iWuBi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "iWuBi/iWuBi-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1313,6 +1690,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6D0BF43B2442186B009EA94B /* Build configuration list for PBXNativeTarget "iWuBi-MacCatylyst" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D0BF43C2442186B009EA94B /* Debug */,
+				6D0BF43D2442186B009EA94B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6DAD76F1225A277F00961BEC /* Build configuration list for PBXProject "iWuBi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
