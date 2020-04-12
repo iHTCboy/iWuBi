@@ -28,7 +28,10 @@ class IHTC98WordViewController: ITBasePushTransitionVC
     fileprivate var titles = IHTCModel.shared.tagsArray
     
     fileprivate lazy var pageTitleView: ITPageTitleView = {
-        let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH, width: kScreenW, height: kTitleViewH)
+        var titleFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH, width: kScreenW, height: kTitleViewH)
+        #if targetEnvironment(macCatalyst)
+            titleFrame.origin.y = titleFrame.origin.y + 20
+        #endif
         let titleView = ITPageTitleView(frame: titleFrame, titles: self.titles)
         titleView.delegate = self
         return titleView
@@ -37,7 +40,11 @@ class IHTC98WordViewController: ITBasePushTransitionVC
     fileprivate lazy var pageContentView: ITPageContentView = {[weak self] in
         // 1. 确定内容 frame
         let contentH = kScreenH - kStatusBarH - kNavBarH - kHomeIndcator
-        let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH + kTitleViewH, width: kScreenW, height: contentH)
+        var contentFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH + kTitleViewH, width: kScreenW, height: contentH)
+        #if targetEnvironment(macCatalyst)
+            contentFrame.origin.y = contentFrame.origin.y + 20
+            contentFrame.size.height = contentFrame.size.height + 1024
+        #endif
         // 2. 确定所有控制器
         let counts = 0
         var childVcs = [UIViewController]()
@@ -67,8 +74,10 @@ class IHTC98WordViewController: ITBasePushTransitionVC
 // MARK:- 设置 UI
 extension IHTC98WordViewController {
     fileprivate func setUpUI() {
+        #if !targetEnvironment(macCatalyst)
         // 0. 不允许系统调整 scrollview 内边距
         automaticallyAdjustsScrollViewInsets = false
+        #endif
         
         // 1. 添加 titleview
         view.addSubview(pageTitleView)

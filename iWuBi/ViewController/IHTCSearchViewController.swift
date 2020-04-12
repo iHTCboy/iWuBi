@@ -94,11 +94,13 @@ extension IHTCSearchViewController {
             versionItem.title = "98版"
         }
         
+        #if !targetEnvironment(macCatalyst)
         // 判断系统版本，必须iOS 9及以上，同时检测是否支持触摸力度识别
         if #available(iOS 9.0, *), traitCollection.forceTouchCapability == .available {
             // 注册预览代理，self监听，tableview执行Peek
             registerForPreviewing(with: self, sourceView: tableView)
         }
+        #endif
         
     }
     

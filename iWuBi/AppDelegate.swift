@@ -105,8 +105,12 @@ extension AppDelegate {
         ui.tintColor = .white
         ui.barTintColor = UIColor(red:0.979, green:0.322, blue:0.000, alpha:1.000)
         ui.barStyle = .black
-        //        UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
-        //        UIApplication.shared.setStatusBarHidden(false, with: .none)
+        
+        #if targetEnvironment(macCatalyst)
+        let tabbar = UITabBarItem.appearance()
+        let font = UIFont.systemFont(ofSize: 18)
+        tabbar.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
+        #endif
     }
     
 }

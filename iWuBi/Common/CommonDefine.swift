@@ -50,6 +50,36 @@ func HTCLocalized(_ key: String) -> String {
     return NSLocalizedString(key, tableName: nil, comment: "")
 }
 
+extension UIViewController {
+
+    /// The app's key window taking into consideration apps that support multiple scenes.
+    class func keyWindowHTC() -> UIWindow? {
+        var foundWindow: UIWindow? = nil
+        for window in UIApplication.shared.windows {
+            if (window.isKeyWindow) {
+                foundWindow = window;
+                break
+            }
+        }
+        
+        if  foundWindow == nil {
+            foundWindow = UIApplication.shared.keyWindow
+        }
+        
+        if  foundWindow == nil {
+            foundWindow = UIApplication.shared.windows.first
+        }
+        
+        // 先兼容iPhone设备
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            foundWindow = UIApplication.shared.keyWindow
+        }
+        
+        return foundWindow
+    }
+
+}
+
 enum UIUserInterfaceIdiom : Int
 {
     case Unspecified

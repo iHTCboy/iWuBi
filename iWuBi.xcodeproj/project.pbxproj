@@ -69,7 +69,7 @@
 		6D0BF3FB2442186B009EA94B /* iWuBi-qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2C12262DA79005EACCA /* iWuBi-qrcode.png */; };
 		6D0BF3FC2442186B009EA94B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DAD7700225A278000961BEC /* Assets.xcassets */; };
 		6D0BF3FD2442186B009EA94B /* iWuBi-style.css in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2E022632984005EACCA /* iWuBi-style.css */; };
-		6D0BF3FE2442186B009EA94B /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		6D0BF3FE2442186B009EA94B /* (null) in Resources */ = {isa = PBXBuildFile; };
 		6D0BF3FF2442186B009EA94B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88E29225B8F420099AC80 /* LaunchScreen.storyboard */; };
 		6D0BF4002442186B009EA94B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D3B83E2225E27B500037787 /* Main.storyboard */; };
 		6D0BF4012442186B009EA94B /* tabbar_selected_98@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E2D12263118D005EACCA /* tabbar_selected_98@3x.png */; };
@@ -239,7 +239,7 @@
 		6DB88E1C225B8E340099AC80 /* ITScalePopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88DF0225B8E340099AC80 /* ITScalePopTransition.swift */; };
 		6DB88E20225B8E720099AC80 /* CommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88E1E225B8E720099AC80 /* CommonDefine.swift */; };
 		6DB88E21225B8E720099AC80 /* ITCommonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB88E1F225B8E720099AC80 /* ITCommonAPI.swift */; };
-		6DB88E2A225B8F430099AC80 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		6DB88E2A225B8F430099AC80 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		6DB88E2B225B8F430099AC80 /* AppLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88E28225B8F420099AC80 /* AppLaunchScreen.storyboard */; };
 		6DB88E2C225B8F430099AC80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DB88E29225B8F420099AC80 /* LaunchScreen.storyboard */; };
 		6DC9406C243084D7009A9994 /* iWiBi-dark-one@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DC9406A243084D6009A9994 /* iWiBi-dark-one@3x.png */; };
@@ -280,8 +280,7 @@
 		4DFAA5851858A4D9CB53BF20 /* libPods-iWuBi-MacCatylyst.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iWuBi-MacCatylyst.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA5AA6FD67142615E34DC61 /* Pods_iWuBiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iWuBiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FABFA1D936DFEDD99C5AC4A /* Pods_iWuBi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iWuBi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D0BF43E2442186B009EA94B /* iWuBi-MacCatylyst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iWuBi-MacCatylyst.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D0BF43F2442186C009EA94B /* iWuBi copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iWuBi copy-Info.plist"; path = "/Users/HTC/Documents/Programing/HTCiOS/iWuBi/iWuBi copy-Info.plist"; sourceTree = "<absolute>"; };
+		6D0BF43E2442186B009EA94B /* iWuBi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iWuBi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0BF441244218FC009EA94B /* iWuBi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iWuBi.entitlements; sourceTree = "<group>"; };
 		6D3B83D5225E238200037787 /* iWuBi-orange-word.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWuBi-orange-word.png"; sourceTree = "<group>"; };
 		6D3B83E1225E27B500037787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -573,7 +572,6 @@
 				6DAD76F7225A277F00961BEC /* Products */,
 				6E0C741675ABE6B74F564B0C /* Pods */,
 				7367FB66A9A425040287456A /* Frameworks */,
-				6D0BF43F2442186C009EA94B /* iWuBi copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -583,7 +581,7 @@
 				6DAD76F6225A277F00961BEC /* iWuBi.app */,
 				6DAD770A225A278000961BEC /* iWuBiTests.xctest */,
 				6DAD7715225A278000961BEC /* iWuBiUITests.xctest */,
-				6D0BF43E2442186B009EA94B /* iWuBi-MacCatylyst.app */,
+				6D0BF43E2442186B009EA94B /* iWuBi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -828,7 +826,7 @@
 			);
 			name = "iWuBi-MacCatylyst";
 			productName = iWuBi;
-			productReference = 6D0BF43E2442186B009EA94B /* iWuBi-MacCatylyst.app */;
+			productReference = 6D0BF43E2442186B009EA94B /* iWuBi.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6DAD76F5225A277F00961BEC /* iWuBi */ = {
@@ -952,7 +950,7 @@
 				6D0BF3FB2442186B009EA94B /* iWuBi-qrcode.png in Resources */,
 				6D0BF3FC2442186B009EA94B /* Assets.xcassets in Resources */,
 				6D0BF3FD2442186B009EA94B /* iWuBi-style.css in Resources */,
-				6D0BF3FE2442186B009EA94B /* BuildFile in Resources */,
+				6D0BF3FE2442186B009EA94B /* (null) in Resources */,
 				6D0BF3FF2442186B009EA94B /* LaunchScreen.storyboard in Resources */,
 				6D0BF4002442186B009EA94B /* Main.storyboard in Resources */,
 				6D0BF4012442186B009EA94B /* tabbar_selected_98@3x.png in Resources */,
@@ -1031,7 +1029,7 @@
 				6D76E2C22262DA7A005EACCA /* iWuBi-qrcode.png in Resources */,
 				6DAD7701225A278000961BEC /* Assets.xcassets in Resources */,
 				6D76E2E522632984005EACCA /* iWuBi-style.css in Resources */,
-				6DB88E2A225B8F430099AC80 /* BuildFile in Resources */,
+				6DB88E2A225B8F430099AC80 /* (null) in Resources */,
 				6DB88E2C225B8F430099AC80 /* LaunchScreen.storyboard in Resources */,
 				6D3B83E0225E27B500037787 /* Main.storyboard in Resources */,
 				6D76E2D72263118D005EACCA /* tabbar_selected_98@3x.png in Resources */,
@@ -1382,7 +1380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2020.04.12;
 				DEVELOPMENT_TEAM = 28PV6G96R7;
-				INFOPLIST_FILE = "iWuBi copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/iWuBi/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1391,7 +1389,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iHTCboy.iWuBi;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iWuBi;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1411,7 +1409,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2020.04.12;
 				DEVELOPMENT_TEAM = 28PV6G96R7;
-				INFOPLIST_FILE = "iWuBi copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/iWuBi/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1420,7 +1418,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iHTCboy.iWuBi;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iWuBi;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
@@ -1553,6 +1551,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = iWuBi/iWuBi.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2020.04.12;
 				DEVELOPMENT_TEAM = 28PV6G96R7;
@@ -1581,6 +1580,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = iWuBi/iWuBi.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2020.04.12;
 				DEVELOPMENT_TEAM = 28PV6G96R7;

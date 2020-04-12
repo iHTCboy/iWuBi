@@ -120,6 +120,9 @@ extension ITAdvancelDetailViewController : UITableViewDelegate, UITableViewDataS
         let subtitle = dict["subtitle"] as! String
         let view = TableHeaderView.initView(title: titile, subtitle: subtitle, height: 40)
         view.backgroundColor = .clear
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .systemGroupedBackground
+        }
         return view
     }
 
@@ -130,7 +133,7 @@ extension ITAdvancelDetailViewController : UITableViewDelegate, UITableViewDataS
             cell = UITableViewCell.init(style: .value1, reuseIdentifier: "ITAdvanceLearningViewCell")
             cell?.accessoryType = .disclosureIndicator
             if #available(iOS 13.0, *) {
-                cell?.backgroundColor = .systemGroupedBackground
+                cell?.backgroundColor = .secondarySystemBackground
             } else {
                 cell?.backgroundColor = .white
             }
@@ -139,6 +142,9 @@ extension ITAdvancelDetailViewController : UITableViewDelegate, UITableViewDataS
             cell?.textLabel?.font = UIFont.systemFont(ofSize: DeviceType.IS_IPAD ? 20:16.5)
             cell?.detailTextLabel?.font = UIFont.systemFont(ofSize: DeviceType.IS_IPAD ? 16:12.5)
             cell?.detailTextLabel?.sizeToFit()
+            #if targetEnvironment(macCatalyst)
+                cell?.textLabel?.font = UIFont.systemFont(ofSize: 20)
+            #endif
         }
 
         let dict = dataArray[indexPath.section]

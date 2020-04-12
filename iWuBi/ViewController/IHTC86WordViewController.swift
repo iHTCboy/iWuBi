@@ -33,7 +33,10 @@ class IHTC86WordViewController: ITBasePushTransitionVC {
     fileprivate var titles = IHTCModel.shared.defaultArray
     
     fileprivate lazy var pageTitleView: ITPageTitleView = {
-        let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH, width: kScreenW, height: kTitleViewH)
+        var titleFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH, width: kScreenW, height: kTitleViewH)
+        #if targetEnvironment(macCatalyst)
+            titleFrame.origin.y = titleFrame.origin.y + 20
+        #endif
         let titleView = ITPageTitleView(frame: titleFrame, titles: self.titles)
         titleView.delegate = self
         return titleView
@@ -42,7 +45,11 @@ class IHTC86WordViewController: ITBasePushTransitionVC {
     fileprivate lazy var pageContentView: ITPageContentView = {[weak self] in
         // 1. 确定内容 frame
         let contentH = kScreenH - kStatusBarH - kNavBarH - kHomeIndcator
-        let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH + kTitleViewH, width: kScreenW, height: contentH)
+        var contentFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH + kTitleViewH, width: kScreenW, height: contentH)
+        #if targetEnvironment(macCatalyst)
+            contentFrame.origin.y = contentFrame.origin.y + 20
+            contentFrame.size.height = contentFrame.size.height + 1024
+        #endif
         // 2. 确定所有控制器
         let counts = 0
         var childVcs = [UIViewController]()
@@ -75,8 +82,10 @@ class IHTC86WordViewController: ITBasePushTransitionVC {
 // MARK:- 设置 UI
 extension IHTC86WordViewController {
     fileprivate func setUpUI() {
+        #if !targetEnvironment(macCatalyst)
         // 0. 不允许系统调整 scrollview 内边距
         automaticallyAdjustsScrollViewInsets = false
+        #endif
         
         // 1. 添加 titleview
         view.addSubview(pageTitleView)
@@ -88,22 +97,45 @@ extension IHTC86WordViewController {
     func launchAnimate() {
         if !isFirstLaunch {
             isFirstLaunch = true
-
-            let vc = UIStoryboard.init(name: "AppLaunchScreen", bundle: nil);
-            let launchView = vc.instantiateInitialViewController()!.view
-            let window =  UIWindow.init(frame: (view?.frame)!)
-            window.windowLevel = UIWindow.Level.alert
-            window.backgroundColor = UIColor.clear
-            window.addSubview(launchView!)
-            window.makeKeyAndVisible()
             
-            UIView.animate(withDuration: 0.25, delay: 0.3, options: .beginFromCurrentState, animations: {
+            let sb = UIStoryboard.init(name: "AppLaunchScreen", bundle: nil);
+            let vc = sb.instantiateInitialViewController()!
+            if #available(iOS 13.0, *), UIDevice.current.userInterfaceIdiom == .pad {
+                vc.view.frame = view.frame //Support iPadOS mutiple windows
+            }
+            let launchView = vc.view
+            var window = view.window
+            
+            if window == nil {
+                 // Support iPadOS mutiple windows, 当前有2个窗口在前台时
+                if #available(iOS 13.0, *), UIDevice.current.userInterfaceIdiom == .pad {
+                    let scenes = UIApplication.shared.connectedScenes
+                    .filter({$0.activationState == .foregroundActive})
+                    .map({$0 as? UIWindowScene})
+                    .compactMap({$0})
+                    
+                    scenes.forEach { (scene) in
+                        scene.windows.forEach({ (wd) in
+                            if wd.isMember(of: UIWindow.self) && wd.frame.equalTo(view.frame) {
+                                window = wd
+                            }
+                        })
+                    }
+                }
+            }
+            
+            if window == nil {
+                window = UIViewController.keyWindowHTC()
+            }
+            
+            window?.addSubview(launchView!)
+            
+            UIView.animate(withDuration: 0.25, delay: 0.8, options: .beginFromCurrentState, animations: {
                 launchView?.layer.transform = CATransform3DScale(CATransform3DIdentity, 2, 2, 1)
                 launchView?.alpha = 0.0
             }, completion: { (true) in
-                window.removeFromSuperview()
+                launchView?.removeFromSuperview()
             })
-            
         }
     }
     
