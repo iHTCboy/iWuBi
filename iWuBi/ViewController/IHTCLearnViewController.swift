@@ -115,6 +115,9 @@ extension IHTCLearnViewController : UITableViewDelegate, UITableViewDataSource
     
         cell!.textLabel?.text = data["title"]
         cell?.detailTextLabel?.text = (DeviceType.IS_IPAD ? data["content"]?.prefix(20) : data["content"]?.prefix(8))! + "..."
+        #if targetEnvironment(macCatalyst)
+        cell?.detailTextLabel?.text = data["content"]
+        #endif
         
         return cell!
     }

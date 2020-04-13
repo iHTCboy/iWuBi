@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6D0BF3BC2442186B009EA94B"
-               BuildableName = "iWuBi-MacCatylyst.app"
+               BuildableName = "iWuBi.app"
                BlueprintName = "iWuBi-MacCatylyst"
                ReferencedContainer = "container:iWuBi.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6D0BF3BC2442186B009EA94B"
-            BuildableName = "iWuBi-MacCatylyst.app"
+            BuildableName = "iWuBi.app"
             BlueprintName = "iWuBi-MacCatylyst"
             ReferencedContainer = "container:iWuBi.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6D0BF3BC2442186B009EA94B"
-            BuildableName = "iWuBi-MacCatylyst.app"
+            BuildableName = "iWuBi.app"
             BlueprintName = "iWuBi-MacCatylyst"
             ReferencedContainer = "container:iWuBi.xcodeproj">
          </BuildableReference>

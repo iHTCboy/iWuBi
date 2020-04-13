@@ -117,3 +117,12 @@ extension AppDelegate {
 
 
 
+// MARK: macOS method
+#if targetEnvironment(macCatalyst)
+extension AppDelegate {
+
+    @IBAction func showHelp(_ sender: Any) {
+        IAppleServiceUtil.openWebView(url: kGithubURL, tintColor: kColorAppOrange, vc: (UIViewController.keyWindowHTC()?.rootViewController)!)
+    }
+}
+#endif
