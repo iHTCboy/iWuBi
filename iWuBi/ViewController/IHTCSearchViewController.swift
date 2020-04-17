@@ -76,6 +76,11 @@ class IHTCSearchViewController: UIViewController {
 
 extension IHTCSearchViewController {
     func setupUI() {
+        
+        if #available(iOS 13.0, *) {
+            tableView?.backgroundColor = .secondarySystemBackground
+        }
+        
         self.searchBar.tintColor = kColorAppOrange
         self.searchBar.becomeFirstResponder()
         self.searchBar.delegate = self

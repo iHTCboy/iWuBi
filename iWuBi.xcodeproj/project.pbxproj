@@ -1378,7 +1378,7 @@
 				CODE_SIGN_ENTITLEMENTS = iWuBi/iWuBi.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020.04.14;
+				CURRENT_PROJECT_VERSION = 2020.04.16;
 				DEVELOPMENT_TEAM = 28PV6G96R7;
 				INFOPLIST_FILE = "$(SRCROOT)/iWuBi/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1387,7 +1387,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 5.0.0;
+				MARKETING_VERSION = 5.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iHTCboy.iWuBi;
 				PRODUCT_NAME = iWuBi;
 				SUPPORTS_MACCATALYST = YES;
@@ -1407,7 +1407,7 @@
 				CODE_SIGN_ENTITLEMENTS = iWuBi/iWuBi.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020.04.14;
+				CURRENT_PROJECT_VERSION = 2020.04.16;
 				DEVELOPMENT_TEAM = 28PV6G96R7;
 				INFOPLIST_FILE = "$(SRCROOT)/iWuBi/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1416,7 +1416,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 5.0.0;
+				MARKETING_VERSION = 5.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iHTCboy.iWuBi;
 				PRODUCT_NAME = iWuBi;
 				SUPPORTS_MACCATALYST = YES;
