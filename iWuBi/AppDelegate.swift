@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setupBaseUI()
         
-        ITCommonAPI.shared.checkAppUpdate(newHandler: nil)
+        //ITCommonAPI.shared.checkAppUpdate(newHandler: nil)
         
         return true
     }
@@ -145,6 +145,10 @@ extension AppDelegate {
 //        builder.insertChild(menu, atStartOfMenu: .file)
 //        
     }
+    
+    @IBAction func showHelp(_ sender: Any) {
+        IAppleServiceUtil.openWebView(url: kGithubURL, tintColor: kColorAppOrange, vc: (UIViewController.keyWindowHTC()?.rootViewController)!)
+    }
 }
 #endif
 
@@ -195,11 +199,7 @@ extension UITabBarController {
         if let sd = sender as? UIKeyCommand {
             return UITabBarController.lastSender != sd
         }
-        return true
-    }
-    
-    @IBAction func showHelp(_ sender: Any) {
-        IAppleServiceUtil.openWebView(url: kGithubURL, tintColor: kColorAppOrange, vc: (UIViewController.keyWindowHTC()?.rootViewController)!)
+        return super.canPerformAction(action, withSender: sender)
     }
     
     @IBAction func showSearch(_ sender: Any) {
@@ -219,18 +219,12 @@ extension UINavigationController {
         guard viewControllers.count > 1 else { return [] }
         let backKeyCommand = UIKeyCommand.init(input: UIKeyCommand.inputEscape, modifierFlags: [], action: #selector(backCommand))
         backKeyCommand.discoverabilityTitle = "返回"
-//        let searchKeyCommand = UIKeyCommand.init(input: "f", modifierFlags: [.command], action: #selector(searchCommand))
-//        searchKeyCommand.discoverabilityTitle = "Search"
         return [backKeyCommand]
     }
 
     @objc private func backCommand() {
         popViewController(animated: true)
     }
-    
-//    @objc private func searchCommand() {
-//        AppDelegate.showSearchVC()
-//    }
     
     open override var canBecomeFirstResponder: Bool {
         return true

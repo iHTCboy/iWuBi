@@ -486,15 +486,7 @@ extension IHTCSearchViewController {
     }
     
     @objc private func wordCommand() {
-        var item: UIBarButtonItem
-        if optionItem.title == "单字" {
-            optionItem.title = "词组"
-            item = UIBarButtonItem.init(title: "单字", style: .plain, target: nil, action: nil)
-        } else {
-            optionItem.title = "单字"
-            item = UIBarButtonItem.init(title: "词组", style: .plain, target: nil, action: nil)
-        }
-        clickedOptionItem(item)
+        clickedOptionItem(optionItem)
     }
     
 //    @objc private func searchCommand() {
