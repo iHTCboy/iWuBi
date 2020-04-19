@@ -133,7 +133,7 @@ extension ITAdvancelDetailViewController : UITableViewDelegate, UITableViewDataS
             cell = UITableViewCell.init(style: .value1, reuseIdentifier: "ITAdvanceLearningViewCell")
             cell?.accessoryType = .disclosureIndicator
             if #available(iOS 13.0, *) {
-                cell?.backgroundColor = .secondarySystemBackground
+                cell?.backgroundColor = .secondarySystemGroupedBackground
             } else {
                 cell?.backgroundColor = .white
             }

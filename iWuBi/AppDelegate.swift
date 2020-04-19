@@ -28,11 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         
         if shortcutItem.type.contains("iWuBi://search") {
-            let vc = IHTCSearchViewController()
-            vc.is86Word = true
-            let navi = UINavigationController.init(rootViewController: vc)
-            navi.navigationBar.isHidden = true
-            UIApplication.shared.keyWindow?.rootViewController!.present(navi, animated: true, completion: nil)
+            AppDelegate.showSearchVC()
         }
         
         if shortcutItem.type.contains("iWuBi://star") {
@@ -44,6 +40,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 IAppleServiceUtil.openAppstore(url: kAppDownloadURl, isAssessment: false)
             })
         }
+    }
+    
+    open class func showSearchVC() {
+        let vc = IHTCSearchViewController()
+        vc.is86Word = true
+        let navi = UINavigationController.init(rootViewController: vc)
+        navi.navigationBar.isHidden = true
+        UIViewController.keyWindowHTC()?.rootViewController!.present(navi, animated: true, completion: nil)
+//            UIApplication.shared.keyWindow?.rootViewController!.present(navi, animated: true, completion: nil)
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -121,8 +126,115 @@ extension AppDelegate {
 #if targetEnvironment(macCatalyst)
 extension AppDelegate {
 
-    @IBAction func showHelp(_ sender: Any) {
-        IAppleServiceUtil.openWebView(url: kGithubURL, tintColor: kColorAppOrange, vc: (UIViewController.keyWindowHTC()?.rootViewController)!)
+    
+    override func buildMenu(with builder: UIMenuBuilder) {
+        guard builder.system == .main else {
+            return
+        }
+
+        builder.remove(menu: .edit)
+        builder.remove(menu: .format)
+        builder.remove(menu: .toolbar)
+
+//        let searchKeyCommand = UIKeyCommand.init(input: "F", modifierFlags: [.command], action: #selector(searchCommand))
+//        searchKeyCommand.title = "搜索"
+//        searchKeyCommand.discoverabilityTitle = "搜索"
+//
+//        let menu = UIMenu.init(title: "", image: nil, identifier: UIMenu.Identifier("MyMenu"), options: .displayInline, children: [searchKeyCommand])
+//
+//        builder.insertChild(menu, atStartOfMenu: .file)
+//        
     }
 }
 #endif
+
+
+// ref: https://www.avanderlee.com/swift/uikeycommand-keyboard-shortcuts/
+// MARK: - Keyboard Shortcuts
+extension UITabBarController {
+
+    /// Adds keyboard shortcuts for the tabs.
+    /// - Shift + Tab Index for the simulator
+    open override var keyCommands: [UIKeyCommand]? {
+        let tabCommand = tabBar.items?.enumerated().map { (index, item) -> UIKeyCommand in
+            let keyCommand = UIKeyCommand.init(input: "\(index + 1)", modifierFlags: .command, action: #selector(selectTab))
+            keyCommand.discoverabilityTitle = item.title ?? "Tab \(index + 1)"
+            return keyCommand
+        }
+        
+        #if !targetEnvironment(macCatalyst)
+        let searchKeyCommand = UIKeyCommand.init(input: "F", modifierFlags: [.command], action: #selector(searchCommand))
+        searchKeyCommand.discoverabilityTitle = "搜索"
+        return tabCommand! + [searchKeyCommand]
+        #else
+        return tabCommand! //+ [searchKeyCommand]
+        #endif
+    }
+
+    @objc private func selectTab(sender: UIKeyCommand) {
+        UITabBarController.lastSender = sender
+        guard let input = sender.input, let newIndex = Int(input), newIndex >= 1 && newIndex <= (tabBar.items?.count ?? 0) else { return }
+        selectedIndex = newIndex - 1
+    }
+
+    @objc private func searchCommand(sender: UIKeyCommand) {
+        AppDelegate.showSearchVC()
+    }
+
+    
+    open override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    
+    
+    /// fix bug：临时修复快捷键点击后，action循环调用问题
+    static var lastSender: UIKeyCommand?
+    
+    override open func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+//        print(action, sender as Any)
+        if let sd = sender as? UIKeyCommand {
+            return UITabBarController.lastSender != sd
+        }
+        return true
+    }
+    
+    @IBAction func showHelp(_ sender: Any) {
+        IAppleServiceUtil.openWebView(url: kGithubURL, tintColor: kColorAppOrange, vc: (UIViewController.keyWindowHTC()?.rootViewController)!)
+    }
+    
+    @IBAction func showSearch(_ sender: Any) {
+        AppDelegate.showSearchVC()
+    }
+}
+
+
+// MARK: - Keyboard Shortcuts
+extension UINavigationController {
+
+    /*
+     Adds keyboard shortcuts to navigate back in a navigation controller.
+     - Shift + left arrow on the simulator
+     */
+    override public var keyCommands: [UIKeyCommand]? {
+        guard viewControllers.count > 1 else { return [] }
+        let backKeyCommand = UIKeyCommand.init(input: UIKeyCommand.inputEscape, modifierFlags: [], action: #selector(backCommand))
+        backKeyCommand.discoverabilityTitle = "返回"
+//        let searchKeyCommand = UIKeyCommand.init(input: "f", modifierFlags: [.command], action: #selector(searchCommand))
+//        searchKeyCommand.discoverabilityTitle = "Search"
+        return [backKeyCommand]
+    }
+
+    @objc private func backCommand() {
+        popViewController(animated: true)
+    }
+    
+//    @objc private func searchCommand() {
+//        AppDelegate.showSearchVC()
+//    }
+    
+    open override var canBecomeFirstResponder: Bool {
+        return true
+    }
+}
+
+

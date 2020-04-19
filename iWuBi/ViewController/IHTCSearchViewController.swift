@@ -452,3 +452,60 @@ extension IHTCSearchViewController: UIViewControllerPreviewingDelegate {
         return questionVC
     }
 }
+
+
+extension IHTCSearchViewController {
+    override public var keyCommands: [UIKeyCommand]? {
+        let backKeyCommand = UIKeyCommand.init(input: UIKeyCommand.inputEscape, modifierFlags: [], action: #selector(backCommand))
+        backKeyCommand.discoverabilityTitle = "Dismiss"
+        let v86KeyCommand = UIKeyCommand.init(input: "8", modifierFlags: [.command], action: #selector(v86Command))
+        v86KeyCommand.discoverabilityTitle = "v86版"
+        let v98KeyCommand = UIKeyCommand.init(input: "9", modifierFlags: [.command], action: #selector(v98Command))
+        v98KeyCommand.discoverabilityTitle = "v98版"
+        let wordKeyCommand = UIKeyCommand.init(input: "T", modifierFlags: [.command], action: #selector(wordCommand))
+        wordKeyCommand.discoverabilityTitle = "单词或词组"
+//        let searchKeyCommand = UIKeyCommand.init(input: "F", modifierFlags: [.command], action: #selector(searchCommand))
+//        searchKeyCommand.discoverabilityTitle = "搜索"
+//        let shareKeyCommand = UIKeyCommand.init(input: "s", modifierFlags: [.command], action: #selector(shareCommand))
+//        shareKeyCommand.discoverabilityTitle = "分享"
+        return [backKeyCommand, v86KeyCommand, v98KeyCommand, wordKeyCommand]
+    }
+
+    @objc private func backCommand() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func v86Command() {
+        versionItem.title = "86版"
+        clickedVersionItem(UIBarButtonItem.init(title: "98版", style: .plain, target: nil, action: nil))
+    }
+      
+    @objc private func v98Command() {
+        versionItem.title = "98版"
+        clickedVersionItem(UIBarButtonItem.init(title: "86版", style: .plain, target: nil, action: nil))
+    }
+    
+    @objc private func wordCommand() {
+        var item: UIBarButtonItem
+        if optionItem.title == "单字" {
+            optionItem.title = "词组"
+            item = UIBarButtonItem.init(title: "单字", style: .plain, target: nil, action: nil)
+        } else {
+            optionItem.title = "单字"
+            item = UIBarButtonItem.init(title: "词组", style: .plain, target: nil, action: nil)
+        }
+        clickedOptionItem(item)
+    }
+    
+//    @objc private func searchCommand() {
+//        searchBar.becomeFirstResponder()
+//    }
+    
+//    @objc private func shareCommand() {
+//        clickedShareItem(UIBarButtonItem())
+//    }
+    
+    open override var canBecomeFirstResponder: Bool {
+        return true
+    }
+}

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9sW-Hr-DOm" initialMenu="dgg-fz-RUM">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="mac" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="bottom" id="bdh-Yz-2TZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hfH-ba-tb7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,7 +41,7 @@
                 <navigationController id="T0k-tT-zim" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="学习" image="tabbar_selected_learning.png" selectedImage="tabbar_selected_learning.png" id="tOD-5L-U1d"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IO7-GX-A2G">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96862745100000003" green="0.32549019610000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -65,7 +65,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hlw-wn-SYs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XbG-OG-7oP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,7 +82,7 @@
                 <navigationController id="I4V-gm-neW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="五笔" image="tabbar_selected_setting.png" selectedImage="tabbar_selected_setting.png" id="U2l-c7-sle"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zSy-sY-Xca">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96862745100000003" green="0.32549019610000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -106,7 +106,7 @@
                         <viewControllerLayoutGuide type="bottom" id="igb-6y-J3Q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wep-FW-oqd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -126,7 +126,7 @@
                         <viewControllerLayoutGuide type="bottom" id="P9d-SD-y8W"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fPk-kt-uXR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -147,15 +147,32 @@
         <!--Main Menu-->
         <scene sceneID="icj-zx-DlJ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lwc-YR-rQe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <menu isSystemItem="YES" title="Main Menu" identifier="com.apple.menu.root" id="dgg-fz-RUM" sceneMemberID="viewController">
+                    <children>
+                        <menu isSystemItem="YES" title="File" identifier="com.apple.menu.file" id="aiy-pq-0VK">
+                            <children>
+                                <command title="搜索" input="f" id="Aew-Yk-Yh8">
+                                    <keyModifierFlags key="modifierFlags" command="YES"/>
+                                    <connections>
+                                        <action selector="showSearch:" destination="Lwc-YR-rQe" id="jHe-ne-nMN"/>
+                                    </connections>
+                                </command>
+                            </children>
+                        </menu>
+                        <menu isSystemItem="YES" title="View" identifier="com.apple.menu.view" id="zK9-Hz-hhX">
+                            <systemMenuChildDeletions>
+                                <menuDeletion anchor="com.apple.menu.toolbar"/>
+                            </systemMenuChildDeletions>
+                        </menu>
+                    </children>
                     <systemMenuChildDeletions>
                         <menuDeletion anchor="com.apple.menu.edit"/>
                         <menuDeletion anchor="com.apple.menu.format"/>
                     </systemMenuChildDeletions>
                 </menu>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lwc-YR-rQe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1260" y="-924"/>
+            <point key="canvasLocation" x="-1305" y="-1023"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="LDy-7v-RO9">
@@ -184,7 +201,7 @@
                     <tabBarItem key="tabBarItem" title="86版" image="tabbar_selected_86.png" selectedImage="tabbar_selected_86.png" id="fhS-3c-oCy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="O3v-qv-Ey5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96862745098039216" green="0.32549019607843138" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -207,7 +224,7 @@
                     <tabBarItem key="tabBarItem" title="98版" image="tabbar_selected_98.png" selectedImage="tabbar_selected_98.png" id="Auc-75-r2L"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IZs-vs-zoc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96862745100000003" green="0.32549019610000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -225,9 +242,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tabbar_selected_86.png" width="30" height="30"/>
-        <image name="tabbar_selected_98.png" width="30" height="30"/>
-        <image name="tabbar_selected_learning.png" width="30" height="30"/>
-        <image name="tabbar_selected_setting.png" width="30" height="30"/>
+        <image name="tabbar_selected_86.png" width="27.5" height="27.5"/>
+        <image name="tabbar_selected_98.png" width="27.5" height="27.5"/>
+        <image name="tabbar_selected_learning.png" width="27.5" height="27.5"/>
+        <image name="tabbar_selected_setting.png" width="27.5" height="27.5"/>
     </resources>
 </document>
