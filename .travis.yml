@@ -1,0 +1,6 @@
+language: objective-c
+osx_image: xcode12.2
+xcode_xcworkspace: iWuBi.xcworkspace
+xcode_scheme: iWuBi
+xcode_sdk: iphonesimulator14.0
+podfile: Podfile

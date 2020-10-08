@@ -44,8 +44,8 @@ class IHTCMeViewController: UIViewController {
         return tableView
     }()
     
-    fileprivate var titles = ["0": "切换App图标:选择你的最爱,主题外观:暗黑or浅色", "1": "应用内评分:欢迎给\(kiTalker)打评分！,AppStore评价:欢迎给\(kiTalker)写评论!,分享给朋友:与身边的好友一起学习！",
-        "2":"意见反馈:欢迎到AppStore提需求或bug问题,邮件联系:如有问题欢迎来信,隐私条款:用户使用服务协议,开源地址:现已开源代码，欢迎关注,更多关注:欢迎访问作者博客,更多学习:更多开发者内容推荐,关于应用:\(kiTalker)"] as [String : String]
+    fileprivate var titles = ["0": "切换App图标:选择你的最爱,主题外观:暗黑or浅色", "1": "应用内评分:欢迎给\(kAppName)打评分！,AppStore评价:欢迎给\(kAppName)写评论!,分享给朋友:与身边的好友一起学习！",
+        "2":"意见反馈:欢迎到AppStore提需求或bug问题,邮件联系:如有问题欢迎来信,隐私条款:用户使用服务协议,开源地址:现已开源代码，欢迎关注,更多关注:欢迎访问作者博客,更多学习:更多开发者内容推荐,关于应用:\(kAppName)"] as [String : String]
 
 }
 
@@ -54,8 +54,8 @@ extension IHTCMeViewController
 {
     func setupUI() {
         #if targetEnvironment(macCatalyst)
-        titles = ["0": "设置主题外观:暗黑or浅色", "1": "应用内评分:欢迎给\(kiTalker)打评分！,AppStore评价:欢迎给\(kiTalker)写评论!,分享给朋友:与身边的好友一起学习！",
-        "2":"意见反馈:欢迎到AppStore提需求或bug问题,邮件联系:如有问题欢迎来信,隐私条款:用户使用服务协议,开源地址:现已开源代码，欢迎关注,更多关注:欢迎访问作者博客,更多学习:更多开发者内容推荐,关于应用:\(kiTalker)"] as [String : String]
+        titles = ["0": "设置主题外观:暗黑or浅色", "1": "应用内评分:欢迎给\(kAppName)打评分！,AppStore评价:欢迎给\(kAppName)写评论!,分享给朋友:与身边的好友一起学习！",
+        "2":"意见反馈:欢迎到AppStore提需求或bug问题,邮件联系:如有问题欢迎来信,隐私条款:用户使用服务协议,开源地址:现已开源代码，欢迎关注,更多关注:欢迎访问作者博客,更多学习:更多开发者内容推荐,关于应用:\(kAppName)"] as [String : String]
         #endif
 
         view.addSubview(tableView)
@@ -272,9 +272,9 @@ extension IHTCMeViewController : UITableViewDelegate, UITableViewDataSource
                 IAppleServiceUtil.openAppstore(url: kAppDownloadURl, isAssessment: true)
             }
             if row == 1 {
-                let message = "欢迎来信，写下你的问题吧" + "\n\n\n\n" + kMarginLine + "\n 当前\(kiTalker)版本：" + KAppVersion + "， 系统版本：" + String(Version.SYS_VERSION_FLOAT) + "， 设备信息：" + UIDevice.init().modelName
-                
-                ITCommonAPI.shared.sendEmail(recipients: [kEmail], messae: message, vc: self)
+                let message = "欢迎来信，写下你的问题吧" + "\n\n\n\n" + kMarginLine + "\n 当前\(kAppName)版本：" + KAppVersion + "， 系统版本：" + String(Version.SYS_VERSION_FLOAT) + "， 设备信息：" + UIDevice.init().modelName
+                let subject = "\(kAppName) Feedback"
+                ITCommonAPI.sharedInstance.sendEmail(recipients: [kEmail], subject: subject, messae: message, vc: self)
             }
             if row == 2 {
                 IAppleServiceUtil.openWebView(url: kLicenseURL, tintColor: kColorAppOrange, vc: self)

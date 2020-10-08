@@ -115,11 +115,12 @@ extension ITCommonAPI
 
 extension ITCommonAPI : MFMailComposeViewControllerDelegate
 {
-    func sendEmail(recipients: Array<String>, messae: String, vc: UIViewController) {
+    func sendEmail(recipients: Array<String>, subject: String, messae: String, vc: UIViewController) {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setToRecipients(recipients)
+            mail.setSubject(subject)
             mail.setMessageBody(messae, isHTML: false)
             vc.present(mail, animated: true, completion: nil)
         } else {
