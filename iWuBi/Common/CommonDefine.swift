@@ -26,7 +26,7 @@ let kShareSubTitle = "支持86版和98版，简体和繁体词库"
 
 let kStatusBarH: CGFloat = 20
 let kNavBarH: CGFloat = (DeviceType.IS_IPHONE_X_S ? 68 : 40)
-let kHomeIndcator: CGFloat = (DeviceType.IS_IPHONE_X_S ? (34 + 49) : 0) //49 Tab bars
+let kHomeIndcator: CGFloat = (DeviceType.IS_IPHONE_X_S ? 34 : 0) //49 Tab bars
 let kLargeTitle: CGFloat = 52.0 //52 Large Title
 let kTitleViewH : CGFloat = 40
 let kScreenW = UIScreen.main.bounds.width
@@ -102,7 +102,7 @@ struct DeviceType
     static let IS_IPHONE_5          = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH == 568.0
     static let IS_IPHONE_6_7          = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH == 667.0
     static let IS_IPHONE_6P_7P         = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH == 736.0
-    static let IS_IPHONE_X_S         = UIDevice.current.userInterfaceIdiom == .phone && (ScreenSize.SCREEN_MAX_LENGTH == 812.0 || ScreenSize.SCREEN_MAX_LENGTH == 896.0)
+    static let IS_IPHONE_X_S         = UIDevice.current.userInterfaceIdiom == .phone && (Version.GREATER_iOS11 ? ((UIViewController.keyWindowHTC()?.value(forKey: "safeAreaInsets") as! UIEdgeInsets).bottom != 0.0) : false)
     static let IS_iPad              = UIDevice.current.userInterfaceIdiom == .pad
     static let IS_IPAD              = UIDevice.current.userInterfaceIdiom == .pad
     static let IS_IPAD_PRO          = UIDevice.current.userInterfaceIdiom == .pad && ScreenSize.SCREEN_MAX_LENGTH == 1366.0
@@ -114,6 +114,7 @@ struct Version {
     static let iOS8 = (Version.SYS_VERSION_FLOAT >= 8.0 && Version.SYS_VERSION_FLOAT < 9.0)
     static let iOS9 = (Version.SYS_VERSION_FLOAT >= 9.0 && Version.SYS_VERSION_FLOAT < 10.0)
     static let iOS10 = (Version.SYS_VERSION_FLOAT >= 10.0 && Version.SYS_VERSION_FLOAT < 11.0)
+    static let GREATER_iOS11 = (Version.SYS_VERSION_FLOAT >= 11.0)
 }
 
 public extension UIDevice {
@@ -151,6 +152,11 @@ public extension UIDevice {
         case "iPhone12,1":                              return "iPhone 11"
         case "iPhone12,3":                              return "iPhone 11 Pro"
         case "iPhone12,5":                              return "iPhone 11 Pro Max"
+        case "iPhone12,8":                              return "iPhone SE 2nd Gen"
+        case "iPhone13,1":                              return "iPhone 12 Mini"
+        case "iPhone13,2":                              return "iPhone 12"
+        case "iPhone13,3":                              return "iPhone 12 Pro"
+        case "iPhone13,4":                              return "iPhone 12 Pro Max"
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":return "iPad 2"
         case "iPad3,1", "iPad3,2", "iPad3,3":           return "iPad 3"
         case "iPad3,4", "iPad3,5", "iPad3,6":           return "iPad 4"
@@ -177,10 +183,18 @@ public extension UIDevice {
         case "iPad8,6":                                 return "iPad Pro 3rd Gen (12.9 inch, 1TB, WiFi)"
         case "iPad8,7":                                 return "iPad Pro 3rd Gen (12.9 inch, WiFi+Cellular)"
         case "iPad8,8":                                 return "iPad Pro 3rd Gen (12.9 inch, 1TB, WiFi+Cellular)"
+        case "iPad8,9":                                 return "iPad Pro 4th Gen (11 inch, WiFi)"
+        case "iPad8,10":                                return "iPad Pro 4th Gen (11 inch, WiFi+Cellular)"
+        case "iPad8,11":                                return "iPad Pro 4th Gen (12.9 inch, WiFi)"
+        case "iPad8,12":                                return "iPad Pro 4th Gen (12.9 inch, WiFi+Cellular)"
         case "iPad11,1":                                return "iPad mini 5th Gen (WiFi)"
         case "iPad11,2":                                return "iPad mini 5th Gen"
         case "iPad11,3":                                return "iPad Air 3rd Gen (WiFi)"
         case "iPad11,4":                                return "iPad Air 3rd Gen"
+        case "iPad11,6":                                return "iPad 8th Gen (WiFi)"
+        case "iPad11,7":                                return "iPad 8th Gen (WiFi+Cellular)"
+        case "iPad13,1":                                return "iPad Air 4th Gen (WiFi)"
+        case "iPad13,2":                                return "iPad Air 4th Gen (WiFi+Celular)"
         case "AppleTV2,1":                              return "Apple TV 2G"
         case "AppleTV3,1":                              return "Apple TV 3"
         case "AppleTV3,2":                              return "Apple TV 3 (2013)"
