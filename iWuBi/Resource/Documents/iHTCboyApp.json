@@ -4,9 +4,14 @@
         "issue_subtitle": "开发者应用",
         "issue_list": [
             {
+                "title": "爱番茄 - iPomodoro",
+                "url": "https://apps.apple.com/cn/app/ipomodoro/id1439666929",
+                "author": "一款高效時間管理番茄工作法"
+            },
+            {
                 "title": "iLeetCoder",
-                "url": "https://itunes.apple.com/cn/app/iLeetCoder/id1458259471?l=zh&ls=1&mt=8",
-                "author": "一款精心的算法题目学习App，迅速找到工作"
+                "url": "https://itunes.apple.com/us/app/iLeetCoder/id1458259471?l=zh&ls=1&mt=8",
+                "author": "一款精心的算法题目学习App"
             },
             {
                 "title": "iTer",

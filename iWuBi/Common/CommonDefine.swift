@@ -17,7 +17,7 @@ let kReviewAction = "&action=write-review"
 let kGithubURL = "https://github.com/iHTCboy/iWuBi"
 let kLicenseURL = "https://raw.githubusercontent.com/iHTCboy/iWuBi/master/LICENSE"
 let kiHTCboyURL = "https://ihtcboy.com"
-let kEmail = "iHTCTeam@gmail.com"
+let kEmail = "iHTCdevelop@gmail.com"
 let kAppShare = "Hello, \(kAppName) 是一款五笔学习的工具，支持86版和98版，简体和繁体字显示！30000+词库，满足你五笔求知欲望！让大家在零碎时间也可以快速和简单的学习get! " + "iOS下载链接：" + kAppDownloadURl
 let kAppAbout = "\(kAppName) 为一款五笔学习的工具，不断努力打造更多更好方式呈现更有趣的知识，让大家在零碎时间也可以快速和简单的学习get! \n \n1、30000+词库，满足你五笔求知欲望！\n2、支持86版和98版，简体和繁体字显示！"
 let kShareTitle = "长按识别二维码下载\(kAppName)"

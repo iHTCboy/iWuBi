@@ -31,6 +31,7 @@ class ITPageTitleView: UIView {
     
     fileprivate lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
+        scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.scrollsToTop = false
         scrollView.bounces = true
@@ -142,7 +143,7 @@ extension ITPageTitleView {
         
         let targetMinX = targetLabel.frame.minX
         let targetW = targetLabel.frame.width
-        let W2 = self.scrollView.frame.size.width/2;
+        let W2 = self.scrollView.frame.size.width/2
         let contentOffset = self.scrollView.contentOffset.x
         
         // 2.1
@@ -195,7 +196,7 @@ extension ITPageTitleView {
         }
         
         // 3.1
-        scrollToMiddle(targetLabel: targetLabel);
+        scrollToMiddle(targetLabel: targetLabel)
         
         // 4. 记录当前 index
         currentIndex = index
@@ -221,7 +222,7 @@ extension ITPageTitleView {
         scrollLine.frame.size.width = progressW
         
         // 2.1
-        scrollToMiddle(targetLabel: targetLabel);
+        scrollToMiddle(targetLabel: targetLabel)
         
         // 3. 颜色渐变
         // 3.1 取出变化范围
