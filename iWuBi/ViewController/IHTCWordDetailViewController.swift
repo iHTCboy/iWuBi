@@ -53,6 +53,16 @@ class IHTCWordDetailViewController: ITBasePopTransitionVC {
         return item
     }()
     
+    lazy var favoritesItem :UIBarButtonItem = {
+        let infoBtn = UIButton.init(type: .custom)
+        infoBtn.setImage(UIImage.init(named: "favorites_normal"), for: .normal)
+        infoBtn.setImage(UIImage.init(named: "favorites_selected"), for: .selected)
+        infoBtn.addTarget(self, action: #selector(showWordFavorites), for: .touchUpInside)
+        infoBtn.isSelected = IHTCUserDefaults.shared.isFavoritesItem(item: questionModle!["word"] as! String)
+        let item = UIBarButtonItem.init(customView: infoBtn)
+        return item
+    }()
+    
     @available(iOS 9.0, *)
     lazy var previewActions: [UIPreviewActionItem] = {
         let a = UIPreviewAction(title: "查字", style: .default, handler: { (action, vc) in
@@ -88,7 +98,19 @@ extension IHTCWordDetailViewController {
         view.layoutIfNeeded()
         
         let shareItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(sharedPageView))
-        navigationItem.rightBarButtonItems = [shareItem, infoItem]
+        let spaceItem = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        spaceItem.width = 15
+        navigationItem.rightBarButtonItems = [shareItem, infoItem, spaceItem, favoritesItem]
+    }
+    
+    @objc func showWordFavorites(item: UIButton) {
+        let word = questionModle!["word"] as! String
+        item.isSelected = !item.isSelected
+        if item.isSelected {
+            IHTCUserDefaults.shared.setFavoritesItem(item: word)
+        } else {
+            IHTCUserDefaults.shared.deleteFavoritesItem(item: word)
+        }
     }
     
     @objc func showWordInfo(item: Any) {

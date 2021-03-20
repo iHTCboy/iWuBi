@@ -16,7 +16,7 @@ class IHTCUserDefaults: NSObject {
 
 extension IHTCUserDefaults
 {
-    func setUDValue(value: Any?, forKey key: String){
+    func setUDValue(value: Any?, forKey key: String) {
         df.set(value, forKey: key)
         df.synchronize()
     }
@@ -79,5 +79,41 @@ extension IHTCUserDefaults
                 break
             }
         }
+    }
+}
+
+
+// MARK: 收藏夹设置
+extension IHTCUserDefaults
+{
+    func isFavoritesItem(item: String) -> Bool {
+        let items = getFavoritesItems()
+        return items.contains(item)
+    }
+    
+    func setFavoritesItem(item: String) {
+        var items = getFavoritesItems()
+        guard !items.contains(item) else {
+            return
+        }
+        items.append(item)
+        setUDFavorites(value: items)
+    }
+    
+    func deleteFavoritesItem(item: String) {
+        var items = getFavoritesItems()
+        items = items.filter({ $0 != item })
+        setUDFavorites(value: items)
+    }
+    
+    func getFavoritesItems() -> Array<String> {
+        if let favorites = getUDValue(key: "IHTCFavoritesItemsKey") as? Array<String> {
+            return favorites
+        }
+        return []
+    }
+    
+    private func setUDFavorites(value: Array<String>) {
+        setUDValue(value: value, forKey: "IHTCFavoritesItemsKey")
     }
 }
