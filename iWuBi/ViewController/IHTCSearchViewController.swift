@@ -325,6 +325,11 @@ extension IHTCSearchViewController : UITableViewDelegate, UITableViewDataSource 
                 cell.wordHeightConstraint.constant = UIScreen.getScreenItemWidth(width: 7.0)
             }
             
+            #if targetEnvironment(macCatalyst)
+            cell.wordHeightConstraint.constant = 90.0
+            cell.wordLbl.font = UIFont.boldSystemFont(ofSize: 55)
+            #endif
+            
             let question = self.searchArray[indexPath.row]
             cell.wordLbl.text = question["word"] as? String
             
@@ -373,6 +378,10 @@ extension IHTCSearchViewController : UITableViewDelegate, UITableViewDataSource 
             if DeviceType.IS_IPHONE_5_OR_LESS {
                 cell.wordHeightConstraint.constant = UIScreen.getScreenItemWidth(width: 5.0)
             }
+            
+            #if targetEnvironment(macCatalyst)
+            cell.wordHeightConstraint.constant = 120.0
+            #endif
             
             let question = self.searchArray[indexPath.row]
             

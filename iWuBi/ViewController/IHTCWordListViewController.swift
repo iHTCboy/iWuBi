@@ -137,6 +137,11 @@ extension IHTCWordListViewController : UITableViewDelegate, UITableViewDataSourc
             cell.wordHeightConstraint.constant = UIScreen.getScreenItemWidth(width: 7.0)
         }
         
+        #if targetEnvironment(macCatalyst)
+        cell.wordHeightConstraint.constant = 90.0
+        cell.wordLbl.font = UIFont.boldSystemFont(ofSize: 55)
+        #endif
+        
         let question = self.listModel()[indexPath.row] as! Dictionary<String, Any>
         cell.wordLbl.text = question["word"] as? String
         

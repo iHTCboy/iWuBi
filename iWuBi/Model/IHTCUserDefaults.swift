@@ -12,6 +12,8 @@ class IHTCUserDefaults: NSObject {
     
     static let shared = IHTCUserDefaults()
     let df = UserDefaults.standard
+    let favoritesKey = "iCloud.com.iHTCboy.iWuBi.favorites"
+    let keyValueStore = NSUbiquitousKeyValueStore.default
 }
 
 extension IHTCUserDefaults
@@ -107,13 +109,20 @@ extension IHTCUserDefaults
     }
     
     func getFavoritesItems() -> Array<String> {
+        if let favories = keyValueStore.array(forKey: favoritesKey) as? Array<String> {
+            return favories
+        }
+        
         if let favorites = getUDValue(key: "IHTCFavoritesItemsKey") as? Array<String> {
             return favorites
         }
+        
         return []
     }
     
     private func setUDFavorites(value: Array<String>) {
+        keyValueStore.set(value, forKey: favoritesKey)
+        keyValueStore.synchronize()
         setUDValue(value: value, forKey: "IHTCFavoritesItemsKey")
     }
 }

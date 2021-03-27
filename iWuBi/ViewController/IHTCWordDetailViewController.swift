@@ -237,6 +237,10 @@ extension IHTCWordDetailViewController : UITableViewDelegate, UITableViewDataSou
             cell.wordHeightConstraint.constant = UIScreen.getScreenItemWidth(width: 5.0)
         }
         
+        #if targetEnvironment(macCatalyst)
+        cell.wordHeightConstraint.constant = 120.0
+        #endif
+        
         let question = questionModle!
         
         cell.num1Lbl.text = question["word"] as? String

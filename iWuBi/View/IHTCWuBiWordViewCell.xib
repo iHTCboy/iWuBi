@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -54,7 +55,7 @@
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrF-JF-Mik" userLabel="LineView">
                         <rect key="frame" x="0.0" y="172" width="436" height="1"/>
-                        <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.80000000000000004" id="WbT-OT-RuV"/>
                         </constraints>
@@ -68,7 +69,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                <color key="backgroundColor" systemColor="tableCellGroupedBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="bHu-0K-Zbc" firstAttribute="leading" secondItem="MZu-6H-XyN" secondAttribute="trailing" constant="8" id="3iE-uP-ssj"/>
                     <constraint firstItem="bHu-0K-Zbc" firstAttribute="height" secondItem="MZu-6H-XyN" secondAttribute="height" id="4Ad-ll-TGA"/>
@@ -97,7 +98,7 @@
                     <constraint firstItem="llE-Io-TGE" firstAttribute="height" secondItem="MZu-6H-XyN" secondAttribute="height" id="zf0-Da-tWE"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+            <color key="backgroundColor" systemColor="tableCellGroupedBackgroundColor"/>
             <connections>
                 <outlet property="img1" destination="MZu-6H-XyN" id="RPo-j0-aoW"/>
                 <outlet property="img2" destination="bHu-0K-Zbc" id="xoP-Ak-Q6c"/>
@@ -110,4 +111,12 @@
             <point key="canvasLocation" x="-317.39130434782612" y="20.424107142857142"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tableCellGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

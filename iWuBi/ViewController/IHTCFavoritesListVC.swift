@@ -16,11 +16,12 @@ class IHTCFavoritesListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
+        setUpData()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        listModel = updateListModel()
         tableView.reloadData()
     }
     
@@ -39,6 +40,14 @@ class IHTCFavoritesListVC: UIViewController {
     
     let refreshControl = UIRefreshControl.init()
     var selectedCell: ITQuestionListViewCell!
+    var keyStore: NSUbiquitousKeyValueStore!
+    var listModel: Array<Any> = [] {
+        didSet {
+            if listModel.count > 0 {
+                title = "收藏夹(\(listModel.count))"
+            }
+        }
+    }
     
     // MARK:- 懒加载
     lazy var tableView: UITableView = {
@@ -68,7 +77,7 @@ class IHTCFavoritesListVC: UIViewController {
         return item
     }()
     
-    func listModel() -> Array<Any> {
+    func updateListModel() -> Array<Any> {
         var favorityArray = Array<Any>()
         var model: Dictionary<String, Dictionary<String, Any>>
         if is86Word {
@@ -119,8 +128,23 @@ extension IHTCFavoritesListVC {
         #endif
     }
     
+    fileprivate func setUpData() {
+        //获取iCloud配置首选项
+        keyStore = NSUbiquitousKeyValueStore.default
+        //注册通知中心，当配置发生改变的时候，发生通知
+        NotificationCenter.default.addObserver(self, selector: #selector(ubiquitousKeyValueStoreDidChange), name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: keyStore)
+    }
+    
+    @objc func ubiquitousKeyValueStoreDidChange(notification: NSNotification) {
+        /* 监听通知，当配置发生改变的时候会调用 */
+        //print(notification)
+        listModel = updateListModel()
+        tableView.reloadData()
+    }
+    
     @objc public func randomRefresh(sender: AnyObject) {
 //        listModel.shuffledData(title: self.title!)
+        listModel = updateListModel()
         refreshControl.endRefreshing()
 //        tableView.reloadData()
     }
@@ -141,7 +165,7 @@ extension IHTCFavoritesListVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listModel().count
+        return listModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -173,7 +197,12 @@ extension IHTCFavoritesListVC : UITableViewDelegate, UITableViewDataSource {
             cell.wordHeightConstraint.constant = UIScreen.getScreenItemWidth(width: 7.0)
         }
         
-        let question = self.listModel()[indexPath.row] as! Dictionary<String, Any>
+        #if targetEnvironment(macCatalyst)
+        cell.wordHeightConstraint.constant = 90.0
+        cell.wordLbl.font = UIFont.boldSystemFont(ofSize: 55)
+        #endif
+        
+        let question = self.listModel[indexPath.row] as! Dictionary<String, Any>
         cell.wordLbl.text = question["word"] as? String
         
         let codeArray = question["codes"] as? Array<String> ?? Array<String>()
@@ -218,7 +247,7 @@ extension IHTCFavoritesListVC : UITableViewDelegate, UITableViewDataSource {
         
         self.selectedCell = (tableView.cellForRow(at: indexPath) as! ITQuestionListViewCell)
     
-        let question = self.listModel()[indexPath.row] as! Dictionary<String, Any>
+        let question = self.listModel[indexPath.row] as! Dictionary<String, Any>
         let questionVC = IHTCSearchDetailVC()
         questionVC.title = question["word"] as? String
         questionVC.is86Word = self.is86Word
@@ -229,7 +258,7 @@ extension IHTCFavoritesListVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let question = self.listModel()[indexPath.row] as! Dictionary<String, Any>
+            let question = self.listModel[indexPath.row] as! Dictionary<String, Any>
             if let word = question["word"] as? String {
                 IHTCUserDefaults.shared.deleteFavoritesItem(item: word)
             }
@@ -264,7 +293,7 @@ extension IHTCFavoritesListVC: UIViewControllerPreviewingDelegate {
         
         self.selectedCell = (tableView.cellForRow(at: indexPath) as! ITQuestionListViewCell)
         
-        let question = self.listModel()[indexPath.row] as! Dictionary<String, Any>
+        let question = self.listModel[indexPath.row] as! Dictionary<String, Any>
         let questionVC = IHTCWordDetailViewController()
         questionVC.title = question["word"] as? String
         questionVC.is86Word = self.is86Word

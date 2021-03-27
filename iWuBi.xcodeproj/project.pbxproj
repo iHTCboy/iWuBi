@@ -162,6 +162,7 @@
 		6D531B7E22637E4B00C921B8 /* iWiBi-orange-two@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7C22637E4A00C921B8 /* iWiBi-orange-two@2x.png */; };
 		6D531B8122637E8500C921B8 /* iWiBi-orange-blank@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B7F22637E8400C921B8 /* iWiBi-orange-blank@3x.png */; };
 		6D531B8222637E8500C921B8 /* iWiBi-orange-blank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D531B8022637E8400C921B8 /* iWiBi-orange-blank@2x.png */; };
+		6D6B2B7D260EE4C300B306D8 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6B2B7C260EE4C300B306D8 /* CloudKit.framework */; };
 		6D76E275225F8829005EACCA /* iWuBi-86-keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E274225F8829005EACCA /* iWuBi-86-keyboard.png */; };
 		6D76E277225F883C005EACCA /* iWuBi-98-keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E276225F883C005EACCA /* iWuBi-98-keyboard.png */; };
 		6D76E27C225F9064005EACCA /* IHTCImgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E27B225F9064005EACCA /* IHTCImgModel.swift */; };
@@ -333,6 +334,7 @@
 		6D531B7F22637E8400C921B8 /* iWiBi-orange-blank@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-orange-blank@3x.png"; sourceTree = "<group>"; };
 		6D531B8022637E8400C921B8 /* iWiBi-orange-blank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWiBi-orange-blank@2x.png"; sourceTree = "<group>"; };
 		6D6B2B73260ED41600B306D8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		6D6B2B7C260EE4C300B306D8 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		6D76E274225F8829005EACCA /* iWuBi-86-keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWuBi-86-keyboard.png"; sourceTree = "<group>"; };
 		6D76E276225F883C005EACCA /* iWuBi-98-keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iWuBi-98-keyboard.png"; sourceTree = "<group>"; };
 		6D76E27B225F9064005EACCA /* IHTCImgModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHTCImgModel.swift; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 				6D76E294225F9E8B005EACCA /* StoreKit.framework in Frameworks */,
 				6D76E292225F9E7F005EACCA /* CFNetwork.framework in Frameworks */,
 				6D76E290225F9E6F005EACCA /* libc++.tbd in Frameworks */,
+				6D6B2B7D260EE4C300B306D8 /* CloudKit.framework in Frameworks */,
 				6D76E28E225F9E6A005EACCA /* SafariServices.framework in Frameworks */,
 				6D76E28C225F9E5B005EACCA /* CoreLocation.framework in Frameworks */,
 				6D76E28A225F9E53005EACCA /* CoreGraphics.framework in Frameworks */,
@@ -811,6 +814,7 @@
 		7367FB66A9A425040287456A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D6B2B7C260EE4C300B306D8 /* CloudKit.framework */,
 				6D531B48226336BF00C921B8 /* WebKit.framework */,
 				6D76E297225F9EFD005EACCA /* libz.tbd */,
 				6D76E295225F9EE9005EACCA /* JavaScriptCore.framework */,
@@ -1414,7 +1418,7 @@
 				CODE_SIGN_ENTITLEMENTS = iWuBi/iWuBi.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021.03.20;
+				CURRENT_PROJECT_VERSION = 2021.03.27;
 				DEVELOPMENT_TEAM = 28PV6G96R7;
 				INFOPLIST_FILE = "$(SRCROOT)/iWuBi/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1423,7 +1427,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 6.0.0;
+				MARKETING_VERSION = 6.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iHTCboy.iWuBi;
 				PRODUCT_NAME = iWuBi;
 				SUPPORTS_MACCATALYST = YES;
@@ -1443,7 +1447,7 @@
 				CODE_SIGN_ENTITLEMENTS = iWuBi/iWuBi.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021.03.20;
+				CURRENT_PROJECT_VERSION = 2021.03.27;
 				DEVELOPMENT_TEAM = 28PV6G96R7;
 				INFOPLIST_FILE = "$(SRCROOT)/iWuBi/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1452,7 +1456,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 6.0.0;
+				MARKETING_VERSION = 6.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iHTCboy.iWuBi;
 				PRODUCT_NAME = iWuBi;
 				SUPPORTS_MACCATALYST = YES;
@@ -1589,7 +1593,7 @@
 				CODE_SIGN_ENTITLEMENTS = iWuBi/iWuBi.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021.03.26;
+				CURRENT_PROJECT_VERSION = 2021.03.27;
 				DEVELOPMENT_TEAM = 28PV6G96R7;
 				INFOPLIST_FILE = iWuBi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1618,7 +1622,7 @@
 				CODE_SIGN_ENTITLEMENTS = iWuBi/iWuBi.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021.03.26;
+				CURRENT_PROJECT_VERSION = 2021.03.27;
 				DEVELOPMENT_TEAM = 28PV6G96R7;
 				INFOPLIST_FILE = iWuBi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
