@@ -44,8 +44,8 @@ class IHTCMeViewController: UIViewController {
         return tableView
     }()
     
-    fileprivate var titles = ["0": "收藏夹:收藏的字,主题外观:暗黑or浅色,切换App图标:选择你的最爱", "1": "应用内评分:欢迎给\(kAppName)打评分！,AppStore评价:欢迎给\(kAppName)写评论!,分享给朋友:与身边的好友一起学习！",
-        "2":"意见反馈:欢迎到AppStore提需求或bug问题,邮件联系:如有问题欢迎来信,隐私条款:用户使用服务协议,开源地址:现已开源代码，欢迎关注,更多关注:欢迎访问作者博客,更多学习:更多开发者内容推荐,关于应用:\(kAppName)"] as [String : String]
+    fileprivate var titles = ["0": "收藏夹:收藏的字,五笔版本:86版或98版,主题外观:暗黑or浅色,切换App图标:选择你的最爱", "1": "应用内评分:欢迎给\(kAppName)打评分！,AppStore评价:欢迎给\(kAppName)写评论!,分享给朋友:与身边的好友一起学习！",
+        "2":"意见反馈:欢迎到AppStore提需求或bug问题,邮件联系:如有问题欢迎来信,隐私条款:用户使用服务协议,开源地址:现已开源代码，欢迎关注,更多关注:欢迎访问作者博客,更多应用:更多开发者内容推荐,关于应用:\(kAppName)"] as [String : String]
 
 }
 
@@ -118,7 +118,12 @@ extension IHTCMeViewController : UITableViewDelegate, UITableViewDataSource
         cell!.textLabel?.text = titleA?[0]
         cell?.detailTextLabel?.text = titleA?[1]
         
+        
         if (indexPath.section == 0 && indexPath.row == 1) {
+            cell?.detailTextLabel?.text = IHTCUserDefaults.shared.getUDWubiVersionIs86() ? "86版" : "98版"
+        }
+        
+        if (indexPath.section == 0 && indexPath.row == 2) {
             switch IHTCUserDefaults.shared.getAppAppearance() {
             case .Default:
                 cell?.detailTextLabel?.text = "跟随系统"
@@ -149,12 +154,28 @@ extension IHTCMeViewController : UITableViewDelegate, UITableViewDataSource
                 navigationController?.pushViewController(vc, animated: true)
             }
             if row == 1 {
+                let versionAlert = UIAlertController(title: "选择五笔版本", message: "选择五笔版本，用于App显示默认的版本，以便更好的用户体验。", preferredStyle: UIAlertController.Style.alert)
+                let v86 = UIAlertAction(title: "86版", style: .default, handler: { (action: UIAlertAction!) in
+                    IHTCUserDefaults.shared.setUDWubiVeersionIs86(value: true)
+                    tableView.reloadData()
+                })
+                versionAlert.addAction(v86)
+                let v98 = UIAlertAction(title: "98版", style: .default, handler: { (action: UIAlertAction!) in
+                    IHTCUserDefaults.shared.setUDWubiVeersionIs86(value: false)
+                    tableView.reloadData()
+                })
+                versionAlert.addAction(v98)
+                let cancel = UIAlertAction(title:  "取消", style: .cancel, handler: nil)
+                versionAlert.addAction(cancel)
+                self.present(versionAlert, animated: true, completion: nil)
+            }
+            if row == 2 {
                 let vc = IHTCAppearanceVC()
                 vc.hidesBottomBarWhenPushed = true
                 navigationController?.pushViewController(vc, animated: true)
             }
             #if !targetEnvironment(macCatalyst)
-            if row == 2 {
+            if row == 3 {
                 let refreshAlert = UIAlertController(title: "切换App图标", message: "选择你喜欢的图标~", preferredStyle: UIAlertController.Style.alert)
                 
                 // icon1

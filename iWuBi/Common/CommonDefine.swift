@@ -12,7 +12,7 @@ import UIKit
 // 常量
 let kAppName = "爱五笔"
 let kAppAppleId = "1459028801"
-let kAppDownloadURl = "https://itunes.apple.com/cn/app/iWuBi/id1459028801?l=zh&ls=1&mt=8"
+let kAppDownloadURl = "https://apps.apple.com/cn/app/iWuBi/id1459028801?l=zh&ls=1&mt=8"
 let kReviewAction = "&action=write-review"
 let kGithubURL = "https://github.com/iHTCboy/iWuBi"
 let kLicenseURL = "https://raw.githubusercontent.com/iHTCboy/iWuBi/master/LICENSE"

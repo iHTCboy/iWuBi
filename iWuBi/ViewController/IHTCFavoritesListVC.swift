@@ -10,7 +10,7 @@ import UIKit
 
 class IHTCFavoritesListVC: UIViewController {
 
-    var is86Word: Bool = true
+    var is86Word: Bool = IHTCUserDefaults.shared.getUDWubiVersionIs86()
     
     // MARK: Life Cycle
     override func viewDidLoad() {
@@ -62,6 +62,7 @@ class IHTCFavoritesListVC: UIViewController {
         let infoBtn = UIButton.init(type: .custom)
         infoBtn.setTitle("86版", for: .normal)
         infoBtn.setTitle("98版", for: .selected)
+        infoBtn.isSelected = !is86Word
         infoBtn.addTarget(self, action: #selector(showWordChange), for: .touchUpInside)
         let item = UIBarButtonItem.init(customView: infoBtn)
         return item

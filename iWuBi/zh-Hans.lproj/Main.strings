@@ -1,24 +1,27 @@
 
-/* Class = "UINavigationItem"; title = "iTer"; ObjectID = "7Dd-N7-EHW"; */
+/* Class = "UINavigationItem"; title = "爱五笔"; ObjectID = "7Dd-N7-EHW"; */
 "7Dd-N7-EHW.title" = "爱五笔";
 
-/* Class = "UITabBarItem"; title = "职位"; ObjectID = "Auc-75-r2L"; */
+/* Class = "UICommand"; title = "搜索"; ObjectID = "Aew-Yk-Yh8"; */
+"Aew-Yk-Yh8.title" = "搜索";
+
+/* Class = "UITabBarItem"; title = "98版"; ObjectID = "Auc-75-r2L"; */
 "Auc-75-r2L.title" = "98版";
 
-/* Class = "UITabBarItem"; title = "猿人"; ObjectID = "U2l-c7-sle"; */
+/* Class = "UITabBarItem"; title = "五笔"; ObjectID = "U2l-c7-sle"; */
 "U2l-c7-sle.title" = "五笔";
 
-/* Class = "UINavigationItem"; title = "iTer"; ObjectID = "dj7-EA-3Bs"; */
+/* Class = "UINavigationItem"; title = "爱五笔"; ObjectID = "dj7-EA-3Bs"; */
 "dj7-EA-3Bs.title" = "爱五笔";
 
-/* Class = "UITabBarItem"; title = "语言"; ObjectID = "fhS-3c-oCy"; */
+/* Class = "UITabBarItem"; title = "86版"; ObjectID = "fhS-3c-oCy"; */
 "fhS-3c-oCy.title" = "86版";
 
-/* Class = "UINavigationItem"; title = "iTer"; ObjectID = "mDN-ix-urQ"; */
+/* Class = "UINavigationItem"; title = "爱五笔"; ObjectID = "mDN-ix-urQ"; */
 "mDN-ix-urQ.title" = "爱五笔";
 
-/* Class = "UITabBarItem"; title = "企业"; ObjectID = "tOD-5L-U1d"; */
+/* Class = "UITabBarItem"; title = "学习"; ObjectID = "tOD-5L-U1d"; */
 "tOD-5L-U1d.title" = "学习";
 
-/* Class = "UINavigationItem"; title = "iTer"; ObjectID = "v8D-Zh-aQr"; */
+/* Class = "UINavigationItem"; title = "爱五笔"; ObjectID = "v8D-Zh-aQr"; */
 "v8D-Zh-aQr.title" = "爱五笔";

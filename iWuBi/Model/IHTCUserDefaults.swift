@@ -117,3 +117,19 @@ extension IHTCUserDefaults
         setUDValue(value: value, forKey: "IHTCFavoritesItemsKey")
     }
 }
+
+
+// MARK: 五笔版本设置
+extension IHTCUserDefaults
+{
+    func getUDWubiVersionIs86() -> Bool {
+        if let v_86 = getUDValue(key: "IHTCWubiVersionKey") as? Bool {
+            return v_86
+        }
+        return true
+    }
+    
+    func setUDWubiVeersionIs86(value: Bool) {
+        setUDValue(value: value, forKey: "IHTCWubiVersionKey")
+    }
+}

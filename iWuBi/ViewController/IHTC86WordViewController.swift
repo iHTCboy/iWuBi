@@ -136,6 +136,13 @@ extension IHTC86WordViewController {
             }, completion: { (true) in
                 launchView?.removeFromSuperview()
             })
+            
+            // 不是86，就选择98版本
+            if !IHTCUserDefaults.shared.getUDWubiVersionIs86() {
+                if let tabBarController = self.tabBarController {
+                    tabBarController.selectedIndex = 1
+                }
+            }
         }
     }
     

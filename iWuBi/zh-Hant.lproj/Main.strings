@@ -2,6 +2,9 @@
 /* Class = "UINavigationItem"; title = "愛五筆"; ObjectID = "7Dd-N7-EHW"; */
 "7Dd-N7-EHW.title" = "愛五筆";
 
+/* Class = "UICommand"; title = "搜索"; ObjectID = "Aew-Yk-Yh8"; */
+"Aew-Yk-Yh8.title" = "搜索";
+
 /* Class = "UITabBarItem"; title = "98版"; ObjectID = "Auc-75-r2L"; */
 "Auc-75-r2L.title" = "98版";
 

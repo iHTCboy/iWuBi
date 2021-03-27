@@ -95,7 +95,7 @@ extension ITCommonAPI
                                       preferredStyle: UIAlertController.Style.alert)
         
         let okAction = UIAlertAction.init(title: "OK", style: .default) { (action: UIAlertAction) in
-            UIApplication.shared.openURL(URL(string: "https://itunes.apple.com/cn/app/yi-mei-yun/id" + kAppAppleId + "?l=zh&ls=1&mt=8")!)
+            UIApplication.shared.openURL(URL(string: "https://apps.apple.com/cn/app/iWuBi/id" + kAppAppleId + "?l=zh&ls=1&mt=8")!)
         }
         alert.addAction(okAction)
         
