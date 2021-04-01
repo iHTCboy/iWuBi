@@ -238,7 +238,7 @@ extension IHTCWordDetailViewController : UITableViewDelegate, UITableViewDataSou
         }
         
         #if targetEnvironment(macCatalyst)
-        cell.wordHeightConstraint.constant = 120.0
+        cell.wordHeightConstraint.constant = 115.0
         #endif
         
         let question = questionModle!

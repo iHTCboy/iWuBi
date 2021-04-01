@@ -54,7 +54,7 @@ extension IHTCMeViewController
 {
     func setupUI() {
         #if targetEnvironment(macCatalyst)
-        titles = ["0": "收藏夹:收藏的字,主题外观:暗黑or浅色", "1": "应用内评分:欢迎给\(kAppName)打评分！,AppStore评价:欢迎给\(kAppName)写评论!,分享给朋友:与身边的好友一起学习！",
+        titles = ["0": "收藏夹:收藏的字,五笔版本:86版或98版,主题外观:暗黑or浅色", "1": "应用内评分:欢迎给\(kAppName)打评分！,AppStore评价:欢迎给\(kAppName)写评论!,分享给朋友:与身边的好友一起学习！",
         "2":"意见反馈:欢迎到AppStore提需求或bug问题,邮件联系:如有问题欢迎来信,隐私条款:用户使用服务协议,开源地址:现已开源代码，欢迎关注,更多关注:欢迎访问作者博客,更多学习:更多开发者内容推荐,关于应用:\(kAppName)"] as [String : String]
         #endif
 
