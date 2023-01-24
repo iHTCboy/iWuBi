@@ -1,6 +1,6 @@
 PODS:
-  - BaiduMobStatCodeless (5.2.2)
-  - JXPhotoBrowser (3.0.9)
+  - BaiduMobStatCodeless (5.3.6)
+  - JXPhotoBrowser (3.1.3)
 
 DEPENDENCIES:
   - BaiduMobStatCodeless
@@ -12,9 +12,9 @@ SPEC REPOS:
     - JXPhotoBrowser
 
 SPEC CHECKSUMS:
-  BaiduMobStatCodeless: bfb398c6c2054b07f97bed51ddf0694311606324
-  JXPhotoBrowser: b22932bfd53492848a63da85a568bf959548fefc
+  BaiduMobStatCodeless: b1029b96b02d54802049d280f2b1abb0c76f0e9e
+  JXPhotoBrowser: d32e94e1226d43bf5ed83164e3f5b651fed625e0
 
-PODFILE CHECKSUM: ac6ebdca1655a7ca5613ec3a85b03d9045db8819
+PODFILE CHECKSUM: 147d59753bb9c22df4267fcda8fc397a35d7f9d0
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.11.3
