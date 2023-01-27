@@ -89,10 +89,8 @@ iWuBi 是一款五笔输入法相关知识的学习App，目的是为了方便�
 
 ### 应用截图
 
-<img src="screenshot/01.png" width="400" height:auto alt="screenshot/01.png"/>
-<img src="screenshot/02.png" width="400" height:auto alt="screenshot/02.png"/>
-<img src="screenshot/03.png" width="400" height:auto alt="screenshot/03.png"/>
-<img src="screenshot/04.png" width="400" height:auto alt="screenshot/04.png"/>
-<img src="screenshot/05.png" width="400" height:auto alt="screenshot/05.png"/>
-<img src="screenshot/06.png" width="400" height:auto alt="screenshot/06.png"/>
-<img src="screenshot/07.png" width="400" height:auto alt="screenshot/07.png"/>
+| ![](screenshot/01.png) | ![](screenshot/02.png) |
+| ----- | ----- |
+| ![](screenshot/03.png) | ![](screenshot/04.png) |
+| ![](screenshot/05.png) | ![](screenshot/06.png) |
+| ![](screenshot/07.png) | ![](screenshot/08.png) |
