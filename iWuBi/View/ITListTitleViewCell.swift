@@ -20,8 +20,9 @@ class ITListTitleViewCell: UITableViewCell {
     
     @IBOutlet weak var versionLbl: UILabel!
     
-    
     @IBOutlet weak var wordLbl: ITCopyLabel!
+    
+    var voiceCallback: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,4 +35,7 @@ class ITListTitleViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func clickedVoiceButton(_ sender: UIButton) {
+        voiceCallback?()
+    }
 }

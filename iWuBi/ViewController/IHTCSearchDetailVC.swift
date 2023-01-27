@@ -34,6 +34,10 @@ class IHTCSearchDetailVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    deinit {
+        TCVoiceUtils.stopTTS()
+    }
+    
     var selectedCell: ITListTitleViewCell!
     var is86Word: Bool = true
     var questionModle : Dictionary<String, Any>?
@@ -236,7 +240,8 @@ extension IHTCSearchDetailVC : UITableViewDelegate, UITableViewDataSource {
         
         let question = questionModle! 
         
-        cell.wordLbl.text = question["word"] as? String
+        let word = question["word"] as? String ?? ""
+        cell.wordLbl.text = word
         
         let codeArray = question["codes"] as? Array<String> ?? Array<String>()
         
@@ -256,6 +261,11 @@ extension IHTCSearchDetailVC : UITableViewDelegate, UITableViewDataSource {
             cell.versionLbl.text = " 86版 "
         } else {
             cell.versionLbl.text = " 98版 "
+        }
+        
+        // 播放声音
+        cell.voiceCallback = {
+            TCVoiceUtils.playTTS(text: word)
         }
         
         self.selectedCell = cell;

@@ -6,6 +6,7 @@
   Copyright © 2019 HTC. All rights reserved.
 */
 
-CFBundleDisplayName = "爱五笔";
+"CFBundleName" = "爱五笔";
+"CFBundleDisplayName" = "爱五笔";
 "NSPhotoLibraryUsageDescription" = "请求访问相册，以便保存App截图";
 "NSPhotoLibraryAddUsageDescription" = "请求访问相册，以便保存App截图";

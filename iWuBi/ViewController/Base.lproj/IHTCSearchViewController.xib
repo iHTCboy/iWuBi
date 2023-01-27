@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +11,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IHTCSearchViewController" customModule="iWuBi" customModuleProvider="target">
             <connections>
                 <outlet property="naviBar" destination="c52-ty-eGm" id="V4e-ND-JWj"/>
-                <outlet property="optionItem" destination="1OT-bu-bAD" id="MHO-oO-01k"/>
                 <outlet property="searchBar" destination="rM4-0j-H8r" id="xA7-8J-JgZ"/>
                 <outlet property="tableView" destination="dWQ-I2-ado" id="Woi-gm-1Cz"/>
                 <outlet property="versionItem" destination="bac-AK-lmr" id="mMM-No-hVO"/>
@@ -24,23 +23,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c52-ty-eGm">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                     <items>
                         <navigationItem title="Search" id="sn4-2G-rIV">
-                            <leftBarButtonItems>
-                                <barButtonItem title="单字" id="1OT-bu-bAD">
-                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <connections>
-                                        <action selector="clickedOptionItem:" destination="-1" id="MYq-4g-dIu"/>
-                                    </connections>
-                                </barButtonItem>
-                                <barButtonItem title="86版" id="bac-AK-lmr" userLabel="type">
-                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <connections>
-                                        <action selector="clickedVersionItem:" destination="-1" id="LmC-i8-w0H"/>
-                                    </connections>
-                                </barButtonItem>
-                            </leftBarButtonItems>
+                            <barButtonItem key="leftBarButtonItem" title="86版" id="bac-AK-lmr" userLabel="type">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="clickedVersionItem:" destination="-1" id="LmC-i8-w0H"/>
+                                </connections>
+                            </barButtonItem>
                             <rightBarButtonItems>
                                 <barButtonItem systemItem="stop" id="Ah8-zJ-ZAW">
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,17 +50,18 @@
                     </items>
                 </navigationBar>
                 <searchBar contentMode="redraw" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rM4-0j-H8r">
-                    <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                    <rect key="frame" x="0.0" y="92" width="414" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="0qI-9Y-EQR"/>
                     </constraints>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dWQ-I2-ado">
-                    <rect key="frame" x="0.0" y="132" width="414" height="730"/>
+                    <rect key="frame" x="0.0" y="136" width="414" height="726"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.96862745100000003" green="0.32549019610000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="c52-ty-eGm" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8iY-KE-tqJ"/>
@@ -85,7 +77,6 @@
                 <constraint firstItem="dWQ-I2-ado" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gBK-Yq-lwb"/>
                 <constraint firstItem="dWQ-I2-ado" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="nPa-me-7Kg"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="111.83035714285714"/>
         </view>
     </objects>

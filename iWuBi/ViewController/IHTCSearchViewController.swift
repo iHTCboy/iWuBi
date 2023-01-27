@@ -131,6 +131,105 @@ extension IHTCSearchViewController {
         } else {
             model = IHTCModel.shared.search98Dict
         }
+        // 词组
+        switch words.count {
+        case 1:
+            var dict = ["word": String.init(words), "codes": Array<String>()] as [String : Any]
+            if let dic = model[String.init(words)] {
+                dict = dic
+            }
+            self.searchArray.append(dict)
+            break
+        case 2:
+            let w1 = String.init(words.first!)
+            let w2 = String.init(words.last!)
+            var code = ""
+            if let dic1 = model[String.init(w1)] {
+                let codes1 = dic1["codes"] as! Array<String>
+                code += codes1.last!.prefix(2)
+            } else {
+                code += "ZZ"
+            }
+            
+            if let dic2 = model[String.init(w2)] {
+                let codes2 = dic2["codes"] as! Array<String>
+                code += codes2.last!.prefix(2)
+            } else {
+                code += "ZZ"
+            }
+            
+            let dict = ["word": String.init(words), "codes": [code]] as [String : Any]
+            self.searchArray.append(dict)
+            break
+        case 3:
+            let w1 = words.subString(from: 0, to: 1)
+            let w2 = words.subString(from: 1, to: 2)
+            let w3 = words.subString(from: 2, to: 3)
+            var code = ""
+            if let dic1 = model[String.init(w1)] {
+                let codes1 = dic1["codes"] as! Array<String>
+                code += codes1.last!.prefix(1)
+            } else {
+                code += "Z"
+            }
+            
+            if let dic2 = model[String.init(w2)] {
+                let codes2 = dic2["codes"] as! Array<String>
+                code += codes2.last!.prefix(1)
+            } else {
+                code += "Z"
+            }
+            
+            if let dic3 = model[String.init(w3)] {
+                let codes3 = dic3["codes"] as! Array<String>
+                code += codes3.last!.prefix(2)
+            } else {
+                code += "ZZ"
+            }
+            
+            let dict = ["word": String.init(words), "codes": [code]] as [String : Any]
+            self.searchArray.append(dict)
+            break
+        default:
+            let w1 = words.subString(from: 0, to: 1)
+            let w2 = words.subString(from: 1, to: 2)
+            let w3 = words.subString(from: 2, to: 3)
+            let w4 = words.subString(from: words.count-1, to: words.count)
+            var code = ""
+            if let dic1 = model[String.init(w1)] {
+                let codes1 = dic1["codes"] as! Array<String>
+                code += codes1.last!.prefix(1)
+            } else {
+                code += "Z"
+            }
+            
+            if let dic2 = model[String.init(w2)] {
+                let codes2 = dic2["codes"] as! Array<String>
+                code += codes2.last!.prefix(1)
+            } else {
+                code += "Z"
+            }
+            
+            if let dic3 = model[String.init(w3)] {
+                let codes3 = dic3["codes"] as! Array<String>
+                code += codes3.last!.prefix(1)
+            } else {
+                code += "Z"
+            }
+            
+            if let dic4 = model[String.init(w4)] {
+                let codes4 = dic4["codes"] as! Array<String>
+                code += codes4.last!.prefix(1)
+            } else {
+                code += "Z"
+            }
+            
+            let dict = ["word": String.init(words), "codes": [code]] as [String : Any]
+            self.searchArray.append(dict)
+            break
+        }
+        
+        // 单字
         for word in words {
             var dict = ["word": String.init(word), "codes": Array<String>()] as [String : Any]
             if let dic = model[String.init(word)] {
@@ -295,7 +394,7 @@ extension IHTCSearchViewController : UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if isSingleWord {
+        if isSingleWord && indexPath.row != 0 {
 
             let cell: ITQuestionListViewCell = tableView.dequeueReusableCell(withIdentifier: "ITQuestionListViewCell") as! ITQuestionListViewCell
             cell.accessoryType = .disclosureIndicator
